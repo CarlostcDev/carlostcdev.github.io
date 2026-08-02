@@ -1,0 +1,56 @@
+{
+  "header": {
+    "home": "Accueil",
+    "about-me": "À propos de moi",
+    "skills": "Compétences",
+    "education": "Formation",
+    "experience": "Expérience",
+    "contact": "Contact",
+    "language": "Français",
+    "es": "Espagnol",
+    "en": "Anglais",
+    "zh": "Chinois",
+    "ja": "Japonais",
+    "va": "Valencien",
+    "fr": "Français",
+    "it": "Italien",
+    "de": "Allemand",
+    "ko": "Coréen",
+    "pt": "Portugais"
+  },
+
+  "main": {
+    "h1": "Portfolio de Carlos Tormo Castaño"
+  },
+
+  "home": {
+    "p1": "Bienvenue,",
+    "p2": "Je suis",
+    "p3": "Votre prochain ",
+    "a1": "À propos de moi",
+    "word-animation": "développeur",
+    "roles-list": [
+      "développeur",
+      "programmeur",
+      "administrateur",
+      "informaticien"
+    ]
+  },
+
+  "about-me": {
+    "h2": "À propos de moi",
+    "phrase1": "Je suis un technicien informatique d'Elche passionné par la compréhension et la maîtrise de la technologie.",
+    "phrase2": "Je me concentre sur les problèmes complexes pour concevoir des solutions évolutives et efficaces.",
+    "phrase3": "Organisé, perfectionniste et doté d'une grande capacité d'apprentissage rapide.",
+    "phrase4": "Je propose des améliorations et des solutions sous une autre perspective qui aident l'environnement de travail.",
+    "phrase5": "Je cherche à progresser professionnellement et à contribuer au succès de l'équipe et de l'entreprise.",
+    "phrase6": "De langue maternelle espagnole, j'ai un niveau d'anglais intermédiaire et une compréhension passive du valencien."
+  },
+
+  "footer": {
+    "h2": "Contact",
+    "projects": "Projets",
+    "phone": "Téléphone",
+    "copyright": "Tous droits non réservés."
+  }
+}

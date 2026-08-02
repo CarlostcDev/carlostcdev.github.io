@@ -1,14 +1,30 @@
-function carousel() {
+export function initCarousel(initialRoles = []) {
     const el = document.getElementById("roles");
-    let i = 0;
 
     if (!el) return;
+
+    let roles = normalizeRoles(initialRoles);
+    let i = 0;
 
     el.style.display = "inline-block";
     el.style.transition = "all 0.5s ease";
 
-    setInterval(() => {
-        if (!window.ROLES || window.ROLES.length === 0) return;
+    const updateRole = () => {
+        if (roles.length === 0) return;
+        i %= roles.length;
+        el.textContent = roles[i];
+    };
+
+    window.addEventListener("portfolio:languagechange", event => {
+        roles = normalizeRoles(event.detail?.roles);
+        i = 0;
+        updateRole();
+    });
+
+    updateRole();
+
+    return setInterval(() => {
+        if (roles.length === 0) return;
 
         el.style.opacity = "0";
         el.style.transform = "translateY(-20px)";
@@ -17,8 +33,8 @@ function carousel() {
             el.style.transition = "none";
             el.style.transform = "translateY(20px)";
 
-            i = (i + 1) % window.ROLES.length;
-            el.textContent = window.ROLES[i];
+            i = (i + 1) % roles.length;
+            updateRole();
 
             setTimeout(() => {
                 el.style.transition = "all 0.5s ease";
@@ -29,4 +45,6 @@ function carousel() {
     }, 5000);
 }
 
-carousel();
+function normalizeRoles(roles) {
+    return Array.isArray(roles) ? roles.filter(role => typeof role === "string" && role.trim()) : [];
+}

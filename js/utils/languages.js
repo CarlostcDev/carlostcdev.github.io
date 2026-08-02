@@ -1,132 +1,233 @@
-const langSelected = document.getElementById("langSelected");
-const langOptions = document.getElementById("langOptions");
-const langDropdown = document.querySelector(".lang-dropdown");
-const roleEl = document.getElementById("roles");
+import { renderLanguageOptions } from "../dom/autolanguages.js";
 
-let currentRoles = [];
-let roleIndex = 0;
-const translationsCache = {};
-
-const fontMap = {
-    zh: '"Noto Sans TC", "Google Sans", "Open Sans", sans-serif',
-    ja: '"Noto Sans JP", "Google Sans", "Open Sans", sans-serif'
+const storageKey = "portfolio.language";
+const defaultLanguage = "es";
+const configUrl = new URL("../../sources/config.json", import.meta.url);
+const translationsCache = new Map();
+let configPromise = null;
+let selectorReady = false;
+let languageState = {
+    code: defaultLanguage,
+    translations: {},
+    roles: []
 };
 
-async function setLanguage(lang) {
+export async function initLanguages() {
+    const config = await loadConfig();
+    const initialLanguage = getInitialLanguage(config);
+
+    renderLanguageOptions(config.languages, initialLanguage);
+    bindLanguageSelector();
+
+    return applyLanguage(initialLanguage);
+}
+
+export async function applyLanguage(language) {
+    const config = await loadConfig();
+    let code = resolveLanguage(language, config) ?? defaultLanguage;
+    let translations = await loadTranslationsSafely(code);
+
+    if (!translations && code !== defaultLanguage) {
+        code = defaultLanguage;
+        translations = await loadTranslationsSafely(defaultLanguage);
+    }
+
+    if (!translations) {
+        return languageState;
+    }
+
+    const fallback = code === defaultLanguage ? translations : await loadTranslationsSafely(defaultLanguage);
+    const roles = getValue(translations, "home.roles-list") ?? getValue(fallback, "home.roles-list") ?? [];
+
+    document.documentElement.lang = code;
+    translateDocument(translations, fallback);
+    updateActiveLanguage(code);
+    setStoredLanguage(code);
+
+    languageState = { code, translations, roles };
+
+    window.dispatchEvent(new CustomEvent("portfolio:languagechange", {
+        detail: languageState
+    }));
+
+    return languageState;
+}
+
+export function getLanguageState() {
+    return languageState;
+}
+
+function loadConfig() {
+    configPromise ??= fetchJson(configUrl);
+    return configPromise;
+}
+
+async function loadTranslationsSafely(language) {
     try {
-        if (!translationsCache[lang]) {
-            const response = await fetch(`../sources/translates/${lang}.json`);
-            if (!response.ok) throw new Error();
-
-            translationsCache[lang] = await response.json();
-        }
-
-        const selectedLang = translationsCache[lang];
-
-        document.querySelectorAll("[data-key]").forEach(element => {
-            const key = element.dataset.key;
-
-            if (selectedLang[key] !== undefined) {
-                if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
-                    element.placeholder = selectedLang[key];
-                } else {
-                    element.textContent = selectedLang[key];
-                }
-            }
-        });
-
-        const arrow = document.createElement("span");
-        arrow.className = "arrow";
-        langSelected.textContent = selectedLang.lang || lang.toUpperCase();
-        langSelected.appendChild(arrow);
-
-        currentRoles = selectedLang["roles-list"] || [];
-
-        if (roleEl && currentRoles.length) {
-            roleIndex = 0;
-            roleEl.textContent = currentRoles[0];
-        }
-
-        localStorage.setItem("preferredLang", lang);
-        document.documentElement.lang = lang;
-
-        document.documentElement.style.setProperty(
-            "--font-general",
-            fontMap[lang] || '"Google Sans", "Open Sans", "Inter", sans-serif'
-        );
-
+        return await loadTranslations(language);
     } catch {
-        if (lang !== "en") {
-            await setLanguage("en");
-        }
-    } finally {
-        langOptions.style.display = "none";
-        langDropdown.classList.remove("active");
+        return null;
     }
 }
 
-function getBrowserLanguage() {
-    const saved = localStorage.getItem("preferredLang");
-    if (saved) return saved;
+async function loadTranslations(language) {
+    if (translationsCache.has(language)) {
+        return translationsCache.get(language);
+    }
 
-    const browserLang = navigator.language.split("-")[0];
-    const supportedLangs = ["es", "en", "va", "zh", "ja"];
+    const translations = await fetchJson(new URL(`../../sources/translates/${language}.json`, import.meta.url));
+    translationsCache.set(language, translations);
 
-    if (browserLang === "ca") return "va";
-
-    return supportedLangs.includes(browserLang) ? browserLang : "en";
+    return translations;
 }
 
-langSelected.addEventListener("click", e => {
-    e.stopPropagation();
+async function fetchJson(url) {
+    const response = await fetch(url);
 
-    const isVisible = langOptions.style.display === "block";
-    langOptions.style.display = isVisible ? "none" : "block";
-    langDropdown.classList.toggle("active");
-});
+    if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+    }
 
-langOptions.addEventListener("click", e => {
-    const option = e.target.closest("li");
-    if (!option) return;
+    return response.json();
+}
 
-    e.stopPropagation();
-    setLanguage(option.dataset.lang);
-});
+function bindLanguageSelector() {
+    if (selectorReady) return;
 
-document.addEventListener("click", () => {
-    langOptions.style.display = "none";
-    langDropdown.classList.remove("active");
-});
+    const dropdown = document.querySelector(".lang-dropdown");
+    const selected = document.getElementById("langSelected");
+    const options = document.getElementById("langOptions");
 
-(function () {
-    if (!roleEl) return;
+    if (!dropdown || !selected || !options) return;
 
-    roleEl.style.display = "inline-block";
-    roleEl.style.transition = "all 0.5s ease";
+    const setOpen = open => {
+        dropdown.classList.toggle("active", open);
+        selected.setAttribute("aria-expanded", String(open));
+        options.hidden = !open;
+    };
 
-    setInterval(() => {
-        if (!currentRoles.length) return;
+    const selectOption = async option => {
+        if (!option?.dataset.lang) return;
 
-        roleEl.style.opacity = "0";
-        roleEl.style.transform = "translateY(-20px)";
+        await applyLanguage(option.dataset.lang);
+        setOpen(false);
+    };
 
-        setTimeout(() => {
-            roleEl.style.transition = "none";
-            roleEl.style.transform = "translateY(20px)";
+    selected.addEventListener("click", event => {
+        event.stopPropagation();
+        setOpen(!dropdown.classList.contains("active"));
+    });
 
-            roleIndex = (roleIndex + 1) % currentRoles.length;
-            roleEl.textContent = currentRoles[roleIndex];
+    options.addEventListener("click", event => {
+        const option = event.target.closest("[data-lang]");
+        selectOption(option);
+    });
 
-            setTimeout(() => {
-                roleEl.style.transition = "all 0.5s ease";
-                roleEl.style.opacity = "1";
-                roleEl.style.transform = "translateY(0)";
-            }, 50);
-        }, 500);
-    }, 5000);
-})();
+    options.addEventListener("keydown", event => {
+        if (event.key !== "Enter" && event.key !== " ") return;
 
-document.addEventListener("DOMContentLoaded", () => {
-    langOptions.style.display = "none";
-    setLanguage(getBrowserLanguage());
-});
+        event.preventDefault();
+        selectOption(event.target.closest("[data-lang]"));
+    });
+
+    document.addEventListener("click", event => {
+        if (!dropdown.contains(event.target)) {
+            setOpen(false);
+        }
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            setOpen(false);
+        }
+    });
+
+    setOpen(false);
+    selectorReady = true;
+}
+
+function getInitialLanguage(config) {
+    const storedLanguage = getStoredLanguage();
+    const resolvedStoredLanguage = resolveLanguage(storedLanguage, config);
+
+    if (resolvedStoredLanguage) {
+        return resolvedStoredLanguage;
+    }
+
+    for (const language of navigator.languages ?? [navigator.language]) {
+        const resolvedLanguage = resolveLanguage(language, config);
+
+        if (resolvedLanguage) {
+            return resolvedLanguage;
+        }
+    }
+
+    return defaultLanguage;
+}
+
+function resolveLanguage(language, config) {
+    if (!language || !Array.isArray(config.languages)) return null;
+
+    const normalizedLanguage = normalizeLanguage(language);
+    const baseLanguage = normalizedLanguage.split("-")[0];
+
+    for (const supportedLanguage of config.languages) {
+        const codes = [supportedLanguage.code, ...(supportedLanguage.aliases ?? [])].map(normalizeLanguage);
+
+        if (codes.includes(normalizedLanguage) || codes.includes(baseLanguage)) {
+            return supportedLanguage.code;
+        }
+    }
+
+    return null;
+}
+
+function normalizeLanguage(language) {
+    return String(language).trim().toLowerCase().replace("_", "-");
+}
+
+function translateDocument(translations, fallback) {
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+        const value = getValue(translations, element.dataset.i18n) ?? getValue(fallback, element.dataset.i18n);
+
+        if (typeof value !== "string" && typeof value !== "number") return;
+
+        const attribute = element.dataset.i18nAttr;
+
+        if (attribute) {
+            element.setAttribute(attribute, value);
+            return;
+        }
+
+        element.textContent = value;
+    });
+}
+
+function getValue(source, path) {
+    return path.split(".").reduce((value, key) => value?.[key], source);
+}
+
+function updateActiveLanguage(language) {
+    document.querySelectorAll("#langOptions [data-lang]").forEach(option => {
+        const isActive = option.dataset.lang === language;
+
+        option.classList.toggle("active", isActive);
+        option.setAttribute("aria-selected", String(isActive));
+    });
+}
+
+function getStoredLanguage() {
+    try {
+        return localStorage.getItem(storageKey);
+    } catch {
+        return null;
+    }
+}
+
+function setStoredLanguage(language) {
+    try {
+        localStorage.setItem(storageKey, language);
+    } catch {
+        return null;
+    }
+}

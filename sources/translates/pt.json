@@ -1,0 +1,56 @@
+{
+  "header": {
+    "home": "Início",
+    "about-me": "Sobre mim",
+    "skills": "Habilidades",
+    "education": "Formação",
+    "experience": "Experiência",
+    "contact": "Contacto",
+    "language": "Português",
+    "es": "Espanhol",
+    "en": "Inglês",
+    "zh": "Chinês",
+    "ja": "Japonês",
+    "va": "Valenciano",
+    "fr": "Francês",
+    "it": "Italiano",
+    "de": "Alemão",
+    "ko": "Coreano",
+    "pt": "Português"
+  },
+
+  "main": {
+    "h1": "Portfólio de Carlos Tormo Castaño"
+  },
+
+  "home": {
+    "p1": "Bem-vindo,",
+    "p2": "Sou",
+    "p3": "O teu próximo ",
+    "a1": "Sobre mim",
+    "word-animation": "desenvolvedor",
+    "roles-list": [
+      "desenvolvedor",
+      "programador",
+      "administrador",
+      "informático"
+    ]
+  },
+
+  "about-me": {
+    "h2": "Sobre mim",
+    "phrase1": "Sou um técnico informático de Elche apaixonado por compreender e dominar a tecnologia.",
+    "phrase2": "Foco-me em problemas complexos para conceber soluções escaláveis e eficientes.",
+    "phrase3": "Organizado, perfeccionista e com elevada capacidade de aprendizagem rápida.",
+    "phrase4": "Proponho melhorias e soluções sob uma nova perspetiva que ajudam o ambiente de trabalho.",
+    "phrase5": "Procuro crescer profissionalmente e contribuir para o sucesso da equipa e da empresa.",
+    "phrase6": "Sou falante nativo de espanhol, com nível intermédio de inglês e compreensão passiva de valenciano."
+  },
+
+  "footer": {
+    "h2": "Contacto",
+    "projects": "Projetos",
+    "phone": "Telefone",
+    "copyright": "Todos os direitos não reservados."
+  }
+}

@@ -1,36 +1,40 @@
 {
   "languages": [
-    {"code":"es","name":"Español"},
-    {"code":"en","name":"Inglés"},
-    {"code":"zh","name":"Chino"},
-    {"code":"ja","name":"Japonés"},
-    {"code":"va","name":"Valenciano"},
-    {"code":"fr", "name":"Francés"}
+    { "code": "es", "name": "Español", "aliases": ["es-ES", "es-MX", "es-AR", "es-CO", "es-CL"] },
+    { "code": "en", "name": "Inglés", "aliases": ["en-US", "en-GB", "en-AU", "en-CA"] },
+    { "code": "zh", "name": "Chino", "aliases": ["zh-CN", "zh-Hans", "zh-TW", "zh-Hant"] },
+    { "code": "ja", "name": "Japonés", "aliases": ["ja-JP"] },
+    { "code": "va", "name": "Valenciano", "aliases": ["ca", "ca-ES", "ca-ES-valencia"] },
+    { "code": "fr", "name": "Francés", "aliases": ["fr-FR", "fr-CA", "fr-BE"] },
+    { "code": "it", "name": "Italiano", "aliases": ["it-IT"] },
+    { "code": "de", "name": "Alemán", "aliases": ["de-DE", "de-AT", "de-CH"] },
+    { "code": "ko", "name": "Coreano", "aliases": ["ko-KR"] },
+    { "code": "pt", "name": "Portugués", "aliases": ["pt-PT", "pt-BR"] }
   ],
 
   "phrases": [
     {
-      "key": "frase1",
+      "key": "about-me.phrase1",
       "text": "Soy un técnico informático ilicitano apasionado por comprender y dominar la tecnología."
     },
     {
-      "key": "frase2",
+      "key": "about-me.phrase2",
       "text": "Me enfoco en los problemas complejos para diseñar soluciones escalables y eficientes."
     },
     {
-      "key": "frase3",
+      "key": "about-me.phrase3",
       "text": "Ordenado, perfeccionista y con alta capacidad de rápido aprendizaje."
     },
     {
-      "key": "frase4",
+      "key": "about-me.phrase4",
       "text": "Propongo mejoras y soluciones con otra perspectiva que ayudan al entorno."
     },
     {
-      "key": "frase5",
+      "key": "about-me.phrase5",
       "text": "Busco crecer profesionalmente y contribuir al éxito del equipo y de la empresa."
     },
     {
-      "key": "frase6",
+      "key": "about-me.phrase6",
       "text": "Poseo español nativo, con nivel intermedio de inglés y comprensión pasiva de valenciano."
     }
   ],
