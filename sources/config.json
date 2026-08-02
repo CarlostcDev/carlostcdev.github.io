@@ -1,0 +1,44 @@
+{
+  "languages": [
+    {"code":"es","name":"Español"},
+    {"code":"en","name":"Inglés"},
+    {"code":"zh","name":"Chino"},
+    {"code":"ja","name":"Japonés"},
+    {"code":"va","name":"Valenciano"},
+    {"code":"fr", "name":"Francés"}
+  ],
+
+  "phrases": [
+    {
+      "key": "frase1",
+      "text": "Soy un técnico informático ilicitano apasionado por comprender y dominar la tecnología."
+    },
+    {
+      "key": "frase2",
+      "text": "Me enfoco en los problemas complejos para diseñar soluciones escalables y eficientes."
+    },
+    {
+      "key": "frase3",
+      "text": "Ordenado, perfeccionista y con alta capacidad de rápido aprendizaje."
+    },
+    {
+      "key": "frase4",
+      "text": "Propongo mejoras y soluciones con otra perspectiva que ayudan al entorno."
+    },
+    {
+      "key": "frase5",
+      "text": "Busco crecer profesionalmente y contribuir al éxito del equipo y de la empresa."
+    },
+    {
+      "key": "frase6",
+      "text": "Poseo español nativo, con nivel intermedio de inglés y comprensión pasiva de valenciano."
+    }
+  ],
+
+  "roles": [
+    "desarrollador",
+    "programador",
+    "administrador",
+    "informático"
+  ]
+}

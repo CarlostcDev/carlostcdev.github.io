@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <title data-key="title">Carlos Tormo | Sobre mi</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+            <div class="theme-switch"><button id="themeToggle" class="theme-toggle"><svg class="light-mode"><use href="/sources/svgs/sprite.svg#light-mode"></use></svg></button></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#inicio" data-key="inicio">Inicio</a></li>
+                    <li><a href="#about-me" data-key="about-me">Sobre mi</a></li>
+                    <li><a href="#skills" data-key="aptitudes">Aptitudes</a></li>
+                    <li><a href="#formacion" data-key="formacion">Formación</a></li>
+                    <li><a href="#experiencia" data-key="experiencia">Experiencia</a></li>
+                    <li><a href="#contacto" data-key="contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="lang-dropdown"><div class="lang-selected" id="langSelected" data-key="lang">Español<span class="arrow"></span></div>
+                <ul class="lang-options" id="langOptions"></ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 data-key="h1">Portafolio de Carlos Tormo Castaño</h1>
+        <section id="inicio">
+            <div class="borde">
+                <div class="intro">
+                    <p data-key="bienvenido">Bienvenido,</p>
+                    <p><span data-key="soy">Soy</span> <span class="name">Carlos Tormo,</span></p>
+                    <p><span data-key="proximo">Tu próximo </span><span id="roles" class="fade" data-key="word-animation">desarrollador</span></p>
+                    <a href="#about-me"><button data-key="button-about-me">Sobre mí</button></a>
+                </div>
+                <div class="foto"><img src="sources/profile/profile-photo.png" alt="Carlos Tormo Castaño" loading="eager"></div>
+            </div>
+        </section>
+        <section id="about-me">
+            <h2 data-key="title-about-me">Sobre mí</h2>
+            <div id="phrases"></div>
+        </section>
+
+        <section id="skills">
+
+        </section>
+
+        <section id="formacion">
+            <div class="fondo"></div>
+            <h2 data-key="title-formacion">Formación</h2>
+            <article class="educacion">
+                <h3 data-key="subtitle1-formacion">Formación Académica</h3>
+                <div class="separacion"></div>
+                <div class="edu">
+                    <h4 data-key="fp-dam">FP Grado Superior · Desarrollo de Aplicaciones Multiplataforma</h4>
+                    <ul>
+                        <li data-key="fp-dam-institute">IES Severo Ochoa | 2025 - Actualidad | Elche, Alicante</li>
+                        <li data-key="fp-dam-desc">
+                            Actualmente estudio DAM. Programo principalmente en Java,
+                            trabajando con objetos y estructuras de datos.
+                            También hago uso de HTML, CSS y JavaScript hasta la gestión
+                            de bases de datos con MariaDB. En mi día a día utilizo Git
+                            para organizar mi código y versiones, siempre enfocado
+                            en escribir un código limpio, bien documentado y que
+                            funcione correctamente en cualquier sistema.
+                        </li>
+                    </ul>
+                    <a><button class="visualizar fps" data-key="btn-fps">Visualizar</button></a>
+                </div>
+                <div class="separacion1"></div>
+                <div class="edu">
+                    <h4 data-key="fp-smr">FP Grado Medio · Sistemas Microinformáticos y Redes</h4>
+                    <ul>
+                        <li data-key="fp-smr-institute">IES Severo Ochoa | 2023 - 2025 | Elche, Alicante</li>
+                        <li data-key="fp-smr-desc">
+                            Durante el ciclo de SMR trabajé con servidores Linux,
+                            configurando servicios como DHCP, DNS, HTTP y FTP,
+                            construyendo redes virtuales con VirtualBox,
+                            realicé pruebas de hardware con herramientas profesionales
+                            de diagnóstico y benchmark como memtest86, Cinebench y 3DMark.
+                            Monitoricé y analicé redes con Wireshark,
+                            administré sistemas y servidores Windows y Linux, implementé
+                            medidas de seguridad informática mediante firewalls con NFTables,
+                            antivirus en red y escaneo de vulnerabilidades con OpenVAS,
+                            y gestioné entornos de desarrollo y ofimáticos.
+                        </li>
+                    </ul>
+                    <a><button class="visualizar fpm" data-key="btn-fpm">Visualizar</button></a>
+                </div>
+                <div class="separacion2"></div>
+                <div class="edu">
+                    <h4 data-key="eso">Educación Secundaria para Adultos · ESO</h4>
+                    <ul>
+                        <li data-key="eso-institute">FPA El Manantial | 2022 - 2023 | Elche, Alicante</li>
+                        <li data-key="eso-desc">
+                            Obtención del título oficial de Educación Secundaria
+                            Obligatoria para adultos, acreditando competencias
+                            fundamentales para la formación y el acceso al mercado laboral.
+                        </li>
+                    </ul>
+                    <a><button class="visualizar eso" data-key="btn-eso">Visualizar</button></a>
+                </div>
+            </article>
+            <article class="cursos">
+                <h3 data-key="subtitle2-formacion">Cursos y Certificaciones</h3>
+                <div class="course">
+                    <h4 data-key="jca-title">Junior Cybersecurity Analyst Career</h4>
+                    <div class="curso">
+                        <ul>
+                            <li data-key="jca-institute">Cisco Networking Academy | 2025 - 2025 | Online</li>
+                            <li data-key="jca-desc">
+                                Formación orientada a reforzar y ampliar conocimientos
+                                en seguridad informática, profundizando en la protección
+                                de sistemas y redes, detección de amenazas, análisis
+                                de vulnerabilidades y aplicación de buenas prácticas
+                                de ciberseguridad en entornos reales.
+                            </li>
+                        </ul>
+                    </div>
+                    <a><button class="visualizar margen jcac" data-key="btn-jcac">Ver Certificado</button></a>
+                </div>
+                <div class="separacion4"></div>
+                <div class="course">
+                    <h4 data-key="ntc-title">Network Technician Career</h4>
+                    <div class="curso">
+                        <ul>
+                            <li data-key="ntc-institute">Cisco Networking Academy | 2025 - 2025 | Online</li>
+                            <li data-key="ntc-desc">
+                                Formación centrada en la instalación, configuración y
+                                mantenimiento de redes, abordando direccionamiento IP,
+                                switching y routing, resolución de incidencias de
+                                conectividad, fundamentos de protocolos de red y
+                                aplicación de buenas prácticas para garantizar
+                                rendimiento, estabilidad y seguridad en entornos
+                                profesionales.
+                            </li>
+                        </ul>
+                    </div>
+                    <a><button class="visualizar margen ntc" data-key="btn-ntc">Ver Certificado</button></a>
+                </div>
+                <div class="separacion5"></div>
+                <div class="course">
+                    <h4 data-key="efi2-title">English For IT 2</h4>
+                    <div class="curso">
+                        <ul>
+                            <li data-key="efi2-institute">Cisco Networking Academy | 2025 - 2025 | Online</li>
+                            <li data-key="efi2-desc">
+                                Desarrollo de competencias lingüísticas en inglés
+                                técnico aplicado a IT, enfocadas en terminología
+                                profesional, documentación técnica, comunicación
+                                en entornos tecnológicos, comprensión de manuales,
+                                procedimientos, y contextos laborales internacionales
+                                dentro del sector informático.
+                            </li>
+                        </ul>
+                    </div>
+                    <a><button class="visualizar margen efi2" data-key="btn-efi2">Ver Certificado</button></a>
+                </div>
+                <div class="separacion6"></div>
+            </article>
+        </section>
+        <section id="experiencia">
+            <h2 data-key="title-experiencia">Experiencia</h2>
+            <div class="exp">
+                <h4 data-key="exp-title">Técnico en Diseño y Mantenimiento Web</h4>
+                <ul>
+                    <li data-key="exp-company">Neuric · Elche, Alicante | feb. 2025 - jun. 2025 | Prácticas Modalidad Mixta</li>
+                    <li class="parrafo" data-key="exp-desc">
+                        Durante mis prácticas de Grado Medio en Neuric,
+                        trabajé con hostings y desarrollé sitios web
+                        usando WordPress y Elementor. Diseñé páginas
+                        aplicando CSS y JavaScript, gestioné numerosos
+                        plugins, tanto para tiendas online como para
+                        diseño en bloques y seguridad, asegurando el
+                        mantenimiento, la configuración y la protección
+                        de los sitios.
+                    </li>
+                    <li class="strong">
+                        <span data-key="exp-projects">Proyectos de empresa:</span>
+                        <a href="https://neuric.es/" rel="noopener noreferrer" target="_blank">neuric.es</a>
+                        <a href="https://delecion17q12.es/" rel="noopener noreferrer" target="_blank">delecion17q12.es</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer id="contacto">
+        <h2 data-key="contactos">Contacto</h2>
+        <div class="contacto">
+            <ul>
+                <li>
+                    <a href="/proyectos" target="_blank" rel="noopener noreferrer">
+                        <button class="projects">
+                            <svg><use href="/sources/svgs/sprite.svg#dashboard"></use></svg>
+                            <span data-key="proyectos">Proyectos</span>
+                        </button>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/cartorcas" target="_blank" rel="noopener noreferrer">
+                        <button class="linkedin">
+                            <svg><use href="/sources/svgs/sprite.svg#linkedin"></use></svg>
+                            LinkedIn
+                        </button>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/CarlostcDev" target="_blank" rel="noopener noreferrer">
+                        <button class="github">
+                            <svg><use href="/sources/svgs/sprite.svg#github"></use></svg>
+                            GitHub
+                        </button>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:carlostccarlos2003@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <button class="email">
+                            <svg><use href="/sources/svgs/sprite.svg#email"></use></svg>
+                            Email
+                        </button>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="tel:+34664637295" target="_blank" rel="noopener noreferrer">
+                        <button class="phone">
+                            <svg><use href="/sources/svgs/sprite.svg#phone"></use></svg>
+                            <span data-key="tel">Teléfono</span>
+                        </button>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://wa.me/+34664637295" target="_blank" rel="noopener noreferrer">
+                        <button class="whatsapp">
+                            <svg><use href="/sources/svgs/sprite.svg#whatsapp"></use></svg>
+                            WhatsApp
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p data-key="copy">&copy; 2026 CarlostcDev · Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
