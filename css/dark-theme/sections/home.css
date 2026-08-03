@@ -1,0 +1,113 @@
+#rol {
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    height: 100vh;
+    min-height: 900px;
+    position: relative;
+    overflow: hidden;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../../sources/backgrounds/hero/background-hero-blue.webp") no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(0px) brightness(50%);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+#home .home-container {
+    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    width: 900px;
+    height: 450px;
+    position: relative;
+    background-color: #1111117C;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--color-box-shadow-inset);
+}
+
+#home .home-content {
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+    margin: 0 0 0 30px;
+}
+
+#home .home-content p {
+    font-size: 1.5rem;
+    font-weight: 1800;
+}
+
+#home .home-content .fade, #home .home-content .name {
+    font-weight: 1000;
+    color: var(--color-secundario);
+    font-size: 1.7rem
+}
+
+#home .home-content button {
+    padding: 15px 40px;
+    border-radius: var(--border-radius-general);
+    background-color: #000000A3;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--transition-general);
+    font-size: 1em;
+    border: var(--color-border);
+    box-shadow: none;
+    width: 200px;
+}
+
+#home .home-content button:hover {
+    border: 3px solid transparent;
+    background-color: var(--color-secundario);
+    box-shadow: 10px 10px 0 #00a6ff;
+}
+
+#home .home-content a {
+    margin-top: 20%;
+    width: 200px;
+}
+
+#home .profile-photo {
+    margin: 0 40px 0 80px;
+    padding: 5px;
+    border-radius: var(--border-radius-large);
+    background: conic-gradient(#a0eaff, #70dfff, #40d4ff, #10c9ff, #009fff, #0157cc, #10c9ff, #70dfff, #a0eaff);
+    transition: transform var(--transition-general);
+}
+
+#home .profile-photo img {
+    display: block;
+    max-width: 300px;
+    border-radius: 75px 0;
+    transition: all var(--transition-general);
+}
+
+#home .profile-photo:hover {
+    transform: scale(1.1);
+}
