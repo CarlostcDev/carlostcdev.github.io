@@ -125,7 +125,7 @@
       "i18n": "footer.location"
     },
     {
-      "icon": "email",
+      "icon": "mail",
       "text": "carlostccarlos2003@gmail.com",
       "href": "mailto:carlostcarlos2003@gmail.com",
       "i18n": null
@@ -135,6 +135,122 @@
       "text": "Curriculum",
       "href": "./sources/profile/cv/CV_Carlos_Tormo_Castano",
       "i18n": "footer.cv"
+    },
+    {
+      "icon": "clock",
+      "text": "Hora local:",
+      "href": "https://time.is/Elche",
+      "i18n": "footer.localtime"
+    }
+  ],
+
+  "education": [
+    {
+      "title": "Desarrollo de Aplicaciones Multiplataforma",
+      "school": "IES Severo Ochoa",
+      "location": "Elche, España",
+      "description": {
+        "phrase1": "Desarrollo de aplicaciones multiplataforma utilizando Java, aplicando programación orientada a objetos, estructuras de datos y patrones de diseño.",
+        "phrase2": "Implementación de interfaces gráficas con JavaFX y desarrollo de aplicaciones web con HTML, CSS y JavaScript, incluyendo el consumo e integración de APIs REST.",
+        "phrase3": "Diseño, modelado y gestión de bases de datos relacionales y NoSQL mediante MariaDB, PostgreSQL, MongoDB y Redis.",
+        "phrase4": "Control de versiones con Git y aplicación de flujos de trabajo colaborativos.",
+        "phrase5": "Análisis y diseño de soluciones software mediante UML, junto con la aplicación de principios de Clean Code, buenas prácticas de documentación y metodologías de desarrollo para la creación de aplicaciones mantenibles y escalables."
+      },
+      "range-years": "2025 - Actualidad",
+      "technologies": [
+        { "name": "Java", "class": "java" },
+        { "name": "JavaScript", "class": "javascript" },
+        { "name": "HTML", "class": "html" },
+        { "name": "CSS", "class": "css" },
+        { "name": "MariaDB", "class": "mariadb" },
+        { "name": "PL/SQL", "class": "pl-sql" },
+        { "name": "MongoDB", "class": "mongodb" },
+        { "name": "Redis", "class": "redis" },
+        { "name": "JavaFX", "class": "javafx" },
+        { "name": "Shell Scripting", "class": "shell-scripting" },
+        { "name": "JUnit", "class": "junit" },
+        { "name": "Git", "class": "git" }
+      ]
+    },
+    {
+      "title": "Sistemas Microinformáticos y Redes",
+      "school": "IES Severo Ochoa",
+      "location": "Elche, España",
+      "description": {
+        "phrase1": "Configuración y administración de servidores Linux y Windows, implementando y gestionando servicios de red como DHCP, DNS, HTTP y FTP.",
+        "phrase2": "Diseño y administración de infraestructuras de red y entornos virtualizados mediante VirtualBox.",
+        "phrase3": "Realización de diagnósticos de hardware, pruebas de estrés y análisis de rendimiento utilizando herramientas como MemTest86, Cinebench y 3DMark.",
+        "phrase4": "Monitorización y análisis del tráfico de red con Wireshark, junto con la implementación de medidas de ciberseguridad mediante firewalls, soluciones antivirus y herramientas de análisis de vulnerabilidades como OpenVAS.",
+        "phrase5": "Administración de sistemas operativos, entornos de servidor, herramientas de desarrollo e infraestructuras informáticas."
+      },
+      "range-years": "2023-2025",
+      "technologies": [
+        { "name": "nftables", "class": "nftables" },
+        { "name": "Linux", "class": "linux" },
+        { "name": "Wireshark", "class": "wireshark" },
+        { "name": "Windows Server", "class": "windows-server" },
+        { "name": "DHCP Server", "class": "dhcp-server" },
+        { "name": "HTTP Server", "class": "http-server" },
+        { "name": "DNS Server", "class": "dns-server" },
+        { "name": "Nginx", "class": "nginx" },
+        { "name": "Shell Scripting", "class": "shell-scripting" },
+        { "name": "Docker", "class": "docker" },
+        { "name": "VirtualBox", "class": "virtualbox" }
+      ]
+    }
+  ],
+
+  "experience": [
+    {
+      "title": "Desarrollador Full-Stack en Prácticas",
+      "company": "NTT DATA",
+      "location": "San Juan, España",
+      "description": {
+        "phrase1": "Desarrollo de aplicaciones backend utilizando Java 18 y Spring Boot, implementando APIs REST, autenticación y autorización con Spring Security, así como pruebas unitarias mediante JUnit y Mockito.",
+        "phrase2": "Desarrollo de aplicaciones frontend con Angular, TypeScript, HTML y CSS, aplicando prácticas modernas de desarrollo web y herramientas del ecosistema Node.js.",
+        "phrase3": "Gestión de dependencias, compilación y automatización de proyectos mediante Maven, siguiendo flujos de desarrollo estructurados.",
+        "phrase4": "Diseño, implementación y gestión de la capa de persistencia utilizando PostgreSQL.",
+        "phrase5": "Control de versiones con Git y colaboración dentro de un entorno profesional de desarrollo de software.",
+        "phrase6": "Integración de herramientas y agentes basados en inteligencia artificial para optimizar los flujos de desarrollo y aumentar la productividad."
+      },
+      "range-years": "Abril 2026 - Junio 2026",
+      "technologies": [
+        { "name": "Java", "class": "java" },
+        { "name": "Spring Boot", "class": "spring-boot" },
+        { "name": "Spring Security", "class": "spring-security" },
+        { "name": "Angular", "class": "angular" },
+        { "name": "TypeScript", "class": "typescript" },
+        { "name": "HTML", "class": "html" },
+        { "name": "CSS", "class": "css" },
+        { "name": "PostgreSQL", "class": "postgresql" },
+        { "name": "JUnit", "class": "junit" },
+        { "name": "Mockito", "class": "mockito" },
+        { "name": "Maven", "class": "maven" },
+        { "name": "Node.js", "class": "node-js" },
+        { "name": "Git", "class": "git" },
+        { "name": "IA", "class": "artificial-intelligence" }
+      ]
+    },
+    {
+      "title": "Desarrollador Web",
+      "company": "Neuric",
+      "location": "Elche, España",
+      "description": {
+        "phrase1": "Desarrollo, personalización y optimización de sitios web utilizando WordPress en un entorno profesional.",
+        "phrase2": "Creación de interfaces y funcionalidades avanzadas mediante Elementor y WooCommerce, adaptando soluciones a las necesidades de cada proyecto.",
+        "phrase3": "Desarrollo de componentes y personalizaciones con HTML, CSS y JavaScript, adquiriendo una sólida base en diseño, maquetación y estilos avanzados con CSS.",
+        "phrase4": "Aplicación de técnicas de optimización del rendimiento, seguridad web y buenas prácticas para mejorar la experiencia de usuario y el posicionamiento de los sitios web.",
+        "phrase5": "Administración básica de sistemas informáticos y soporte técnico dentro del entorno empresarial."
+      },
+      "range-years": "Febrero 2025 - Mayo 2025",
+      "technologies": [
+        { "name": "WordPress", "class": "wordpress" },
+        { "name": "Elementor", "class": "elementor" },
+        { "name": "WooCommerce", "class": "woocommerce" },
+        { "name": "HTML", "class": "html" },
+        { "name": "CSS", "class": "css" },
+        { "name": "JavaScript", "class": "javascript" }
+      ]
     }
   ]
 }

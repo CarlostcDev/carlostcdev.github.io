@@ -1,67 +1,64 @@
 import config from "../config.js";
 
 const buttons = document.getElementById("buttons");
-for (const social of config.social) {
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = social.href;
-    a.target = "_blank";
-    a.rel = "noopener noreferrer";
-    const button = document.createElement("button");
-    button.classList.add(social.class);
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
-    use.setAttribute("href", `/sources/svgs/sprite.svg#${social.icon}`);
-    svg.append(use);
-    button.append(svg);
-
-    if (social.i18n) {
-        const span = document.createElement("span");
-        span.dataset.i18n = social.i18n;
-        span.textContent = social.text;
-        button.appendChild(span);
-    } else {
-        button.append(document.createTextNode(social.text));
-    }
-
-    a.appendChild(button);
-    li.appendChild(a);
-    buttons.appendChild(li);
+buttons.innerHTML = config.social.map(social => `
+    <li>
+        <a href="${social.href}" target="_blank" rel="noopener noreferrer">
+            <button class="${social.class}">
+                <svg><use href="/sources/svgs/sprite.svg#${social.icon}"></use></svg>
+                ${social.i18n
+    ? `<span data-i18n="${social.i18n}">${social.text}</span>`
+    : social.text
 }
+            </button>
+        </a>
+    </li>
+`).join("");
 
 const info = document.getElementById("info");
-for (const inf of config.info) {
-    const li = document.createElement("li");
-    li.classList.add("list");
-    const a = document.createElement("a");
-    let language = localStorage.getItem("portfolio.language");
-    if (inf.i18n === "footer.cv") a.href = inf.href + "_" + (language ? language.toUpperCase() : "EN") + ".pdf";
-    else a.href = inf.href;
-    a.target = "_blank";
-    a.rel = "noopener noreferrer";
-    a.classList.add("source");
-    if (inf.i18n) a.dataset.i18n = inf.i18n;
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
-    use.setAttribute("href", `/sources/svgs/sprite.svg#${inf.icon}`);
-    svg.classList.add("icon")
-    svg.append(use);
-    a.textContent = inf.text;
-    li.appendChild(svg);
-    li.appendChild(a);
-    info.appendChild(li);
-}
+const language = localStorage.getItem("portfolio.language") || "EN";
 
-function dateToYear(timeZone) {
-    try {
-        return new Date().toLocaleDateString('es-ES', {timeZone: timeZone, year: 'numeric'});
-    } catch {
-        return new Date().getFullYear().toString();
-    }
-}
+info.innerHTML = config.info.map(inf => {
+    const href = inf.i18n === "footer.cv"
+        ? `${inf.href}_${language.toUpperCase()}.pdf`
+        : inf.href;
+
+    const i18nAttr = inf.i18n ? `data-i18n="${inf.i18n}"` : "";
+    const localTimeSpan = inf.i18n === "footer.localtime" ? '<span id="localtime"></span>' : '';
+
+    return `
+        <li class="list">
+            <svg class="icon"><use href="/sources/svgs/sprite.svg#${inf.icon}"></use></svg>
+            <a href="${href}" target="_blank" rel="noopener noreferrer" class="source" ${i18nAttr}>
+                ${inf.text}
+            </a>
+            ${localTimeSpan}
+        </li>
+    `;
+}).join("");
 
 const year = document.getElementById("year");
 if (year) {
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    year.textContent = dateToYear(timezone);
+    try {
+        year.textContent = new Date().toLocaleDateString('es-ES', {timeZone: timezone, year: 'numeric'});
+    } catch {
+        year.textContent = new Date().getFullYear().toString();
+    }
+}
+
+const localTimeElement = document.getElementById("localtime");
+if (localTimeElement) {
+    const timeFormatter = new Intl.DateTimeFormat("es-ES", {
+        timeZone: "Europe/Madrid",
+        hour: "2-digit",
+        minute: "2-digit"
+    });
+
+    const updateTime = () => {
+        localTimeElement.textContent = timeFormatter.format(new Date());
+    };
+
+    updateTime();
+    setInterval(updateTime, 1000);
 }

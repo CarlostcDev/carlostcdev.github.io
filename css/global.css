@@ -7,6 +7,9 @@
     --font-general: "Google Sans", "Open Sans", "Google Sans Flex", system-ui;
     --font-code: "Google Sans Code", "Source Code Pro", monospace;
     --light: #ffffff;
+    --error: #b3261e;
+    --warning: #ff7f7d;
+    --danger: #7c0515;
 }
 
 html[lang="zh"] {

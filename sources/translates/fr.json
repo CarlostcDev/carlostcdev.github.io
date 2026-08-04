@@ -51,6 +51,9 @@
     "h2": "Contact",
     "projects": "Projets",
     "phone": "Téléphone",
-    "copyright": "Tous droits non réservés."
+    "copyright": "Tous droits non réservés.",
+    "location": "Elche, Espagne",
+    "cv": "CV",
+    "localtime": "Heure locale :"
   }
 }

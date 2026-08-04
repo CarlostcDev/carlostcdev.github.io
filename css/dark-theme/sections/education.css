@@ -1,0 +1,43 @@
+#education {
+    background: var(--primary);
+    padding: 20px;
+    width: 100%;
+    margin-top: 300px;
+}
+
+#education .h2 {
+    font-size: 2em;
+    width: 1200px;
+    margin: 50px auto -20px;
+    padding-left: 30px;
+    border-radius: 60px 0 0 0;
+    font-weight: 600;
+    height: 50px;
+    border-width: 3px 3px 0 3px;
+    border-color: var(--secondary);
+    border-style: solid;
+    background: var(--secondary);
+    box-shadow: 0 5px 10px rgb(0 5 7 / 0.83);
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+#education h2 {
+    font-size: 1em;
+}
+
+#education .h2 * {
+    color: var(--black);
+}
+
+#education #courses {
+    justify-content: center;
+    margin: 20px auto 60px;
+    width: 1200px;
+    border-width: 0 3px 3px 3px;
+    border-style: solid;
+    border-color: var(--secondary);
+    padding: 50px;
+    border-radius: 0 0 60px 0;
+}

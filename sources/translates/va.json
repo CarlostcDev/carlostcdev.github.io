@@ -51,6 +51,9 @@
     "h2": "Contacte",
     "projects": "Projectes",
     "phone": "Telèfon",
-    "copyright": "Tots els drets no reservats."
+    "copyright": "Tots els drets no reservats.",
+    "location": "Elx, Espanya",
+    "cv": "Currículum",
+    "localtime": "Hora local:"
   }
 }

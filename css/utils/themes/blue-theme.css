@@ -4,5 +4,6 @@
     --gray: #283337;
     --dark: #1a1f22;
     --black: #000a0c;
+    --transparent: color-mix(in srgb, var(--black) 70%, transparent);
     --background-image: url("../../../sources/backgrounds/hero/background-hero-blue.webp");
 }

@@ -1,16 +1,16 @@
-#rol {
+#home #roles {
     display: inline-block;
     transition: all 0.5s ease-in-out;
     opacity: 1;
     transform: translateY(0);
 }
 
-.fade-out {
+#home .fade-out {
     opacity: 0;
     transform: translateY(10px);
 }
 
-.fade-in {
+#home .fade-in {
     opacity: 0;
     transform: translateY(-10px);
 }
@@ -35,9 +35,8 @@
     width: 900px;
     height: 450px;
     position: relative;
-    background-color: #1111117C;
+    background-color: var(--transparent);
     border-radius: 80px 0;
-    box-shadow: inset 0 4px 12px #0000003F;
 }
 
 #home .home-content {
@@ -54,27 +53,27 @@
 
 #home .home-content .fade, #home .home-content .name {
     font-weight: 1000;
-    color: #2cc8dd;
+    color: var(--primary);
     font-size: 1.7rem
 }
 
 #home .home-content button {
     padding: 15px 40px;
     border-radius: 15px 0;
-    background-color: #000000A3;
-    font-weight: 800;
+    background-color: var(--primary);
+    font-weight: 900;
     cursor: pointer;
     transition: all 0.5s;
-    font-size: 1em;
-    border: 3px solid white;
+    font-size: 1.2em;
+    border: none;
     box-shadow: none;
     width: 200px;
+    color: var(--black);
 }
 
 #home .home-content button:hover {
-    border: 3px solid transparent;
-    background-color: #2cc8dd;
-    box-shadow: 10px 10px 0 #00a6ff;
+    background-color: var(--black);
+    color: var(--primary);
 }
 
 #home .home-content a {
@@ -86,8 +85,8 @@
     margin: 0 40px 0 80px;
     padding: 5px;
     border-radius: 80px 0;
-    background: #2cc8dd;
-    transition: transform 0.5s;
+    background: var(--primary);
+    transition: all 0.5s;
 }
 
 #home .profile-photo img {
@@ -98,5 +97,7 @@
 }
 
 #home .profile-photo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    cursor: pointer;
+    background: var(--black);
 }

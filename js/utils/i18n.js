@@ -211,7 +211,7 @@ function setStoredLanguage(language) {
         localStorage.setItem(storageKey, language);
         const cv = document.querySelector('[data-i18n="footer.cv"]');
         const info = config.info.find(item => item.i18n === "footer.cv");
-        cv.href = `${info.href}_${language.toUpperCase()}.pdf`;
+        if (cv && info) cv.href = `${info.href}_${language.toUpperCase()}.pdf`;
     } catch {
         return null;
     }

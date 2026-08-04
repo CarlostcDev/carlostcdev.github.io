@@ -51,6 +51,9 @@
     "h2": "Contact",
     "projects": "Projects",
     "phone": "Phone",
-    "copyright": "All rights unreserved."
+    "copyright": "All rights unreserved.",
+    "location": "Elche, Spain",
+    "cv": "Resume",
+    "localtime": "Local time:"
   }
 }
