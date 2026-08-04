@@ -1,9 +1,7 @@
-export function initMenu() {
-    const hamburger = document.getElementById("menu");
-    const menu = document.querySelector(".menu-container");
+const hamburger = document.getElementById("menu");
+const menu = document.querySelector(".menu-container");
 
-    if (!hamburger || !menu) return;
-
+if (hamburger && menu) {
     hamburger.addEventListener("click", event => {
         event.stopPropagation();
         menu.classList.toggle("active");

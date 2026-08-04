@@ -1,0 +1,8 @@
+:root.orange-theme {
+    --primary: #dd512e;
+    --secondary: #953713;
+    --gray: #372d28;
+    --dark: #221d1a;
+    --black: #110603;
+    --background-image: url("../../../sources/backgrounds/hero/background-hero-orange.webp");
+}

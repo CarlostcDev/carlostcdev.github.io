@@ -44,5 +44,97 @@
     "programador",
     "administrador",
     "informático"
+  ],
+
+  "themes": [
+    "blue-theme",
+    "green-theme",
+    "orange-theme",
+    "purple-theme",
+    "maroon-theme"
+  ],
+
+  "social": [
+    {
+      "id": "projects",
+      "href": "/projects",
+      "icon": "dashboard",
+      "text": "Proyectos",
+      "i18n": "footer.projects",
+      "target": null,
+      "rel": null,
+      "class": "projects"
+    },
+    {
+      "id": "linkedin",
+      "href": "https://www.linkedin.com/in/cartorcas",
+      "icon": "linkedin",
+      "text": "LinkedIn",
+      "i18n": null,
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "class": "linkedin"
+    },
+    {
+      "id": "github",
+      "href": "https://github.com/CarlostcDev",
+      "icon": "github",
+      "text": "GitHub",
+      "i18n": null,
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "class": "github"
+    },
+    {
+      "id": "email",
+      "href": "mailto:carlostccarlos2003@gmail.com",
+      "icon": "email",
+      "text": "Email",
+      "i18n": null,
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "class": "email"
+    },
+    {
+      "id": "phone",
+      "href": "tel:+34664637295",
+      "icon": "phone",
+      "text": "Teléfono",
+      "i18n": "footer.phone",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "class": "phone"
+    },
+    {
+      "id": "whatsapp",
+      "href": "https://wa.me/34664637295",
+      "icon": "whatsapp",
+      "text": "WhatsApp",
+      "i18n": null,
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "class": "whatsapp"
+    }
+  ],
+
+  "info": [
+    {
+      "icon": "location",
+      "text": "Elche, España",
+      "href": "https://maps.app.goo.gl/VyLmG2a6jPgxPa8r8",
+      "i18n": "footer.location"
+    },
+    {
+      "icon": "email",
+      "text": "carlostccarlos2003@gmail.com",
+      "href": "mailto:carlostcarlos2003@gmail.com",
+      "i18n": null
+    },
+    {
+      "icon": "download",
+      "text": "Curriculum",
+      "href": "./sources/profile/cv/CV_Carlos_Tormo_Castano",
+      "i18n": "footer.cv"
+    }
   ]
 }

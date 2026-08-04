@@ -1,9 +1,7 @@
-export function initCarousel(initialRoles = []) {
-    const el = document.getElementById("roles");
+const el = document.getElementById("roles");
 
-    if (!el) return;
-
-    let roles = normalizeRoles(initialRoles);
+if (el) {
+    let roles = normalizeRoles(window.languageState?.roles ?? []);
     let i = 0;
 
     el.style.display = "inline-block";
@@ -23,7 +21,7 @@ export function initCarousel(initialRoles = []) {
 
     updateRole();
 
-    return setInterval(() => {
+    setInterval(() => {
         if (roles.length === 0) return;
 
         el.style.opacity = "0";

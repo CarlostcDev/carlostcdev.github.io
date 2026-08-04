@@ -5,11 +5,32 @@
     width: 100%;
 }
 
+#about-me .h2 {
+    font-size: 2em;
+    width: 1200px;
+    margin: 50px auto -20px;
+    padding-left: 30px;
+    border-radius: 60px 0 0 0;
+    font-family: "Google Sans Code", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #0e0e0e;
+    font-weight: 600;
+    height: 50px;
+    border-width: 3px 3px 0 3px;
+    border-color: #2cc8dd;
+    border-style: solid;
+    background: #2cc8dd;
+    box-shadow: 0 5px 10px rgb(0 5 7 / 0.83);
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
 #about-me h2 {
-    font-size: 2.5em;
-    border-bottom: 3px solid #00bbff;
-    margin: 50px 170px 50px 170px;
-    text-align: center;
+    font-size: 1em;
+}
+
+#about-me .h2 * {
+    color: #0e0e0e;
 }
 
 #about-me #phrases {
@@ -17,13 +38,21 @@
     grid-template-columns: repeat(3, 350px);
     gap: 30px;
     justify-content: center;
-    margin: 20px 0 60px 0;
+    margin: 20px auto 60px;
+    width: 1200px;
+    border-width: 0 3px 3px 3px;
+    border-style: solid;
+    border-color: #2cc8dd;
+    padding: 50px;
+    border-radius: 0 0 60px 0;
+    background: #0e0e0e;
+    box-shadow: 20px 20px 10px rgb(0 9 10 / 0.8);
 }
 
 #about-me #phrases .phrase {
     width: 350px;
     height: 150px;
-    background: linear-gradient(145deg, #0e0e0e, #181818);
+    background: linear-gradient(145deg, #0e0e0e, #151515);
     box-shadow: 8px 8px 20px #000000B2, -4px -4px 15px #00000000;
     border-radius: 25px 0;
     border: 3px solid #00E1FF00;
@@ -35,9 +64,9 @@
     transform: translateY(-10px) scale(1.03);
     box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.85), -8px -8px 20px rgba(0, 150, 255, 0.25);
     border-radius: 25px 0 25px 0;
-    border-color: rgba(0, 225, 255, 0.8);
-    border-left: 3px solid #00e1ff;
-    border-top: 3px solid #00bbff;
+    border-color: #2cc8dd;
+    border-left: 3px solid #2cc8dd;
+    border-top: 3px solid #2cc8dd;
     background: linear-gradient(145deg, #0a0a0a, #181818);
 }
 
@@ -73,9 +102,9 @@
         transform: translateY(-10px) scale(1.03);
         box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.85), -8px -8px 20px rgba(0, 150, 255, 0.25);
         border-radius: 25px 5px 25px 5px;
-        border-color: #00E1FFCC;
-        border-left: 3px solid #00e1ff;
-        border-top: 3px solid #00bbff;
+        border-color: #2cc8dd;
+        border-left: 3px solid #2cc8dd;
+        border-top: 3px solid #2cc8dd;
         background: linear-gradient(145deg, #0a0a0a, #181818);
     }
 }

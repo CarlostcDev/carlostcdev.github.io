@@ -20,11 +20,14 @@
                     <li><a href="#skills" data-i18n="header.skills" class="nav-item nav-item-3" id="nav-skills">Aptitudes</a></li>
                     <li><a href="#education" data-i18n="header.education" class="nav-item nav-item-4" id="nav-education">Formación</a></li>
                     <li><a href="#experience" data-i18n="header.experience" class="nav-item nav-item-5" id="nav-experience">Experiencia</a></li>
-                    <li><a href="#contact" data-i18n="header.contact" class="nav-item nav-item-6" id="nav-contact">Contacto</a></li>
+                    <li><a href="#footer" data-i18n="header.contact" class="nav-item nav-item-6" id="nav-contact">Contacto</a></li>
                 </ul>
             </div>
             <div class="lang-dropdown">
-                <button class="lang-selected" id="langSelected" type="button" aria-haspopup="listbox" aria-expanded="false"><span data-i18n="header.language">Español</span><span class="arrow" aria-hidden="true"></span></button>
+                <button class="lang-selected" id="langSelected" type="button" aria-haspopup="listbox" aria-expanded="false">
+                    <span data-i18n="header.language" class="language">Español</span>
+                    <span class="arrow" aria-hidden="true"></span>
+                </button>
                 <ul class="lang-options" id="langOptions" role="listbox" hidden></ul>
             </div>
         </nav>
@@ -46,69 +49,17 @@
         </section>
 
         <section id="about-me">
-            <h2 data-i18n="about-me.h2">Sobre mí</h2>
+            <div class="h2"><span>C:\CarlostcDev\</span><h2 data-i18n="about-me.h2">Sobre mí</h2><span>&gt;</span></div>
             <div id="phrases"></div>
         </section>
     </main>
 
     <footer id="footer">
         <h2 data-i18n="footer.h2">Contacto</h2>
-        <div class="contacto">
-            <ul>
-                <li>
-                    <a href="/proyectos">
-                        <button class="projects">
-                            <svg><use href="/sources/svgs/sprite.svg#dashboard"></use></svg>
-                            <span data-i18n="footer.projects">Proyectos</span>
-                        </button>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.linkedin.com/in/cartorcas" target="_blank" rel="noopener noreferrer">
-                        <button class="linkedin">
-                            <svg><use href="/sources/svgs/sprite.svg#linkedin"></use></svg>
-                            LinkedIn
-                        </button>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://github.com/CarlostcDev" target="_blank" rel="noopener noreferrer">
-                        <button class="github">
-                            <svg><use href="/sources/svgs/sprite.svg#github"></use></svg>
-                            GitHub
-                        </button>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="mailto:carlostccarlos2003@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <button class="email">
-                            <svg><use href="/sources/svgs/sprite.svg#email"></use></svg>
-                            Email
-                        </button>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="tel:+34664637295" target="_blank" rel="noopener noreferrer">
-                        <button class="phone">
-                            <svg><use href="/sources/svgs/sprite.svg#phone"></use></svg>
-                            <span data-i18n="footer.phone">Teléfono</span>
-                        </button>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://wa.me/+34664637295" target="_blank" rel="noopener noreferrer">
-                        <button class="whatsapp">
-                            <svg><use href="/sources/svgs/sprite.svg#whatsapp"></use></svg>
-                            WhatsApp
-                        </button>
-                    </a>
-                </li>
-            </ul>
+        <div class="contact">
+            <ul id="info"></ul>
+            <ul id="buttons"></ul>
+            <ul id="stats"></ul>
         </div>
         <div class="copyright">
             <p>&copy; &nbsp;</p><p data-i18n="footer.year" id="year"></p><p>&nbsp;CarlostcDev&nbsp;&middot;&nbsp;</p><p data-i18n="footer.copyright">Todos los derechos no reservados.</p>

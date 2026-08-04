@@ -1,0 +1,8 @@
+:root.blue-theme {
+    --primary: #2cc8dd;
+    --secondary: #138797;
+    --gray: #283337;
+    --dark: #1a1f22;
+    --black: #000a0c;
+    --background-image: url("../../../sources/backgrounds/hero/background-hero-blue.webp");
+}

@@ -4,25 +4,58 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-    background: linear-gradient(90deg, rgba(0, 166, 153, 0.07), rgba(0, 52, 152, 0.06));
+    background: var(--primary);
     margin-top: 100px;
-    box-shadow: 0 -5px 20px #070707;
 }
 
-#footer ul {
+#footer .contact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20%;
+    margin: 0 0 50px 0;
+}
+
+#footer #buttons {
+    width: 500px;
+}
+
+#footer #buttons {
     flex-wrap: wrap;
     list-style: none;
     display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
     gap: 20px;
+}
+
+#footer #info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#footer #info .icon {
+    width: 30px;
+    fill: var(--black);
+}
+
+#footer #info .list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+}
+
+#footer #info .list .source {
+    color: var(--black);
+    font-weight: bold;
+
 }
 
 #footer h2 {
     font-size: 2em;
     margin: 50px auto 30px;
     text-align: center;
-    border-bottom: 2px solid #00bbff;
     width: 50%;
     padding: 10px;
 }
@@ -35,7 +68,7 @@
     font-weight: bold;
     cursor: pointer;
     font-size: 1.2em;
-    border: 3px solid #0E0E0EE8;
+    border: 3px solid var(--dark);
 }
 
 #footer button:hover {
@@ -109,12 +142,12 @@
 #footer button svg {
     width: 20px;
     height: 20px;
-    fill: #ffffff;
+    fill: var(--light);
     flex-shrink: 0;
 }
 
 .copyright {
-    background-color: #090909;
+    background-color: var(--black);
     padding: 10px;
     display: flex;
     justify-content: center;

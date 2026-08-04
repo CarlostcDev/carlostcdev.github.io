@@ -1,35 +1,12 @@
-@import url("dark-theme/shared/header.css");
-@import url("dark-theme/shared/footer.css");
-@import url("dark-theme/sections/home.css");
-@import url("dark-theme/sections/about-me.css");
-@import url("light-theme/sections/home.css");
-@import url("light-theme/sections/about-me.css");
-@import url("light-theme/shared/header.css");
-@import url("light-theme/shared/footer.css");
-@import url("responsive/mobile.css");
-@import url("responsive/tablet.css");
-@import url("responsive/ultrawide.css");
-@import url("utils/fonts.css");
+@import url("dark-theme/index.css");
+@import url("light-theme/index.css");
+@import url("responsive/index.css");
+@import url("utils/index.css");
 
 :root {
-    --color-blanco: #ffffff;
-    --color-principal: #00bbff;
-    --color-secundario: #00e1ff;
-    --color-fondo: #0e0e0e;
-    --color-header: #0E0E0EFF;
-    --color-header-shadow: #000000C6;
-    --color-body-shadow: #000000B2;
-    --color-hover-bg: #0c1421;
-    --color-border: 3px solid var(--color-principal);
-    --color-text-grad1: #00a6ff;
-    --color-text-grad2: #008cff;
-    --color-text-grad3: #009dff;
-    --color-box-shadow-inset: inset 0 4px 12px #0000003F;
-    --border-radius-general: 15px 0;
-    --border-radius-large: 80px 0;
-    --transition-general: 0.5s;
     --font-general: "Google Sans", "Open Sans", "Google Sans Flex", system-ui;
     --font-code: "Google Sans Code", "Source Code Pro", monospace;
+    --light: #ffffff;
 }
 
 html[lang="zh"] {
@@ -61,16 +38,15 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-variation-settings: "GRAD" 0;
-    color: var(--color-blanco);
+    color: white;
 }
 
 ::selection {
-    background-color: var(--color-principal);
-    color: var(--color-blanco);
+    background-color: var(--black);
+    color: var(--primary);
 }
 
 body {
-    background-color: var(--color-fondo);
     line-height: 1.6;
+    background: var(--black) var(--background-image) center center / cover no-repeat fixed;
 }
