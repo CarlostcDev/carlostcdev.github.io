@@ -57,7 +57,7 @@
   "social": [
     {
       "id": "projects",
-      "href": "/projects",
+      "href": "./projects",
       "icon": "dashboard",
       "text": "Proyectos",
       "i18n": "footer.projects",
@@ -146,17 +146,42 @@
 
   "education": [
     {
-      "title": "Desarrollo de Aplicaciones Multiplataforma",
-      "school": "IES Severo Ochoa",
-      "location": "Elche, España",
-      "description": {
-        "phrase1": "Desarrollo de aplicaciones multiplataforma utilizando Java, aplicando programación orientada a objetos, estructuras de datos y patrones de diseño.",
-        "phrase2": "Implementación de interfaces gráficas con JavaFX y desarrollo de aplicaciones web con HTML, CSS y JavaScript, incluyendo el consumo e integración de APIs REST.",
-        "phrase3": "Diseño, modelado y gestión de bases de datos relacionales y NoSQL mediante MariaDB, PostgreSQL, MongoDB y Redis.",
-        "phrase4": "Control de versiones con Git y aplicación de flujos de trabajo colaborativos.",
-        "phrase5": "Análisis y diseño de soluciones software mediante UML, junto con la aplicación de principios de Clean Code, buenas prácticas de documentación y metodologías de desarrollo para la creación de aplicaciones mantenibles y escalables."
+      "title": {
+        "i18n": "education.dam.title",
+        "text": "Desarrollo de Aplicaciones Multiplataforma"
       },
-      "range-years": "2025 - Actualidad",
+      "subtitle": {
+        "i18n": "education.dam.subtitle",
+        "text": "Grado Superior de FP"
+      },
+      "school": "IES Severo Ochoa",
+      "location": {
+        "i18n": "education.dam.location",
+        "text": "Elche, España"
+      },
+      "description": [
+        {
+          "i18n": "education.dam.phrase1",
+          "text": "Desarrollo de aplicaciones multiplataforma utilizando Java, aplicando programación orientada a objetos, estructuras de datos y patrones de diseño."
+        },
+        {
+          "i18n": "education.dam.phrase2",
+          "text": "Implementación de interfaces gráficas con JavaFX y desarrollo de aplicaciones web con HTML, CSS y JavaScript, incluyendo el consumo e integración de APIs REST."
+        },
+        {
+          "i18n": "education.dam.phrase3",
+          "text": "Diseño, modelado y gestión de bases de datos relacionales y NoSQL mediante MariaDB, PostgreSQL, MongoDB y Redis."
+        },
+        {
+          "i18n": "education.dam.phrase4",
+          "text": "Control de versiones con Git y aplicación de flujos de trabajo colaborativos."
+        },
+        {
+          "i18n": "education.dam.phrase5",
+          "text": "Análisis y diseño de soluciones software mediante UML, junto con la aplicación de principios de Clean Code, buenas prácticas de documentación y metodologías de desarrollo para la creación de aplicaciones mantenibles y escalables."
+        }
+      ],
+      "range-years": "2025 - 2027",
       "technologies": [
         { "name": "Java", "class": "java" },
         { "name": "JavaScript", "class": "javascript" },
@@ -169,20 +194,46 @@
         { "name": "JavaFX", "class": "javafx" },
         { "name": "Shell Scripting", "class": "shell-scripting" },
         { "name": "JUnit", "class": "junit" },
-        { "name": "Git", "class": "git" }
+        { "name": "Git", "class": "git" },
+        { "name": "AWS", "class": "aws" }
       ]
     },
     {
-      "title": "Sistemas Microinformáticos y Redes",
-      "school": "IES Severo Ochoa",
-      "location": "Elche, España",
-      "description": {
-        "phrase1": "Configuración y administración de servidores Linux y Windows, implementando y gestionando servicios de red como DHCP, DNS, HTTP y FTP.",
-        "phrase2": "Diseño y administración de infraestructuras de red y entornos virtualizados mediante VirtualBox.",
-        "phrase3": "Realización de diagnósticos de hardware, pruebas de estrés y análisis de rendimiento utilizando herramientas como MemTest86, Cinebench y 3DMark.",
-        "phrase4": "Monitorización y análisis del tráfico de red con Wireshark, junto con la implementación de medidas de ciberseguridad mediante firewalls, soluciones antivirus y herramientas de análisis de vulnerabilidades como OpenVAS.",
-        "phrase5": "Administración de sistemas operativos, entornos de servidor, herramientas de desarrollo e infraestructuras informáticas."
+      "title": {
+        "i18n": "education.smr.title",
+        "text": "Sistemas Microinformáticos y Redes"
       },
+      "subtitle": {
+        "i18n": "education.smr.subtitle",
+        "text": "Grado Medio de FP"
+      },
+      "school": "IES Severo Ochoa",
+      "location": {
+        "i18n": "education.smr.location",
+        "text": "Elche, España"
+      },
+      "description": [
+        {
+          "i18n": "education.smr.phrase1",
+          "text": "Configuración y administración de servidores Linux y Windows, implementando y gestionando servicios de red como DHCP, DNS, HTTP y FTP."
+        },
+        {
+          "i18n": "education.smr.phrase2",
+          "text": "Diseño y administración de infraestructuras de red y entornos virtualizados mediante VirtualBox."
+        },
+        {
+          "i18n": "education.smr.phrase3",
+          "text": "Realización de diagnósticos de hardware, pruebas de estrés y análisis de rendimiento utilizando herramientas como MemTest86, Cinebench y 3DMark."
+        },
+        {
+          "i18n": "education.smr.phrase4",
+          "text": "Monitorización y análisis del tráfico de red con Wireshark, junto con la implementación de medidas de ciberseguridad mediante firewalls, soluciones antivirus y herramientas de análisis de vulnerabilidades como OpenVAS."
+        },
+        {
+          "i18n": "education.smr.phrase5",
+          "text": "Administración de sistemas operativos, entornos de servidor, herramientas de desarrollo e infraestructuras informáticas."
+        }
+      ],
       "range-years": "2023-2025",
       "technologies": [
         { "name": "nftables", "class": "nftables" },
@@ -195,7 +246,8 @@
         { "name": "Nginx", "class": "nginx" },
         { "name": "Shell Scripting", "class": "shell-scripting" },
         { "name": "Docker", "class": "docker" },
-        { "name": "VirtualBox", "class": "virtualbox" }
+        { "name": "VirtualBox", "class": "virtualbox" },
+        { "name": "AWS", "class": "aws" }
       ]
     }
   ],

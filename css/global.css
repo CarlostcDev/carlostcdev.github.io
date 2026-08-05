@@ -7,6 +7,7 @@
     --font-general: "Google Sans", "Open Sans", "Google Sans Flex", system-ui;
     --font-code: "Google Sans Code", "Source Code Pro", monospace;
     --light: #ffffff;
+    --dark-gray: #0d0c0f;
     --error: #b3261e;
     --warning: #ff7f7d;
     --danger: #7c0515;

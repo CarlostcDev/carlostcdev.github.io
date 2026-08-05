@@ -55,5 +55,28 @@
     "location": "Elche, Espagne",
     "cv": "CV",
     "localtime": "Heure locale :"
+  },
+
+  "education": {
+    "dam": {
+      "title": "Développement d'Applications Multiplateformes",
+      "subtitle": "Brevet de Technicien Supérieur",
+      "location": "Elche, Espagne",
+      "phrase1": "Développement d'applications multiplateformes en Java, appliquant la programmation orientée objet, les structures de données et les patrons de conception.",
+      "phrase2": "Implémentation d'interfaces graphiques avec JavaFX et développement d'applications web avec HTML, CSS et JavaScript, incluant la consommation et l'intégration d'APIs REST.",
+      "phrase3": "Conception, modélisation et gestion de bases de données relationnelles et NoSQL avec MariaDB, PostgreSQL, MongoDB et Redis.",
+      "phrase4": "Gestion de versions avec Git et mise en œuvre de flux de travail collaboratifs.",
+      "phrase5": "Analyse et conception de solutions logicielles via UML, associées à l'application des principes Clean Code, des bonnes pratiques de documentation et des méthodologies de développement pour concevoir des applications maintenables et évolutives."
+    },
+    "smr": {
+      "title": "Systèmes Informatiques et Réseaux",
+      "subtitle": "Diplôme Professionnel Intermédiaire",
+      "location": "Elche, Espagne",
+      "phrase1": "Configuration et administration de serveurs Linux et Windows, déploiement et gestion de services réseau tels que DHCP, DNS, HTTP et FTP.",
+      "phrase2": "Conception et administration d'infrastructures réseau et d'environnements virtualisés via VirtualBox.",
+      "phrase3": "Réalisation de diagnostics matériels, tests de stress et analyses de performance à l'aide d'outils tels que MemTest86, Cinebench et 3DMark.",
+      "phrase4": "Surveillance et analyse du trafic réseau avec Wireshark, associées à la mise en place de mesures de cybersécurité via pare-feu, solutions antivirus et outils d'analyse de vulnérabilités comme OpenVAS.",
+      "phrase5": "Administration de systèmes d'exploitation, d'environnements serveur, d'outils de développement et d'infrastructures informatiques."
+    }
   }
 }

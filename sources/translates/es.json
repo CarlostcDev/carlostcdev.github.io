@@ -55,5 +55,28 @@
     "location": "Elche, España",
     "cv": "Currículum",
     "localtime": "Hora local:"
+  },
+
+  "education": {
+    "dam": {
+      "title": "Desarrollo de Aplicaciones Multiplataforma",
+      "subtitle": "Grado Superior de FP",
+      "location": "Elche, España",
+      "phrase1": "Desarrollo de aplicaciones multiplataforma utilizando Java, aplicando programación orientada a objetos, estructuras de datos y patrones de diseño.",
+      "phrase2": "Implementación de interfaces gráficas con JavaFX y desarrollo de aplicaciones web con HTML, CSS y JavaScript, incluyendo el consumo e integración de APIs REST.",
+      "phrase3": "Diseño, modelado y gestión de bases de datos relacionales y NoSQL mediante MariaDB, PostgreSQL, MongoDB y Redis.",
+      "phrase4": "Control de versiones con Git y aplicación de flujos de trabajo colaborativos.",
+      "phrase5": "Análisis y diseño de soluciones software mediante UML, junto con la aplicación de principios de Clean Code, buenas prácticas de documentación y metodologías de desarrollo para la creación de aplicaciones mantenibles y escalables."
+    },
+    "smr": {
+      "title": "Sistemas Microinformáticos y Redes",
+      "subtitle": "Grado Medio de FP",
+      "location": "Elche, España",
+      "phrase1": "Configuración y administración de servidores Linux y Windows, implementando y gestionando servicios de red como DHCP, DNS, HTTP y FTP.",
+      "phrase2": "Diseño y administración de infraestructuras de red y entornos virtualizados mediante VirtualBox.",
+      "phrase3": "Realización de diagnósticos de hardware, pruebas de estrés y análisis de rendimiento utilizando herramientas como MemTest86, Cinebench y 3DMark.",
+      "phrase4": "Monitorización y análisis del tráfico de red con Wireshark, junto con la implementación de medidas de ciberseguridad mediante firewalls, soluciones antivirus y herramientas de análisis de vulnerabilidades como OpenVAS.",
+      "phrase5": "Administración de sistemas operativos, entornos de servidor, herramientas de desarrollo e infraestructuras informáticas."
+    }
   }
 }

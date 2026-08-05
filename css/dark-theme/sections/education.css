@@ -2,7 +2,6 @@
     background: var(--primary);
     padding: 20px;
     width: 100%;
-    margin-top: 300px;
 }
 
 #education .h2 {
@@ -14,9 +13,9 @@
     font-weight: 600;
     height: 50px;
     border-width: 3px 3px 0 3px;
-    border-color: var(--secondary);
+    border-color: var(--black);
     border-style: solid;
-    background: var(--secondary);
+    background: var(--black);
     box-shadow: 0 5px 10px rgb(0 5 7 / 0.83);
     position: relative;
     z-index: 1;
@@ -28,7 +27,7 @@
 }
 
 #education .h2 * {
-    color: var(--black);
+    color: var(--primary);
 }
 
 #education #courses {
@@ -37,7 +36,129 @@
     width: 1200px;
     border-width: 0 3px 3px 3px;
     border-style: solid;
-    border-color: var(--secondary);
-    padding: 50px;
+    border-color: var(--black);
     border-radius: 0 0 60px 0;
+    box-shadow: 0 5px 10px rgb(0 5 7 / 0.63);
+    background: var(--dark);
+}
+
+#education .education {
+    with: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#education .education .info {
+    display: flex;
+    background: var(--dark);
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+#education .education .data {
+    display: flex;
+    gap: 10px;
+}
+
+#education .education .info .title {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#education .education .data .list {
+    list-style: none;
+    padding: 10px;
+}
+
+#education .education .data .list .content .icon {
+    width: 30px;
+    height: 30px;
+    fill: var(--light);
+}
+
+#education .education .data .list .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+#education .education .description {
+    display: flex;
+}
+
+#education .education .description .skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
+    width: 25%;
+    padding: 10px;
+    background: var(--black);
+    box-sizing: border-box;
+}
+
+#education .education .description .phrases {
+    width: 75%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--black);
+    box-sizing: border-box;
+}
+
+#education .education .description .phrases .phrase {
+    background: var(--black);
+    padding: 5px;
+}
+
+#education .education .h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+#education .education .h4 {
+    font-size: 1.3rem;
+}
+
+#education .education .description .skills .skill {
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#education .education .description .skills .java { background: #db380e; }
+#education .education .description .skills .javascript { background: #e8d44d; color: #30312e; }
+#education .education .description .skills .html { background: #f16529; }
+#education .education .description .skills .css { background: #0096dc; }
+#education .education .description .skills .mariadb { background: #003545; }
+#education .education .description .skills .pl-sql { background: #ff0000; }
+#education .education .description .skills .mongodb { background: #6cac48; }
+#education .education .description .skills .redis { background: #ff4438; }
+#education .education .description .skills .javafx { background: #52829d; }
+#education .education .description .skills .shell-scripting { background: #2a3238; }
+#education .education .description .skills .junit { background: #299d5b; }
+#education .education .description .skills .git { background: #f5511e; }
+#education .education .description .skills .aws { background: #ff9900; }
+#education .education .description .skills .nftables { background: #204a87; }
+#education .education .description .skills .linux { background: #f5c021; }
+#education .education .description .skills .wireshark { background: #00619e; }
+#education .education .description .skills .windows-server { background: #00adef; }
+#education .education .description .skills .dhcp-server { background: #ec6117; }
+#education .education .description .skills .http-server { background: #b5e08c; color: #1a1a12; }
+#education .education .description .skills .dns-server { background: #f7b217; }
+#education .education .description .skills .nginx { background: #009438; }
+#education .education .description .skills .docker { background: #2597ee; }
+#education .education .description .skills .virtualbox { background: #00758a; }
+
+
+#education .education:last-child .description .phrases {
+    border-radius: 0 0 58px 0;
+    background: var(--black);
+}
+
+#education .education:last-child .description .phrases .phrase:last-child {
+    border-radius: 0 0 50px 0;
 }

@@ -55,5 +55,28 @@
     "location": "Elche, Spagna",
     "cv": "Curriculum",
     "localtime": "Ora locale:"
+  },
+
+  "education": {
+    "dam": {
+      "title": "Sviluppo di Applicazioni Multi piattaforma",
+      "subtitle": "Diploma di Istruzione Superiore (ITS)",
+      "location": "Elche, Spagna",
+      "phrase1": "Sviluppo di applicazioni multipiattaforma in Java, applicando programmazione orientata agli oggetti, strutture dati e pattern architetturali.",
+      "phrase2": "Implementazione di interfacce grafiche con JavaFX e sviluppo di applicazioni web con HTML, CSS e JavaScript, con integrazione e consumo di API REST.",
+      "phrase3": "Progettazione, modellazione e gestione di database relazionali e NoSQL tramite MariaDB, PostgreSQL, MongoDB e Redis.",
+      "phrase4": "Controllo versione con Git e adozione di flussi di lavoro collaborativi.",
+      "phrase5": "Analisi e progettazione di soluzioni software tramite UML, unite all'applicazione dei principi di Clean Code, buone pratiche di documentazione e metodologie di sviluppo per creare applicazioni manutenibili e scalabili."
+    },
+    "smr": {
+      "title": "Sistemi Informatici e Reti",
+      "subtitle": "Diploma di Istruzione Professionale Intermedia",
+      "location": "Elche, Spagna",
+      "phrase1": "Configurazione e amministrazione di server Linux e Windows, con implementazione e gestione di servizi di rete come DHCP, DNS, HTTP e FTP.",
+      "phrase2": "Progettazione e gestione di infrastrutture di rete e ambienti virtualizzati tramite VirtualBox.",
+      "phrase3": "Esecuzione di diagnosi hardware, stress test e analisi delle prestazioni utilizzando strumenti come MemTest86, Cinebench e 3DMark.",
+      "phrase4": "Monitoraggio e analisi del traffico di rete con Wireshark, insieme all'implementazione di misure di cibersicurezza tramite firewall, soluzioni antivirus e strumenti di analisi delle vulnerabilità come OpenVAS.",
+      "phrase5": "Amministrazione di sistemi operativi, ambienti server, strumenti di sviluppo e infrastrutture informatiche."
+    }
   }
 }

@@ -55,5 +55,28 @@
     "location": "Elche, Spain",
     "cv": "Resume",
     "localtime": "Local time:"
+  },
+
+  "education": {
+    "dam": {
+      "title": "Cross-Platform Application Development",
+      "subtitle": "Higher Vocational Education",
+      "location": "Elche, Spain",
+      "phrase1": "Development of cross-platform applications using Java, applying object-oriented programming, data structures, and design patterns.",
+      "phrase2": "Implementation of graphical user interfaces with JavaFX and web application development using HTML, CSS, and JavaScript, including REST API consumption and integration.",
+      "phrase3": "Design, modeling, and management of relational and NoSQL databases using MariaDB, PostgreSQL, MongoDB, and Redis.",
+      "phrase4": "Version control with Git and adoption of collaborative workflows.",
+      "phrase5": "Software solution analysis and design using UML, alongside the application of Clean Code principles, documentation best practices, and development methodologies for building maintainable and scalable applications."
+    },
+    "smr": {
+      "title": "Microcomputer Systems and Networks",
+      "subtitle": "Intermediate Vocational Education",
+      "location": "Elche, Spain",
+      "phrase1": "Configuration and administration of Linux and Windows servers, deploying and managing network services such as DHCP, DNS, HTTP, and FTP.",
+      "phrase2": "Design and management of network infrastructures and virtualized environments using VirtualBox.",
+      "phrase3": "Execution of hardware diagnostics, stress testing, and performance analysis using tools such as MemTest86, Cinebench, and 3DMark.",
+      "phrase4": "Network traffic monitoring and analysis with Wireshark, combined with cybersecurity implementation using firewalls, antivirus solutions, and vulnerability scanning tools like OpenVAS.",
+      "phrase5": "Administration of operating systems, server environments, development tools, and IT infrastructures."
+    }
   }
 }

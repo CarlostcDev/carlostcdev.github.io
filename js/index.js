@@ -9,3 +9,4 @@ import "./dom/autoaboutme.js";
 import "./dom/carousel.js";
 import "./dom/autotheme.js";
 import "./dom/autofooter.js";
+import "./dom/autoeducation.js";

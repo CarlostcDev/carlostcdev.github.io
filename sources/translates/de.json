@@ -55,5 +55,28 @@
     "location": "Elche, Spanien",
     "cv": "Lebenslauf",
     "localtime": "Ortszeit:"
+  },
+
+  "education": {
+    "dam": {
+      "title": "Höhere Berufsausbildung für plattformübergreifende Anwendungsentwicklung",
+      "subtitle": "Höhere Berufsausbildung",
+      "location": "Elche, Spanien",
+      "phrase1": "Entwicklung plattformübergreifender Anwendungen mit Java unter Anwendung von objektorientierter Programmierung, Datenstrukturen und Entwurfsmustern.",
+      "phrase2": "Implementierung grafischer Benutzeroberflächen mit JavaFX und Entwicklung von Webanwendungen mit HTML, CSS und JavaScript, einschließlich der Anbindung und Integration von REST-APIs.",
+      "phrase3": "Entwurf, Modellierung und Verwaltung relationaler sowie NoSQL-Datenbanken mittels MariaDB, PostgreSQL, MongoDB und Redis.",
+      "phrase4": "Versionsverwaltung mit Git und Anwendung kollaborativer Workflows.",
+      "phrase5": "Analyse und Entwurf von Softwarelösungen mittels UML sowie Anwendung von Clean-Code-Prinzipien, bewährten Dokumentationsstandards und Entwicklungsmethodiken für wartbare und skalierbare Anwendungen."
+    },
+    "smr": {
+      "title": "Berufsausbildung für IT-Systeme und Netzwerke",
+      "subtitle": "Mittlere Berufsausbildung",
+      "location": "Elche, Spanien",
+      "phrase1": "Konfiguration und Administration von Linux- und Windows-Servern sowie Implementierung und Verwaltung von Netzdiensten wie DHCP, DNS, HTTP und FTP.",
+      "phrase2": "Entwurf und Administration von Netzwerk-Infrastrukturen und virtualisierten Umgebungen mittels VirtualBox.",
+      "phrase3": "Durchführung von Hardware-Diagnosen, Stresstests und Leistungsanalysen mit Tools wie MemTest86, Cinebench und 3DMark.",
+      "phrase4": "Überwachung und Analyse des Netzwerkverkehrs mit Wireshark sowie Implementierung von Cybersicherheitsmaßnahmen durch Firewalls, Antiviren-Lösungen und Schwachstellen-Analyse-Tools wie OpenVAS.",
+      "phrase5": "Administration von Betriebssystemen, Serverumgebungen, Entwicklungstools und IT-Infrastrukturen."
+    }
   }
 }

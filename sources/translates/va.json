@@ -55,5 +55,28 @@
     "location": "Elx, Espanya",
     "cv": "Currículum",
     "localtime": "Hora local:"
+  },
+
+  "education": {
+    "dam": {
+      "title": "Desenvolupament d'Aplicacions Multiplataforma",
+      "subtitle": "Grau Superior de FP",
+      "location": "Elx, Espanya",
+      "phrase1": "Desenvolupament d'aplicacions multiplataforma utilitzant Java, aplicant programació orientada a objectes, estructures de dades i patrons de disseny.",
+      "phrase2": "Implementació d'interfícies gràfiques amb JavaFX i desenvolupament d'aplicacions web amb HTML, CSS i JavaScript, incloent-hi el consum i integració d'APIs REST.",
+      "phrase3": "Disseny, modelatge i gestió de bases de dades relacionals i NoSQL mitjançant MariaDB, PostgreSQL, MongoDB i Redis.",
+      "phrase4": "Control de versions amb Git i aplicació de fluxos de treball col·laboratius.",
+      "phrase5": "Anàlisi i disseny de solucions programari mitjançant UML, juntament amb l'aplicació de principis de Clean Code, bones pràctiques de documentació i metodologies de desenvolupament per a la creació d'aplicacions mantenibles i escalables."
+    },
+    "smr": {
+      "title": "Sistemes Microinformàtics i Xarxes",
+      "subtitle": "Grau Mitjà de FP",
+      "location": "Elx, Espanya",
+      "phrase1": "Configuració i administració de servidors Linux i Windows, implementant i gestionant serveis de xarxa com DHCP, DNS, HTTP i FTP.",
+      "phrase2": "Disseny i administració d'infraestructures de xarxa i entorns virtualitzats mitjançant VirtualBox.",
+      "phrase3": "Realització de diagnòstics de maquinari, proves d'esforç i anàlisi de rendiment utilitzant eines com MemTest86, Cinebench i 3DMark.",
+      "phrase4": "Monitoratge i anàlisi del tràfec de xarxa amb Wireshark, juntament amb la implementació de mesures de ciberseguretat mitjançant tallafocs, solucions antivirus i eines d'anàlisi de vulnerabilitats com OpenVAS.",
+      "phrase5": "Administració de sistemes operatius, entorns de servidor, eines de desenvolupament i infraestructures informàtiques."
+    }
   }
 }

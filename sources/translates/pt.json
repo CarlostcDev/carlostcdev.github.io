@@ -55,5 +55,28 @@
     "location": "Elche, Espanha",
     "cv": "Currículo",
     "localtime": "Hora local:"
+  },
+
+  "education": {
+    "dam": {
+      "title": "Desenvolvimento de Aplicações Multiplataforma",
+      "subtitle": "Curso Técnico Superior Profissional",
+      "location": "Elche, Espanha",
+      "phrase1": "Desenvolvimento de aplicações multiplataforma utilizando Java, aplicando programação orientada a objetos, estruturas de dados e padrões de projeto.",
+      "phrase2": "Implementação de interfaces gráficas com JavaFX e desenvolvimento de aplicações web com HTML, CSS e JavaScript, incluindo o consumo e integração de APIs REST.",
+      "phrase3": "Design, modelagem e gestão de bases de dados relacionais e NoSQL através de MariaDB, PostgreSQL, MongoDB e Redis.",
+      "phrase4": "Controlo de versões com Git e aplicação de fluxos de trabalho colaborativos.",
+      "phrase5": "Análise e design de soluções de software utilizando UML, em conjunto com a aplicação de princípios de Clean Code, boas práticas de documentação e metodologias de desenvolvimento para a criação de aplicações sustentáveis e escaláveis."
+    },
+    "smr": {
+      "title": "Sistemas Microinformáticos e Redes",
+      "subtitle": "Curso Técnico Profissional Intermédio",
+      "location": "Elche, Espanha",
+      "phrase1": "Configuração e administração de servidores Linux e Windows, implementando e gerindo serviços de rede como DHCP, DNS, HTTP e FTP.",
+      "phrase2": "Design e administração de infraestruturas de rede e ambientes virtualizados através do VirtualBox.",
+      "phrase3": "Realização de diagnósticos de hardware, testes de esforço e análise de desempenho com ferramentas como MemTest86, Cinebench e 3DMark.",
+      "phrase4": "Monitorização e análise de tráfego de rede com Wireshark, juntamente com a implementação de medidas de cibersegurança através de firewalls, soluções antivírus e ferramentas de análise de vulnerabilidades como OpenVAS.",
+      "phrase5": "Administração de sistemas operativos, ambientes de servidor, ferramentas de desenvolvimento e infraestruturas informáticas."
+    }
   }
 }
