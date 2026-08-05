@@ -6,6 +6,7 @@
 :root {
     --font-general: "Google Sans", "Open Sans", "Google Sans Flex", system-ui;
     --font-code: "Google Sans Code", "Source Code Pro", monospace;
+    --transition: all 0.5s;
     --light: #ffffff;
     --dark-gray: #0d0c0f;
     --error: #b3261e;

@@ -11,9 +11,18 @@ const htmlContent = config.education.map(item => `
             </div>
             <div class="data">
                 <ul class="list">
-                    <li class="content"><svg class="icon"><use href="sources/svgs/sprite.svg#education"></use></svg><span>${item.school}</span></li>
-                    <li class="content"><svg class="icon"><use href="sources/svgs/sprite.svg#location"></use></svg><span data-i18n="${item.location.i18n}">${item.location.text}</span></li>
-                    <li class="content"><svg class="icon"><use href="sources/svgs/sprite.svg#calendar"></use></svg><span>${item["range-years"]}</span></li>
+                    <li class="content">
+                        <svg class="icon"><use href="sources/svgs/sprite.svg#education"></use></svg>
+                        <a href="${item.school.href}" target="_blank" rel="noopener noreferrer">${item.school.name}</a>
+                    </li>
+                    <li class="content">
+                        <svg class="icon"><use href="sources/svgs/sprite.svg#location"></use></svg>
+                        <a data-i18n="${item.location.i18n}">${item.location.text}</a>
+                    </li>
+                    <li class="content">
+                        <svg class="icon"><use href="sources/svgs/sprite.svg#calendar"></use></svg>
+                        <span>${item["range-years"]}</span>
+                    </li>
                 </ul>
             </div>
         </div>

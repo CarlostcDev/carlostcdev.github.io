@@ -43,7 +43,6 @@
 }
 
 #education .education {
-    with: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -86,6 +85,7 @@
 
 #education .education .description {
     display: flex;
+    background: var(--gray);
 }
 
 #education .education .description .skills {
@@ -95,7 +95,6 @@
     gap: 10px;
     width: 25%;
     padding: 10px;
-    background: var(--black);
     box-sizing: border-box;
 }
 
@@ -105,12 +104,10 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: var(--black);
     box-sizing: border-box;
 }
 
 #education .education .description .phrases .phrase {
-    background: var(--black);
     padding: 5px;
 }
 
@@ -138,7 +135,7 @@
 #education .education .description .skills .mongodb { background: #6cac48; }
 #education .education .description .skills .redis { background: #ff4438; }
 #education .education .description .skills .javafx { background: #52829d; }
-#education .education .description .skills .shell-scripting { background: #2a3238; }
+#education .education .description .skills .shell-scripting { background: #1a1a1a; }
 #education .education .description .skills .junit { background: #299d5b; }
 #education .education .description .skills .git { background: #f5511e; }
 #education .education .description .skills .aws { background: #ff9900; }
@@ -154,11 +151,6 @@
 #education .education .description .skills .virtualbox { background: #00758a; }
 
 
-#education .education:last-child .description .phrases {
+#education .education:last-child .description {
     border-radius: 0 0 58px 0;
-    background: var(--black);
-}
-
-#education .education:last-child .description .phrases .phrase:last-child {
-    border-radius: 0 0 50px 0;
 }

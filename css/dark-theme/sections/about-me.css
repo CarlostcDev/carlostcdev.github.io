@@ -58,12 +58,12 @@
     border-radius: 25px 0;
     border: 3px solid var(--dark);
     padding: 15px;
-    transition: all 0.5s;
+    transition: var(--transition);
 }
 
 #about-me #phrases .phrase.hovered, #about-me #phrases .phrase:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: 12px 12px 30px var(--transaparent), 8px 8px 5px var(--dark);
+    box-shadow: 12px 12px 30px var(--transparent), 8px 8px 5px var(--dark);
     border-radius: 25px 0 25px 0;
     border-color: var(--primary);
     background: var(--primary);

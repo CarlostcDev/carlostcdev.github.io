@@ -154,7 +154,10 @@
         "i18n": "education.dam.subtitle",
         "text": "Grado Superior de FP"
       },
-      "school": "IES Severo Ochoa",
+      "school": {
+        "name": "IES Severo Ochoa",
+        "href": "https://maps.app.goo.gl/JdSuRGf8xe2peQc78"
+      },
       "location": {
         "i18n": "education.dam.location",
         "text": "Elche, España"
@@ -207,7 +210,10 @@
         "i18n": "education.smr.subtitle",
         "text": "Grado Medio de FP"
       },
-      "school": "IES Severo Ochoa",
+      "school": {
+        "name": "IES Severo Ochoa",
+        "href": "https://maps.app.goo.gl/JdSuRGf8xe2peQc78"
+      },
       "location": {
         "i18n": "education.smr.location",
         "text": "Elche, España"
