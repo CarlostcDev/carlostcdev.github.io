@@ -1,0 +1,57 @@
+:root.light-theme {
+    --light: #131313;
+}
+
+:root.light-theme.orange-theme {
+    --primary: #dd512e;
+    --secondary: #dc7055;
+    --gray: #e3beb5;
+    --dark: #e3cbc6;
+    --black: #f6edeb;
+    --background-image: url("../../sources/backgrounds/body/light-theme/background-body-theme-orange.webp");
+}
+
+:root.light-theme.green-theme {
+    --primary: #46c284;
+    --secondary: #5da878;
+    --gray: #7ed28b;
+    --dark: #9cd7a8;
+    --black: #e9fcec;
+    --background-image: url("../../sources/backgrounds/body/light-theme/background-body-theme-green.webp");
+}
+
+:root.light-theme.light-blue-theme {
+    --primary: #65d7e3;
+    --secondary: #86d8e7;
+    --gray: #8ed0dc;
+    --dark: #a1d9e0;
+    --black: #ecffff;
+    --background-image: url("../../sources/backgrounds/body/light-theme/background-body-theme-light-blue.webp");
+}
+
+:root.light-theme.blue-theme {
+    --primary: #3fddf5;
+    --secondary: #1db6cb;
+    --gray: #9ff4ff;
+    --dark: #bef4ff;
+    --black: #ebfdff;
+    --background-image: url("../../sources/backgrounds/body/light-theme/background-body-theme-blue.webp");
+}
+
+:root.light-theme.maroon-theme {
+    --primary: #e161c7;
+    --secondary: #be297e;
+    --gray: #d78ace;
+    --dark: #e5b4e5;
+    --black: #ffe8f6;
+    --background-image: url("../../sources/backgrounds/body/light-theme/background-body-theme-maroon.webp");
+}
+
+:root.light-theme.purple-theme {
+    --primary: #d778d9;
+    --secondary: #aa52b4;
+    --gray: #e08ee0;
+    --dark: #eab1ea;
+    --black: #ffdcf5;
+    --background-image: url("../../sources/backgrounds/body/light-theme/background-body-theme-purple.webp");
+}

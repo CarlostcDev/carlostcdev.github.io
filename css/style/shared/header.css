@@ -1,0 +1,208 @@
+#header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    position: fixed;
+    z-index: 10000;
+    animation: header-bg linear both;
+    animation-timeline: scroll();
+    animation-range: 0 180px;
+}
+
+@keyframes header-bg {
+    to {
+        background: var(--black);
+        box-shadow: 2px 2px 6px rgb(0 0 0 / 0.2);
+    }
+}
+
+#header .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+#header .nav-menu .menu-container .menu-options {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+#header .nav-menu .menu-container .menu-options li a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.5s;
+    padding: 15px;
+    border-radius: 15px 0;
+}
+
+#header .nav-menu .menu-container .menu-options li a:hover {
+    background-color: var(--primary);
+    color: var(--black);
+}
+
+#header #menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#header #menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--light);
+    transition: all 0.5s;
+}
+
+#header .theme-toggle {
+    background: transparent;
+    border: 2px solid var(--light);
+    border-radius: 10px 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+#header .theme-toggle svg {
+    position: absolute;
+    width: 22px;
+    fill: var(--light);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#header .theme-toggle:hover {
+    border-color: var(--primary);
+}
+
+#header .theme-toggle:hover svg {
+    transform: scale(1.1);
+    fill: var(--primary);
+}
+
+#header .theme-toggle .dark-mode {
+    transform: translateY(35px);
+    opacity: 0;
+}
+
+#header .theme-toggle .light-mode {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#header .lang-dropdown {
+    position: relative;
+    font-weight: 600;
+}
+
+#header .lang-selected {
+    padding: 8px 40px 8px 14px;
+    border: 2px solid  var(--light);
+    border-radius: 15px 0;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.5s all;
+    font: inherit;
+    min-width: 140px;
+    text-align: left;
+}
+
+#header .lang-selected:hover {
+
+    border: 2px solid var(--primary);
+}
+
+#header .lang-selected .language {
+    transition: 0.5s all;
+}
+
+#header .lang-selected:hover .language {
+    color: var(--primary);
+}
+
+#header .lang-selected .arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--light);
+    border-bottom: 2px solid var(--light);
+    transform: translateY(-60%) rotate(45deg);
+    transition: all 0.5s;
+}
+
+#header .lang-selected:hover .arrow {
+    border-right-color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+#header .lang-dropdown.active .arrow {
+    transform: translateY(-50%) rotate(135deg);
+}
+
+#header .lang-options {
+    position: absolute;
+    right: 0;
+    top: 120%;
+    list-style: none;
+    background-color: var(--black);
+    border: 2px solid var(--light);
+    border-radius: 20px 0;
+    min-width: 140px;
+    z-index: 2000;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#header .lang-options[hidden] {
+    display: none;
+}
+
+#header .lang-options li {
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#header .lang-options li:hover {
+    background-color: var(--primary);
+    color: var(--black);
+}
+
+#header .lang-options li.active {
+    color: var(--primary);
+    background-color: var(--dark);
+}
+
+#header .lang-options li.active:hover {
+    background-color: var(--primary);
+    color: var(--black);
+}
+
+#header .lang-options li:first-child:hover {
+    border-radius: 18px 0 0 0;
+}
+
+#header .lang-options li:last-child:hover {
+    border-radius: 0 0 18px 0;
+}
+
+#header .lang-options li:first-child {
+    border-radius: 18px 0 0 0;
+}
+
+#header .lang-options li:last-child {
+    border-radius: 0 0 18px 0;
+}

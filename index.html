@@ -12,7 +12,7 @@
     <header id="header">
         <nav class="nav-menu">
             <button id="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-            <div class="theme-switch"><button id="themeToggle" class="theme-toggle"><svg class="light-mode"><use href="/sources/svgs/sprite.svg#light-mode"></use></svg></button></div>
+            <div class="theme-switch"><button id="themeToggle" class="theme-toggle"><svg><use id="theme-mode" href="/sources/svgs/sprite.svg#light-mode"></use></svg></button></div>
             <div class="menu-container">
                 <ul class="menu-options">
                     <li><a href="#home" data-i18n="header.home" class="nav-item nav-item-1" id="nav-home">Inicio</a></li>
@@ -42,7 +42,11 @@
                     <p data-i18n="home.p1">Bienvenido,</p>
                     <p><span data-i18n="home.p2">Soy</span> <span class="name"> Carlos Tormo</span>,</p>
                     <p><span data-i18n="home.p3">Tu próximo </span><span id="roles" class="fade" data-i18n="home.word-animation">desarrollador</span></p>
-                    <a href="#about-me"><button data-i18n="home.a1">Sobre mí</button></a>
+                    <div class="buttons">
+                        <a href="#about-me"><button data-i18n="home.a1" class="about-me">Sobre mí</button></a>
+                        <div id="spikes"></div>
+                        <a href="./proyectos"><button data-i18n="home.a2" class="projects">Proyectos</button></a>
+                    </div>
                 </div>
                 <div class="profile-photo"><img src="sources/profile/profile-photo.png" alt="Carlos Tormo Castaño" loading="eager"></div>
             </div>
@@ -65,7 +69,9 @@
             <div class="h2"><span>C:\CarlostcDev\</span><h2 data-i18n="education.h2">Formación</h2><span>&gt;</span></div>
             <div id="courses"></div>
         </section>
-        <section class="spikes"></section>
+
+        <section id="separator"></section>
+
         <section id="experience">
             <div class="h2"><span>C:\CarlostcDev\</span><h2 data-i18n="experience.h2">Experiencia</h2><span>&gt;</span></div>
             <div id="jobs"></div>
@@ -75,7 +81,7 @@
     <footer id="footer">
         <div class="contact">
             <div id="info"></div>
-            <div id="buttons"></div>
+            <div id="social"></div>
             <div id="stats">
                 <h2 data-i18n="stats.h2">Estadísticas</h2>
                 <div class="image-stats">

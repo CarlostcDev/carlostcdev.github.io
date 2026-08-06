@@ -17,7 +17,7 @@ const htmlContent = config.education.map(item => `
                     </li>
                     <li class="content">
                         <svg class="icon"><use href="sources/svgs/sprite.svg#location"></use></svg>
-                        <a data-i18n="${item.location.i18n}">${item.location.text}</a>
+                        <span data-i18n="${item.location.i18n}">${item.location.text}</span>
                     </li>
                     <li class="content">
                         <svg class="icon"><use href="sources/svgs/sprite.svg#calendar"></use></svg>

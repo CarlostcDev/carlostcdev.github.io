@@ -1,0 +1,133 @@
+{
+  "header": {
+    "home": "Accueil",
+    "about-me": "À propos de moi",
+    "skills": "Compétences",
+    "education": "Formation",
+    "experience": "Expérience",
+    "contact": "Contact",
+    "language": "Français",
+    "es": "Espagnol",
+    "en": "Anglais",
+    "zh": "Chinois",
+    "ja": "Japonais",
+    "va": "Valencien",
+    "fr": "Français",
+    "it": "Italien",
+    "de": "Allemand",
+    "ko": "Coréen",
+    "pt": "Portugais"
+  },
+
+  "main": {
+    "h1": "Portfolio de Carlos Tormo Castaño"
+  },
+
+  "home": {
+    "p1": "Bienvenue,",
+    "p2": "Je suis",
+    "p3": "Votre prochain ",
+    "a1": "À propos de moi",
+    "a2": "Projets",
+    "word-animation": "développeur",
+    "roles-list": [
+      "développeur",
+      "programmeur",
+      "administrateur",
+      "informaticien"
+    ]
+  },
+
+  "about-me": {
+    "h2": "À propos de moi",
+    "phrase1": "Je suis un technicien informatique d'Elche passionné par la compréhension et la maîtrise de la technologie.",
+    "phrase2": "Je me concentre sur les problèmes complexes pour concevoir des solutions évolutives et efficaces.",
+    "phrase3": "Organisé, perfectionniste et doté d'une grande capacité d'apprentissage rapide.",
+    "phrase4": "Je propose des améliorations et des solutions sous une autre perspective qui aident l'environnement de travail.",
+    "phrase5": "Je cherche à progresser professionnellement et à contribuer au succès de l'équipe et de l'entreprise.",
+    "phrase6": "De langue maternelle espagnole, j'ai un niveau d'anglais intermédiaire et une compréhension passive du valencien."
+  },
+
+  "projects": {
+    "h2": "Projets",
+    "p": "Découvrez mes derrières réalisations et projets desarrollés.",
+    "a": "Voir les projets"
+  },
+
+  "footer": {
+    "h2": "Contact",
+    "projects": "Projets",
+    "phone": "Téléphone",
+    "copyright": "Tous droits non réservés.",
+    "location": "Elche, Espagne",
+    "cv": "CV",
+    "localtime": "Heure locale :"
+  },
+
+  "education": {
+    "h2": "Formation",
+    "dam": {
+      "title": "Développement d'Applications Multiplateformes",
+      "subtitle": "Brevet de Technicien Supérieur",
+      "location": "Elche, Espagne",
+      "phrase1": "Développement d'applications multiplateformes en Java, appliquant la programmation orientée objet, les structures de données et les patrons de conception.",
+      "phrase2": "Implémentation d'interfaces graphiques avec JavaFX et développement d'applications web avec HTML, CSS et JavaScript, incluant la consommation et l'intégration d'APIs REST.",
+      "phrase3": "Conception, modélisation et gestion de bases de données relationnelles et NoSQL avec MariaDB, PostgreSQL, MongoDB et Redis.",
+      "phrase4": "Gestion de versions avec Git et mise en œuvre de flux de travail collaboratifs.",
+      "phrase5": "Analyse et conception de solutions logicielles via UML, associées à l'application des principes Clean Code, des bonnes pratiques de documentation et des méthodologies de développement pour concevoir des applications maintenables et évolutives."
+    },
+    "smr": {
+      "title": "Systèmes Informatiques et Réseaux",
+      "subtitle": "Diplôme Professionnel Intermédiaire",
+      "location": "Elche, Espagne",
+      "phrase1": "Configuration et administration de serveurs Linux et Windows, déploiement et gestion de services réseau tels que DHCP, DNS, HTTP et FTP.",
+      "phrase2": "Conception et administration d'infrastructures réseau et d'environnements virtualisés via VirtualBox.",
+      "phrase3": "Réalisation de diagnostics matériels, tests de stress et analyses de performance à l'aide d'outils tels que MemTest86, Cinebench et 3DMark.",
+      "phrase4": "Surveillance et analyse du trafic réseau avec Wireshark, associées à la mise en place de mesures de cybersécurité via pare-feu, solutions antivirus et outils d'analyse de vulnérabilités comme OpenVAS.",
+      "phrase5": "Administration de systèmes d'exploitation, d'environnements serveurs, d'outils de développement et d'infrastructures informatiques."
+    }
+  },
+
+  "title": "Carlos Tormo | Portfolio",
+
+  "stats": {
+    "h2": "Statistiques"
+  },
+
+  "social": {
+    "h2": "Social"
+  },
+
+  "info": {
+    "h2": "Informations"
+  },
+
+  "experience": {
+    "h2": "Expérience",
+    "nttdata": {
+      "job": "Développeur Full-Stack en Stage",
+      "company": "NTT Data Espagne",
+      "location": "Playa de San Juan, Espagne",
+      "business": "NTT Data San Juan",
+      "phrase1": "Développement d'applications backend avec Java 18 et Spring Boot, mise en œuvre d'APIs REST, d'authentification et d'autorisation avec Spring Security, ainsi que de tests unitaires avec JUnit et Mockito.",
+      "phrase2": "Développement d'applications frontend avec Angular, TypeScript, HTML et CSS, en appliquant des pratiques modernes de développement web et des outils de l'écosystème Node.js.",
+      "phrase3": "Gestion des dépendances, compilation et automatisation de projets avec Maven, en suivant des flux de développement structurés.",
+      "phrase4": "Conception, mise en œuvre et gestion de la couche de persistance avec PostgreSQL.",
+      "phrase5": "Gestion de versions avec Git et collaboration au sein d'un environnement professionnel de développement logiciel.",
+      "phrase6": "Intégration d'outils et d'agents basés sur l'intelligence artificielle pour optimiser les flux de développement et accroître la productivité.",
+      "years": "Avril 2026 - Juin 2026"
+    },
+    "neuric": {
+      "job": "Développeur Web",
+      "company": "Neuric",
+      "location": "Elche, Espagne",
+      "business": "Neuric Consultant",
+      "phrase1": "Développement, personnalisation et optimisation de sites web avec WordPress dans un environnement professionnel.",
+      "phrase2": "Création d'interfaces et de fonctionnalités avancées avec Elementor et WooCommerce, en adaptant les solutions aux besoins de chaque projet.",
+      "phrase3": "Développement de composants et de personnalisations avec HTML, CSS et JavaScript, en acquérant une solide base en conception, mise en page et styles avancés en CSS.",
+      "phrase4": "Application de techniques d'optimisation des performances, de sécurité web et de bonnes pratiques pour améliorer l'expérience utilisateur et le référencement des sites web.",
+      "phrase5": "Administration de base de systèmes informatiques et support technique dans l'environnement d'entreprise.",
+      "years": "Février 2025 - Mai 2025"
+    }
+  }
+}

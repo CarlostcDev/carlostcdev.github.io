@@ -1,0 +1,133 @@
+{
+  "header": {
+    "home": "首页",
+    "about-me": "关于我",
+    "skills": "技能",
+    "education": "教育背景",
+    "experience": "工作经验",
+    "contact": "联系方式",
+    "language": "中文",
+    "es": "西班牙语",
+    "en": "英语",
+    "zh": "中文",
+    "ja": "日语",
+    "va": "瓦伦西亚语",
+    "fr": "法语",
+    "it": "意大利语",
+    "de": "德语",
+    "ko": "韩语",
+    "pt": "葡萄牙语"
+  },
+
+  "main": {
+    "h1": "Carlos Tormo Castaño 的个人作品集"
+  },
+
+  "home": {
+    "p1": "欢迎，",
+    "p2": "我是",
+    "p3": "您的下一位 ",
+    "a1": "关于我",
+    "a2": "项目",
+    "word-animation": "开发者",
+    "roles-list": [
+      "开发者",
+      "程序员",
+      "系统管理员",
+      "IT工程师"
+    ]
+  },
+
+  "about-me": {
+    "h2": "关于我",
+    "phrase1": "我是一名来自埃尔切的IT技术人员，对理解和掌握技术充满热情。",
+    "phrase2": "我专注于复杂问题，致力于设计可扩展且高效的解决方案。",
+    "phrase3": "办事井井有条、追求完美，并具备极强的快速学习能力。",
+    "phrase4": "我能从不同的视角提出改进建议和解决方案，从而助力团队和环境。",
+    "phrase5": "我寻求在职业上不断成长，并为团队和公司的成功贡献力量。",
+    "phrase6": "我的母语是西班牙语，具备中级英语水平以及瓦伦西亚语的被动理解能力。"
+  },
+
+  "projects": {
+    "h2": "项目",
+    "p": "探索我最新的工作成果和开发项目。",
+    "a": "查看项目"
+  },
+
+  "footer": {
+    "h2": "联系",
+    "projects": "项目",
+    "phone": "电话",
+    "copyright": "版权未保留。",
+    "location": "埃尔切，西班牙",
+    "cv": "简历",
+    "localtime": "当地时间："
+  },
+
+  "education": {
+    "h2": "教育背景",
+    "dam": {
+      "title": "跨平台应用程序开发",
+      "subtitle": "高等职业教育文凭",
+      "location": "埃尔切，西班牙",
+      "phrase1": "使用 Java 开发跨平台应用程序，应用面向对象编程、数据结构和设计模式。",
+      "phrase2": "使用 JavaFX 实现图形用户界面，并结合 HTML、CSS 和 JavaScript 进行 Web 应用程序开发，包含 REST API 的调用与集成。",
+      "phrase3": "使用 MariaDB、PostgreSQL、MongoDB 和 Redis 进行关系型及 NoSQL 数据库的设计、建模与管理。",
+      "phrase4": "使用 Git 进行版本控制并应用协同工作流。",
+      "phrase5": "使用 UML 进行软件解决方案的分析与设计，遵循 Clean Code 原则、文档最佳实践及开发方法论，以构建易于维护和具备可扩展性的应用程序。"
+    },
+    "smr": {
+      "title": "微型计算机系统与网络",
+      "subtitle": "中等职业教育文凭",
+      "location": "埃尔切，西班牙",
+      "phrase1": "配置与管理 Linux 和 Windows 服务器，部署并管理 DHCP、DNS、HTTP 和 FTP 等网络服务。",
+      "phrase2": "使用 VirtualBox 进行网络基础设施与虚拟化环境的设计和管理。",
+      "phrase3": "使用 MemTest86、Cinebench 和 3DMark 等工具进行硬件诊断、压力测试及性能分析。",
+      "phrase4": "使用 Wireshark 进行网络流量监控与分析，并通过防火墙、杀毒软件及 OpenVAS 等漏洞扫描工具实施网络安全防护措施。",
+      "phrase5": "管理操作系统、服务器环境、开发工具及 IT 基础设施。"
+    }
+  },
+
+  "title": "Carlos Tormo | 作品集",
+
+  "stats": {
+    "h2": "统计"
+  },
+
+  "social": {
+    "h2": "社交"
+  },
+
+  "info": {
+    "h2": "信息"
+  },
+
+  "experience": {
+    "h2": "工作经验",
+    "nttdata": {
+      "job": "全栈开发实习生",
+      "company": "NTT Data 西班牙",
+      "location": "圣胡安海滩，西班牙",
+      "business": "NTT Data San Juan",
+      "phrase1": "使用 Java 18 和 Spring Boot 开发后端应用，实现 REST API，使用 Spring Security 进行身份验证和授权，并使用 JUnit 和 Mockito 编写单元测试。",
+      "phrase2": "使用 Angular、TypeScript、HTML 和 CSS 开发前端应用，应用现代 Web 开发实践和 Node.js 生态系统中的工具。",
+      "phrase3": "按照结构化的开发流程，使用 Maven 进行依赖管理、编译和项目自动化。",
+      "phrase4": "使用 PostgreSQL 设计、实现和管理持久化层。",
+      "phrase5": "使用 Git 进行版本控制，并在专业的软件开发环境中进行协作。",
+      "phrase6": "集成基于人工智能的工具和智能体，以优化开发流程并提高生产力。",
+      "years": "2026年4月 - 2026年6月"
+    },
+    "neuric": {
+      "job": "Web 开发人员",
+      "company": "Neuric",
+      "location": "埃尔切，西班牙",
+      "business": "Neuric 咨询",
+      "phrase1": "在专业环境中使用 WordPress 进行网站的开发、定制和优化。",
+      "phrase2": "使用 Elementor 和 WooCommerce 创建高级界面和功能，并根据每个项目的需求调整解决方案。",
+      "phrase3": "使用 HTML、CSS 和 JavaScript 开发组件和自定义功能，在设计、布局和高级 CSS 样式方面打下坚实基础。",
+      "phrase4": "应用性能优化技术、Web 安全性和最佳实践，以改善用户体验和网站的搜索排名。",
+      "phrase5": "企业环境中计算机系统的基础管理和技术支持。",
+      "years": "2025年2月 - 2025年5月"
+    }
+  }
+}

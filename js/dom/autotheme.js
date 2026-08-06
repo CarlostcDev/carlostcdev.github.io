@@ -1,3 +1,4 @@
-const config = await fetch("../../sources/config.json").then(r => r.json());
+import config from "../config.js";
+
 const rdm = Math.floor(Math.random() * config.themes.length);
 document.documentElement.classList.add(config.themes[rdm]);

@@ -1,9 +1,0 @@
-:root.green-theme {
-    --primary: #2cdc85;
-    --secondary: #265737;
-    --gray: #2d3728;
-    --dark: #1b221a;
-    --black: #060d08;
-    --transparent: color-mix(in srgb, var(--black) 70%, transparent);
-    --background-image: url("../../../sources/backgrounds/hero/background-hero-green.webp");
-}

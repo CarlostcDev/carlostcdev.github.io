@@ -1,6 +1,6 @@
 import config from "../config.js";
 
-const buttons = document.getElementById("buttons");
+const buttons = document.getElementById("social");
 const socialH2 = config.social.find(item => item.h2);
 const socialLinks = config.social.filter(item => item.href);
 

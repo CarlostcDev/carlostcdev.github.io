@@ -1,9 +1,0 @@
-:root.maroon-theme {
-    --primary: #c052a9;
-    --secondary: #4d002c;
-    --gray: #332837;
-    --dark: #1f1a22;
-    --black: #0e060d;
-    --transparent: color-mix(in srgb, var(--black) 70%, transparent);
-    --background-image: url("../../../sources/backgrounds/hero/background-hero-maroon.webp");
-}

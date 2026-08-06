@@ -48,17 +48,13 @@ export async function applyLanguage(language) {
     }));
 }
 
-export function getLanguageState() {
-    return languageState;
-}
-
 async function loadTranslations(language) {
     if (translationsCache.has(language)) {
         return translationsCache.get(language);
     }
 
     try {
-        const translations = await fetch(`/sources/translates/${language}.json`)
+        const translations = await fetch(`/data/translates/${language}.json`)
             .then(r => r.json());
 
         translationsCache.set(language, translations);
@@ -172,14 +168,14 @@ function bindLanguageSelector() {
     });
 
     options.addEventListener("click", event => {
-        selectOption(event.target.closest("[data-lang]"));
+        selectOption(event.target.closest("[data-lang]")).then(()=>{});
     });
 
     options.addEventListener("keydown", event => {
         if (event.key !== "Enter" && event.key !== " ") return;
 
         event.preventDefault();
-        selectOption(event.target.closest("[data-lang]"));
+        selectOption(event.target.closest("[data-lang]")).then(()=>{});
     });
 
     document.addEventListener("click", event => {

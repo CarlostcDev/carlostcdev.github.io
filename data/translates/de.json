@@ -1,0 +1,133 @@
+{
+  "header": {
+    "home": "Startseite",
+    "about-me": "Über mich",
+    "skills": "Fähigkeiten",
+    "education": "Ausbildung",
+    "experience": "Erfahrung",
+    "contact": "Kontakt",
+    "language": "Deutsch",
+    "es": "Spanisch",
+    "en": "Englisch",
+    "zh": "Chinesisch",
+    "ja": "Japanisch",
+    "va": "Valencianisch",
+    "fr": "Französisch",
+    "it": "Italienisch",
+    "de": "Deutsch",
+    "ko": "Koreanisch",
+    "pt": "Portugiesisch"
+  },
+
+  "main": {
+    "h1": "Portfolio von Carlos Tormo Castaño"
+  },
+
+  "home": {
+    "p1": "Willkommen,",
+    "p2": "Ich bin",
+    "p3": "Ihr nächster ",
+    "a1": "Über mich",
+    "a2": "Projekte",
+    "word-animation": "Entwickler",
+    "roles-list": [
+      "Entwickler",
+      "Programmierer",
+      "Administrator",
+      "IT-Spezialist"
+    ]
+  },
+
+  "about-me": {
+    "h2": "Über mich",
+    "phrase1": "Ich bin ein IT-Techniker aus Elche mit einer Leidenschaft dafür, Technologie zu verstehen und zu meistern.",
+    "phrase2": "Ich konzentriere mich auf komplexe Probleme, um skalierbare und effiziente Lösungen zu entwickeln.",
+    "phrase3": "Strukturiert, perfektionistisch und mit einer hohen Auffassungsgabe.",
+    "phrase4": "Ich schlage Verbesserungen und Lösungen aus einer neuen Perspektive vor, die dem Umfeld helfen.",
+    "phrase5": "Ich möchte mich beruflich weiterentwickeln und zum Erfolg des Teams und des Unternehmens beitragen.",
+    "phrase6": "Spanisch ist meine Muttersprache, mit Mittelstufenkenntnissen in Englisch und passivem Verständnis von Valencianisch."
+  },
+
+  "projects": {
+    "h2": "Projekte",
+    "p": "Entdecken Sie meine neuesten Arbeiten und entwickelten Softwareprojekte.",
+    "a": "Projekte ansehen"
+  },
+
+  "footer": {
+    "h2": "Kontakt",
+    "projects": "Projekte",
+    "phone": "Telefon",
+    "copyright": "Alle Rechte nicht vorbehalten.",
+    "location": "Elche, Spanien",
+    "cv": "Lebenslauf",
+    "localtime": "Ortszeit:"
+  },
+
+  "education": {
+    "h2": "Ausbildung",
+    "dam": {
+      "title": "Höhere Berufsausbildung für plattformübergreifende Anwendungsentwicklung",
+      "subtitle": "Höhere Berufsausbildung",
+      "location": "Elche, Spanien",
+      "phrase1": "Entwicklung plattformübergreifender Anwendungen mit Java unter Anwendung von objektorientierter Programmierung, Datenstrukturen und Entwurfsmustern.",
+      "phrase2": "Implementierung grafischer Benutzeroberflächen mit JavaFX und Entwicklung von Webanwendungen mit HTML, CSS und JavaScript, einschließlich der Anbindung und Integration von REST-APIs.",
+      "phrase3": "Entwurf, Modellierung und Verwaltung relationaler sowie NoSQL-Datenbanken mittels MariaDB, PostgreSQL, MongoDB und Redis.",
+      "phrase4": "Versionsverwaltung mit Git und Anwendung kollaborativer Workflows.",
+      "phrase5": "Analyse und Entwurf von Softwarelösungen mittels UML sowie Anwendung von Clean-Code-Prinzipien, bewährten Dokumentationsstandards und Entwicklungsmethodiken für wartbare und skalierbare Anwendungen."
+    },
+    "smr": {
+      "title": "Berufsausbildung für IT-Systeme und Netzwerke",
+      "subtitle": "Mittlere Berufsausbildung",
+      "location": "Elche, Spanien",
+      "phrase1": "Konfiguration und Administration von Linux- und Windows-Servern sowie Implementierung und Verwaltung von Netzdiensten wie DHCP, DNS, HTTP und FTP.",
+      "phrase2": "Entwurf und Administration von Netzwerk-Infrastrukturen und virtualisierten Umgebungen mittels VirtualBox.",
+      "phrase3": "Durchführung von Hardware-Diagnosen, Stresstests und Leistungsanalysen mit Tools wie MemTest86, Cinebench und 3DMark.",
+      "phrase4": "Überwachung und Analyse des Netzwerkverkehrs mit Wireshark sowie Implementierung von Cybersicherheitsmaßnahmen durch Firewalls, Antiviren-Lösungen und Schwachstellen-Analyse-Tools wie OpenVAS.",
+      "phrase5": "Administration von Betriebssystemen, Serverumgebungen, Entwicklungstools und IT-Infrastrukturen."
+    }
+  },
+
+  "title": "Carlos Tormo | Portfolio",
+
+  "stats": {
+    "h2": "Statistiken"
+  },
+
+  "social": {
+    "h2": "Soziale Netzwerke"
+  },
+
+  "info": {
+    "h2": "Informationen"
+  },
+
+  "experience": {
+    "h2": "Erfahrung",
+    "nttdata": {
+      "job": "Full-Stack-Entwickler (Praktikum)",
+      "company": "NTT Data Spanien",
+      "location": "Playa de San Juan, Spanien",
+      "business": "NTT Data San Juan",
+      "phrase1": "Entwicklung von Backend-Anwendungen mit Java 18 und Spring Boot, Implementierung von REST-APIs, Authentifizierung und Autorisierung mit Spring Security sowie Unit-Tests mit JUnit und Mockito.",
+      "phrase2": "Entwicklung von Frontend-Anwendungen mit Angular, TypeScript, HTML und CSS unter Anwendung moderner Webentwicklungspraktiken und Tools aus dem Node.js-Ökosystem.",
+      "phrase3": "Verwaltung von Abhängigkeiten, Kompilierung und Automatisierung von Projekten mit Maven, nach strukturierten Entwicklungsabläufen.",
+      "phrase4": "Design, Implementierung und Verwaltung der Persistenzschicht mit PostgreSQL.",
+      "phrase5": "Versionsverwaltung mit Git und Zusammenarbeit in einer professionellen Softwareentwicklungsumgebung.",
+      "phrase6": "Integration von KI-basierten Tools und Agenten, um Entwicklungsabläufe zu optimieren und die Produktivität zu steigern.",
+      "years": "April 2026 - Juni 2026"
+    },
+    "neuric": {
+      "job": "Webentwickler",
+      "company": "Neuric",
+      "location": "Elche, Spanien",
+      "business": "Neuric Beratung",
+      "phrase1": "Entwicklung, Individualisierung und Optimierung von Websites mit WordPress in einer professionellen Umgebung.",
+      "phrase2": "Erstellung fortgeschrittener Oberflächen und Funktionen mit Elementor und WooCommerce, wobei die Lösungen an die Anforderungen jedes Projekts angepasst werden.",
+      "phrase3": "Entwicklung von Komponenten und Individualisierungen mit HTML, CSS und JavaScript, wodurch eine solide Grundlage in Design, Layout und fortgeschrittenen CSS-Stilen erworben wird.",
+      "phrase4": "Anwendung von Leistungsoptimierungstechniken, Websicherheit und Best Practices zur Verbesserung der Benutzererfahrung und des Rankings von Websites.",
+      "phrase5": "Grundlegende Verwaltung von Computersystemen und technischer Support in der Unternehmensumgebung.",
+      "years": "Februar 2025 - Mai 2025"
+    }
+  }
+}

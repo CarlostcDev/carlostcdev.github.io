@@ -1,9 +1,0 @@
-:root.purple-theme {
-    --primary: #fcaffe;
-    --secondary: #6a2d71;
-    --gray: #372837;
-    --dark: #221a22;
-    --black: #0e060d;
-    --transparent: color-mix(in srgb, var(--black) 70%, transparent);
-    --background-image: url("../../../sources/backgrounds/hero/background-hero-purple.webp");
-}
