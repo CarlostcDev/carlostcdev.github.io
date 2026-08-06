@@ -182,13 +182,13 @@
 }
 
 #header .lang-options li.active {
-    color: var(--secondary);
+    color: var(--primary);
     background-color: var(--dark);
 }
 
 #header .lang-options li.active:hover {
-    background-color: var(--gray);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--black);
 }
 
 #header .lang-options li:first-child:hover {

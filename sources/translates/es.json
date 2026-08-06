@@ -47,6 +47,12 @@
     "phrase6": "Poseo español nativo, con nivel intermedio de inglés y comprensión pasiva de valenciano."
   },
 
+  "projects": {
+    "h2": "Proyectos",
+    "p": "Explora mis trabajos más recientes y proyectos desarrollados.",
+    "a": "Ver proyectos"
+  },
+
   "footer": {
     "h2": "Contacto",
     "projects": "Proyectos",
@@ -58,6 +64,7 @@
   },
 
   "education": {
+    "h2": "Formación",
     "dam": {
       "title": "Desarrollo de Aplicaciones Multiplataforma",
       "subtitle": "Grado Superior de FP",
@@ -77,6 +84,49 @@
       "phrase3": "Realización de diagnósticos de hardware, pruebas de estrés y análisis de rendimiento utilizando herramientas como MemTest86, Cinebench y 3DMark.",
       "phrase4": "Monitorización y análisis del tráfico de red con Wireshark, junto con la implementación de medidas de ciberseguridad mediante firewalls, soluciones antivirus y herramientas de análisis de vulnerabilidades como OpenVAS.",
       "phrase5": "Administración de sistemas operativos, entornos de servidor, herramientas de desarrollo e infraestructuras informáticas."
+    }
+  },
+
+  "title": "Carlos Tormo | Portafolio",
+
+  "stats": {
+    "h2": "Estadísticas"
+  },
+
+  "social": {
+    "h2": "Social"
+  },
+
+  "info": {
+    "h2": "Información"
+  },
+
+  "experience": {
+    "h2": "Experiencia",
+    "nttdata": {
+      "job": "Desarrollador Full-Stack en Prácticas",
+      "company": "NTT Data España",
+      "location": "Playa de San Juan, España",
+      "business": "NTT Data San Juan",
+      "phrase1": "Desarrollo de aplicaciones backend utilizando Java 18 y Spring Boot, implementando APIs REST, autenticación y autorización con Spring Security, así como pruebas unitarias mediante JUnit y Mockito.",
+      "phrase2": "Desarrollo de aplicaciones frontend con Angular, TypeScript, HTML y CSS, aplicando prácticas modernas de desarrollo web y herramientas del ecosistema de Node.js.",
+      "phrase3": "Gestión de dependencias, compilación y automatización de proyectos mediante Maven, siguiendo flujos de desarrollo estructurados.",
+      "phrase4": "Diseño, implementación y gestión de la capa de persistencia utilizando PostgreSQL.",
+      "phrase5": "Control de versiones con Git y colaboración dentro de un entorno profesional de desarrollo de software.",
+      "phrase6": "Integración de herramientas y agentes de inteligencia artificial para optimizar los flujos de desarrollo e incrementar la productividad.",
+      "years": "Abril 2026 - Junio 2026"
+    },
+    "neuric": {
+      "job": "Desarrollador Web",
+      "company": "Neuric",
+      "location": "Elche, España",
+      "business": "Neuric Consultoría",
+      "phrase1": "Desarrollo, personalización y optimización de sitios web utilizando WordPress en un entorno profesional.",
+      "phrase2": "Creación de interfaces y funcionalidades avanzadas mediante Elementor y WooCommerce, adaptando las soluciones a las necesidades de cada proyecto.",
+      "phrase3": "Desarrollo de componentes y personalizaciones con HTML, CSS y JavaScript, adquiriendo una sólida base en diseño, maquetación y estilos avanzados con CSS.",
+      "phrase4": "Aplicación de técnicas de optimización del rendimiento, seguridad web y buenas prácticas para mejorar la experiencia de usuario y el posicionamiento de los sitios web.",
+      "phrase5": "Administración básica de sistemas informáticos y soporte técnico dentro del entorno empresarial.",
+      "years": "Febrero 2025 - Mayo 2025"
     }
   }
 }

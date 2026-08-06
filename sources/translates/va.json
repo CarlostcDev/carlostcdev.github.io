@@ -47,6 +47,12 @@
     "phrase6": "Tinc espanyol natiu, amb nivell intermedi d'anglés i comprensió passiva de valencià."
   },
 
+  "projects": {
+    "h2": "Projectes",
+    "p": "Explora els meus treballs més recents i projectes desenvolupats.",
+    "a": "Veure projectes"
+  },
+
   "footer": {
     "h2": "Contacte",
     "projects": "Projectes",
@@ -58,6 +64,7 @@
   },
 
   "education": {
+    "h2": "Formació",
     "dam": {
       "title": "Desenvolupament d'Aplicacions Multiplataforma",
       "subtitle": "Grau Superior de FP",
@@ -77,6 +84,49 @@
       "phrase3": "Realització de diagnòstics de maquinari, proves d'esforç i anàlisi de rendiment utilitzant eines com MemTest86, Cinebench i 3DMark.",
       "phrase4": "Monitoratge i anàlisi del tràfec de xarxa amb Wireshark, juntament amb la implementació de mesures de ciberseguretat mitjançant tallafocs, solucions antivirus i eines d'anàlisi de vulnerabilitats com OpenVAS.",
       "phrase5": "Administració de sistemes operatius, entorns de servidor, eines de desenvolupament i infraestructures informàtiques."
+    }
+  },
+
+  "title": "Carlos Tormo | Portfoli",
+
+  "stats": {
+    "h2": "Estadístiques"
+  },
+
+  "social": {
+    "h2": "Social"
+  },
+
+  "info": {
+    "h2": "Informació"
+  },
+
+  "experience": {
+    "h2": "Experiència",
+    "nttdata": {
+      "job": "Desenvolupador Full-Stack en Pràctiques",
+      "company": "NTT Data Espanya",
+      "location": "Platja de Sant Joan, Espanya",
+      "business": "NTT Data Sant Joan",
+      "phrase1": "Desenvolupament d'aplicacions backend amb Java 18 i Spring Boot, implementant APIs REST, autenticació i autorització amb Spring Security, a més de proves unitàries amb JUnit i Mockito.",
+      "phrase2": "Desenvolupament d'aplicacions frontend amb Angular, TypeScript, HTML i CSS, aplicant pràctiques modernes de desenvolupament web i eines de l'ecosistema de Node.js.",
+      "phrase3": "Gestió de dependències, compilació i automatització de projectes amb Maven, seguint fluxos de desenvolupament estructurats.",
+      "phrase4": "Disseny, implementació i gestió de la capa de persistència utilitzant PostgreSQL.",
+      "phrase5": "Control de versions amb Git i col·laboració dins d'un entorn professional de desenvolupament de programari.",
+      "phrase6": "Integració d'eines i agents de intel·ligència artificial per a optimitzar els fluxos de desenvolupament i augmentar la productivitat.",
+      "years": "Abril 2026 - Juny 2026"
+    },
+    "neuric": {
+      "job": "Desenvolupador Web",
+      "company": "Neuric",
+      "location": "Elx, Espanya",
+      "business": "Neuric Consultoria",
+      "phrase1": "Desenvolupament, personalització i optimització de llocs web utilitzant WordPress en un entorn professional.",
+      "phrase2": "Creació d'interfícies i funcionalitats avançades amb Elementor i WooCommerce, adaptant les solucions a les necessitats de cada project.",
+      "phrase3": "Desenvolupament de components i personalitzacions amb HTML, CSS i JavaScript, adquirint una sòlida base en disseny, maquetació i estils avançats amb CSS.",
+      "phrase4": "Aplicació de tècniques d'optimització del rendiment, seguretat web i bones pràctiques per a millorar l'experiència d'usuari i el posicionament dels llocs web.",
+      "phrase5": "Administració bàsica de sistemes informàtics i suport tècnic en l'entorn empresarial.",
+      "years": "Febrer de 2025 - Maig de 2025"
     }
   }
 }

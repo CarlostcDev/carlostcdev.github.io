@@ -56,9 +56,13 @@
 
   "social": [
     {
+      "h2": "Social",
+      "i18n": "social.h2"
+    },
+    {
       "id": "projects",
       "href": "./projects",
-      "icon": "dashboard",
+      "icon": "code",
       "text": "Proyectos",
       "i18n": "footer.projects",
       "target": null,
@@ -118,6 +122,10 @@
   ],
 
   "info": [
+    {
+      "h2": "Información",
+      "i18n": "info.h2"
+    },
     {
       "icon": "location",
       "text": "Elche, España",
@@ -260,18 +268,57 @@
 
   "experience": [
     {
-      "title": "Desarrollador Full-Stack en Prácticas",
-      "company": "NTT DATA",
-      "location": "San Juan, España",
-      "description": {
-        "phrase1": "Desarrollo de aplicaciones backend utilizando Java 18 y Spring Boot, implementando APIs REST, autenticación y autorización con Spring Security, así como pruebas unitarias mediante JUnit y Mockito.",
-        "phrase2": "Desarrollo de aplicaciones frontend con Angular, TypeScript, HTML y CSS, aplicando prácticas modernas de desarrollo web y herramientas del ecosistema Node.js.",
-        "phrase3": "Gestión de dependencias, compilación y automatización de proyectos mediante Maven, siguiendo flujos de desarrollo estructurados.",
-        "phrase4": "Diseño, implementación y gestión de la capa de persistencia utilizando PostgreSQL.",
-        "phrase5": "Control de versiones con Git y colaboración dentro de un entorno profesional de desarrollo de software.",
-        "phrase6": "Integración de herramientas y agentes basados en inteligencia artificial para optimizar los flujos de desarrollo y aumentar la productividad."
+      "job": {
+        "name": "Desarrollador Full-Stack en Prácticas",
+        "i18n": "experience.nttdata.job"
       },
-      "range-years": "Abril 2026 - Junio 2026",
+      "company": {
+        "name": "NTT Data España",
+        "i18n": "experience.nttdata.company"
+      },
+      "location": {
+        "text": "Playa de San Juan, España",
+        "i18n": "experience.nttdata.location"
+      },
+      "icon": {
+        "src": "sources/logos/nttdata-logo.webp",
+        "class": "nttdata icon"
+      },
+      "business": {
+        "name": "NTT Data San Juan",
+        "i18n": "experience.nttdata.business",
+        "href": "https://maps.app.goo.gl/BZ4nv1p4RfjYg3W46"
+      },
+      "description": [
+        {
+          "i18n": "experience.nttdata.phrase1",
+          "text": "Desarrollo de aplicaciones backend utilizando Java 18 y Spring Boot, implementando APIs REST, autenticación y autorización con Spring Security, así como pruebas unitarias mediante JUnit y Mockito."
+        },
+        {
+          "i18n": "experience.nttdata.phrase2",
+          "text": "Desarrollo de aplicaciones frontend con Angular, TypeScript, HTML y CSS, aplicando prácticas modernas de desarrollo web y herramientas del ecosistema Node.js."
+        },
+        {
+          "i18n": "experience.nttdata.phrase3",
+          "text": "Gestión de dependencias, compilación y automatización de proyectos mediante Maven, siguiendo flujos de desarrollo estructurados."
+        },
+        {
+          "i18n": "experience.nttdata.phrase4",
+          "text": "Diseño, implementación y gestión de la capa de persistencia utilizando PostgreSQL."
+        },
+        {
+          "i18n": "experience.nttdata.phrase5",
+          "text": "Control de versiones con Git y colaboración dentro de un entorno profesional de desarrollo de software."
+        },
+        {
+          "i18n": "experience.nttdata.phrase6",
+          "text": "Integración de herramientas y agentes basados en inteligencia artificial para optimizar los flujos de desarrollo y aumentar la productividad."
+        }
+      ],
+      "range-years": {
+        "years": "Abril 2026 - Junio 2026",
+        "i18n": "experience.nttdata.years"
+      },
       "technologies": [
         { "name": "Java", "class": "java" },
         { "name": "Spring Boot", "class": "spring-boot" },
@@ -286,21 +333,57 @@
         { "name": "Maven", "class": "maven" },
         { "name": "Node.js", "class": "node-js" },
         { "name": "Git", "class": "git" },
-        { "name": "IA", "class": "artificial-intelligence" }
+        { "name": "IA", "class": "ia" }
       ]
     },
     {
-      "title": "Desarrollador Web",
-      "company": "Neuric",
-      "location": "Elche, España",
-      "description": {
-        "phrase1": "Desarrollo, personalización y optimización de sitios web utilizando WordPress en un entorno profesional.",
-        "phrase2": "Creación de interfaces y funcionalidades avanzadas mediante Elementor y WooCommerce, adaptando soluciones a las necesidades de cada proyecto.",
-        "phrase3": "Desarrollo de componentes y personalizaciones con HTML, CSS y JavaScript, adquiriendo una sólida base en diseño, maquetación y estilos avanzados con CSS.",
-        "phrase4": "Aplicación de técnicas de optimización del rendimiento, seguridad web y buenas prácticas para mejorar la experiencia de usuario y el posicionamiento de los sitios web.",
-        "phrase5": "Administración básica de sistemas informáticos y soporte técnico dentro del entorno empresarial."
+      "job": {
+        "name": "Desarrollador Web",
+        "i18n": "experience.neuric.job"
       },
-      "range-years": "Febrero 2025 - Mayo 2025",
+      "company": {
+        "name": "Neuric",
+        "i18n": "experience.neuric.company"
+      },
+      "location": {
+        "text": "Elche, España",
+        "i18n": "experience.neuric.location"
+      },
+      "icon": {
+        "src": "sources/logos/neuric-logo.webp",
+        "class": "neuric icon"
+      },
+      "business": {
+        "name": "Neuric Consultoría",
+        "i18n": "experience.neuric.business",
+        "href": "https://maps.app.goo.gl/2qFMVwtJuUVijKTCA"
+      },
+      "description": [
+        {
+          "i18n": "experience.neuric.phrase1",
+          "text": "Desarrollo, personalización y optimización de sitios web utilizando WordPress en un entorno profesional."
+        },
+        {
+          "i18n": "experience.neuric.phrase2",
+          "text": "Creación de interfaces y funcionalidades avanzadas mediante Elementor y WooCommerce, adaptando soluciones a las necesidades de cada proyecto."
+        },
+        {
+          "i18n": "experience.neuric.phrase3",
+          "text": "Desarrollo de componentes y personalizaciones con HTML, CSS y JavaScript, adquiriendo una sólida base en diseño, maquetación y estilos avanzados con CSS."
+        },
+        {
+          "i18n": "experience.neuric.phrase4",
+          "text": "Aplicación de técnicas de optimización del rendimiento, seguridad web y buenas prácticas para mejorar la experiencia de usuario y el posicionamiento de los sitios web."
+        },
+        {
+          "i18n": "experience.neuric.phrase5",
+          "text": "Administración básica de sistemas informáticos y soporte técnico dentro del entorno empresarial."
+        }
+      ],
+      "range-years": {
+        "years": "Febrero 2025 - Mayo 2025",
+        "i18n": "experience.neuric.years"
+      },
       "technologies": [
         { "name": "WordPress", "class": "wordpress" },
         { "name": "Elementor", "class": "elementor" },

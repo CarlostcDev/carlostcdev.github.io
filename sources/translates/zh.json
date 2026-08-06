@@ -47,6 +47,12 @@
     "phrase6": "我的母语是西班牙语，具备中级英语水平以及瓦伦西亚语的被动理解能力。"
   },
 
+  "projects": {
+    "h2": "项目",
+    "p": "探索我最新的工作成果和开发项目。",
+    "a": "查看项目"
+  },
+
   "footer": {
     "h2": "联系",
     "projects": "项目",
@@ -58,6 +64,7 @@
   },
 
   "education": {
+    "h2": "教育背景",
     "dam": {
       "title": "跨平台应用程序开发",
       "subtitle": "高等职业教育文凭",
@@ -77,6 +84,49 @@
       "phrase3": "使用 MemTest86、Cinebench 和 3DMark 等工具进行硬件诊断、压力测试及性能分析。",
       "phrase4": "使用 Wireshark 进行网络流量监控与分析，并通过防火墙、杀毒软件及 OpenVAS 等漏洞扫描工具实施网络安全防护措施。",
       "phrase5": "管理操作系统、服务器环境、开发工具及 IT 基础设施。"
+    }
+  },
+
+  "title": "Carlos Tormo | 作品集",
+
+  "stats": {
+    "h2": "统计"
+  },
+
+  "social": {
+    "h2": "社交"
+  },
+
+  "info": {
+    "h2": "信息"
+  },
+
+  "experience": {
+    "h2": "工作经验",
+    "nttdata": {
+      "job": "全栈开发实习生",
+      "company": "NTT Data 西班牙",
+      "location": "圣胡安海滩，西班牙",
+      "business": "NTT Data San Juan",
+      "phrase1": "使用 Java 18 和 Spring Boot 开发后端应用，实现 REST API，使用 Spring Security 进行身份验证和授权，并使用 JUnit 和 Mockito 编写单元测试。",
+      "phrase2": "使用 Angular、TypeScript、HTML 和 CSS 开发前端应用，应用现代 Web 开发实践和 Node.js 生态系统中的工具。",
+      "phrase3": "按照结构化的开发流程，使用 Maven 进行依赖管理、编译和项目自动化。",
+      "phrase4": "使用 PostgreSQL 设计、实现和管理持久化层。",
+      "phrase5": "使用 Git 进行版本控制，并在专业的软件开发环境中进行协作。",
+      "phrase6": "集成基于人工智能的工具和智能体，以优化开发流程并提高生产力。",
+      "years": "2026年4月 - 2026年6月"
+    },
+    "neuric": {
+      "job": "Web 开发人员",
+      "company": "Neuric",
+      "location": "埃尔切，西班牙",
+      "business": "Neuric 咨询",
+      "phrase1": "在专业环境中使用 WordPress 进行网站的开发、定制和优化。",
+      "phrase2": "使用 Elementor 和 WooCommerce 创建高级界面和功能，并根据每个项目的需求调整解决方案。",
+      "phrase3": "使用 HTML、CSS 和 JavaScript 开发组件和自定义功能，在设计、布局和高级 CSS 样式方面打下坚实基础。",
+      "phrase4": "应用性能优化技术、Web 安全性和最佳实践，以改善用户体验和网站的搜索排名。",
+      "phrase5": "企业环境中计算机系统的基础管理和技术支持。",
+      "years": "2025年2月 - 2025年5月"
     }
   }
 }

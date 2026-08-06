@@ -1,0 +1,32 @@
+#projects {
+    background: var(--transparent);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#projects .h2 {
+    font-size: 2rem;
+}
+
+#projects .p {
+   width: 80%;
+}
+
+#projects .a {
+    text-decoration: none;
+    padding: 15px;
+    background: var(--primary);
+    font-size: 1.2rem;
+    border-radius: 10px 0;
+    transition: var(--transition);
+    color: var(--black);
+    font-weight: bold;
+}
+
+#projects .a:hover {
+    background: var(--black);
+    color: var(--primary);
+}

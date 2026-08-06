@@ -10,3 +10,4 @@ import "./dom/carousel.js";
 import "./dom/autotheme.js";
 import "./dom/autofooter.js";
 import "./dom/autoeducation.js";
+import "./dom/autoexperience.js";

@@ -47,6 +47,12 @@
     "phrase6": "스페인어가 모국어이며, 중급 수준의 영어 능력과 발렌시아어 수동적 이해력을 보유하고 있습니다."
   },
 
+  "projects": {
+    "h2": "프로젝트",
+    "p": "최근 작업물과 개발한 프로젝트를 확인해 보세요.",
+    "a": "프로젝트 보기"
+  },
+
   "footer": {
     "h2": "문의",
     "projects": "프로젝트",
@@ -58,6 +64,7 @@
   },
 
   "education": {
+    "h2": "학력 및 교육",
     "dam": {
       "title": "멀티플랫폼 애플리케이션 개발",
       "subtitle": "고등 직업 전문 학위",
@@ -77,6 +84,49 @@
       "phrase3": "MemTest86, Cinebench, 3DMark 등의 도구를 활용한 하드웨어 진단, 스트레스 테스트 및 성능 분석 수행.",
       "phrase4": "Wireshark를 통한 네트워크 트래픽 모니터링 및 분석, 방화벽, 백신 솔루션 및 OpenVAS와 같은 취약점 분석 도구를 활용한 사이버 보안 조치 적용.",
       "phrase5": "운영체제, 서버 환경, 개발 도구 및 IT 인프라 통합 관리."
+    }
+  },
+
+  "title": "Carlos Tormo | 포트폴리오",
+
+  "stats": {
+    "h2": "통계"
+  },
+
+  "social": {
+    "h2": "소셜"
+  },
+
+  "info": {
+    "h2": "정보"
+  },
+
+  "experience": {
+    "h2": "경력",
+    "nttdata": {
+      "job": "풀스택 개발자 (인턴)",
+      "company": "NTT Data 스페인",
+      "location": "산후안 비치, 스페인",
+      "business": "NTT Data San Juan",
+      "phrase1": "Java 18과 Spring Boot를 사용한 백엔드 애플리케이션 개발, Spring Security를 이용한 REST API, 인증 및 권한 부여 구현, JUnit과 Mockito를 사용한 단위 테스트 수행.",
+      "phrase2": "Angular, TypeScript, HTML, CSS를 사용한 프런트엔드 애플리케이션 개발과 현대적인 웹 개발 기법 및 Node.js 생태계 도구 적용.",
+      "phrase3": "구조화된 개발 프로세스에 따른 Maven 기반의 의존성 관리, 컴파일 및 프로젝트 자동화.",
+      "phrase4": "PostgreSQL을 사용한 영속성 계층의 설계, 구현 및 관리.",
+      "phrase5": "Git을 사용한 버전 관리와 전문적인 소프트웨어 개발 환경에서의 협업.",
+      "phrase6": "AI 기반 도구와 에이전트를 통합하여 개발 프로세스를 최적화하고 생산성을 향상.",
+      "years": "2026년 4월 - 2026년 6월"
+    },
+    "neuric": {
+      "job": "웹 개발자",
+      "company": "Neuric",
+      "location": "엘체, 스페인",
+      "business": "Neuric 컨설팅",
+      "phrase1": "전문적인 환경에서 WordPress를 사용한 웹사이트 개발, 맞춤화 및 최적화.",
+      "phrase2": "Elementor와 WooCommerce를 사용한 고급 인터페이스 및 기능 구현, 각 프로젝트의 요구 사항에 맞게 솔루션 조정.",
+      "phrase3": "HTML, CSS, JavaScript를 사용한 컴포넌트 및 커스터마이징 개발과 디자인, 레이아웃, 고급 CSS 스타일에 대한 탄탄한 기반 습득.",
+      "phrase4": "성능 최적화 기술, 웹 보안 및 모범 사례를 적용하여 사용자 경험과 웹사이트의 검색 순위 개선.",
+      "phrase5": "기업 환경에서의 기본 컴퓨터 시스템 관리 및 기술 지원.",
+      "years": "2025년 2월 - 2025년 5월"
     }
   }
 }

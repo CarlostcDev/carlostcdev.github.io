@@ -55,3 +55,59 @@ body {
     line-height: 1.6;
     background: var(--black) var(--background-image) center center / cover no-repeat fixed;
 }
+
+.java { background: #db380e; }
+.javascript { background: #e8d44d; color: #30312e; }
+.html { background: #f16529; }
+.css { background: #0096dc; }
+.mariadb { background: #003545; }
+.pl-sql { background: #ff0000; }
+.mongodb { background: #6cac48; }
+.redis { background: #ff4438; }
+.javafx { background: #52829d; }
+.shell-scripting { background: #1a1a1a; }
+.junit { background: #299d5b; }
+.git { background: #f5511e; }
+.aws { background: #ff9900; }
+.nftables { background: #204a87; }
+.linux { background: #f5c021; }
+.wireshark { background: #00619e; }
+.windows-server { background: #00adef; }
+.dhcp-server { background: #ec6117; }
+.http-server { background: #b5e08c; color: #1a1a12; }
+.dns-server { background: #f7b217; }
+.nginx { background: #009438; }
+.docker { background: #2597ee; }
+.virtualbox { background: #00758a; }
+.spring-boot { background: #6db23e; }
+.spring-security { background: #6cb33e; }
+.angular { background: #de15a8; }
+.typescript { background: #3178c6; }
+.postgresql { background: #336791; }
+.mockito { background: #79a63e; }
+.maven { background: #cc2236; }
+.node-js { background: #409338; }
+.ia { background: #adffff; color: #30312e; }
+.wordpress { background: #2b92b4; }
+.elementor { background: #ab366d; }
+.woocommerce { background: #9b5c8f; }
+
+.spikes {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.spikes::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 50px;
+    background-size: 50px 100%;
+    background-image: linear-gradient(135deg, var(--primary) 25%, transparent 25%), linear-gradient(225deg, var(--primary) 25%, transparent 25%);
+    background-position: 0 0;
+    background-color: var(--black);
+}

@@ -47,6 +47,12 @@
     "phrase6": "Sou falante nativo de espanhol, com nível intermédio de inglês e compreensão passiva de valenciano."
   },
 
+  "projects": {
+    "h2": "Projetos",
+    "p": "Explore os meus trabalhos mais recentes e projetos desenvolvidos.",
+    "a": "Ver projetos"
+  },
+
   "footer": {
     "h2": "Contacto",
     "projects": "Projetos",
@@ -58,6 +64,7 @@
   },
 
   "education": {
+    "h2": "Formação",
     "dam": {
       "title": "Desenvolvimento de Aplicações Multiplataforma",
       "subtitle": "Curso Técnico Superior Profissional",
@@ -77,6 +84,49 @@
       "phrase3": "Realização de diagnósticos de hardware, testes de esforço e análise de desempenho com ferramentas como MemTest86, Cinebench e 3DMark.",
       "phrase4": "Monitorização e análise de tráfego de rede com Wireshark, juntamente com a implementação de medidas de cibersegurança através de firewalls, soluções antivírus e ferramentas de análise de vulnerabilidades como OpenVAS.",
       "phrase5": "Administração de sistemas operativos, ambientes de servidor, ferramentas de desenvolvimento e infraestruturas informáticas."
+    }
+  },
+
+  "title": "Carlos Tormo | Portfólio",
+
+  "stats": {
+    "h2": "Estatísticas"
+  },
+
+  "social": {
+    "h2": "Social"
+  },
+
+  "info": {
+    "h2": "Informação"
+  },
+
+  "experience": {
+    "h2": "Experiência",
+    "nttdata": {
+      "job": "Desenvolvedor Full-Stack Estagiário",
+      "company": "NTT Data Espanha",
+      "location": "Praia de San Juan, Espanha",
+      "business": "NTT Data San Juan",
+      "phrase1": "Desenvolvimento de aplicações backend com Java 18 e Spring Boot, implementação de APIs REST, autenticação e autorização com Spring Security, além de testes unitários com JUnit e Mockito.",
+      "phrase2": "Desenvolvimento de aplicações frontend com Angular, TypeScript, HTML e CSS, aplicando práticas modernas de desenvolvimento web e ferramentas do ecossistema Node.js.",
+      "phrase3": "Gestão de dependências, compilação e automatização de projetos com Maven, seguindo fluxos de trabalho estruturados.",
+      "phrase4": "Conceção, implementação e gestão da camada de persistência com PostgreSQL.",
+      "phrase5": "Controlo de versões com Git e colaboração num ambiente profissional de desenvolvimento de software.",
+      "phrase6": "Integração de ferramentas e agentes baseados em inteligência artificial para otimizar os fluxos de desenvolvimento e aumentar a produtividade.",
+      "years": "Abril de 2026 - Junho de 2026"
+    },
+    "neuric": {
+      "job": "Desenvolvedor Web",
+      "company": "Neuric",
+      "location": "Elche, Espanha",
+      "business": "Neuric Consultoria",
+      "phrase1": "Desenvolvimento, personalização e otimização de sites com WordPress num ambiente profissional.",
+      "phrase2": "Criação de interfaces e funcionalidades avançadas com Elementor e WooCommerce, adaptando as soluções às necessidades de cada projeto.",
+      "phrase3": "Desenvolvimento de componentes e personalizações com HTML, CSS e JavaScript, adquirindo uma base sólida em design, layout e estilos avançados com CSS.",
+      "phrase4": "Aplicação de técnicas de otimização de desempenho, segurança web e boas práticas para melhorar a experiência do utilizador e o posicionamento dos sites.",
+      "phrase5": "Administração básica de sistemas informáticos e suporte técnico no ambiente empresarial.",
+      "years": "Fevereiro de 2025 - Maio de 2025"
     }
   }
 }

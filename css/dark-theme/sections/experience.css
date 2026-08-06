@@ -1,13 +1,11 @@
-#education {
-    background: var(--primary);
+#experience {
+    background: var(--black);
     padding: 20px;
-    width: 100%;
     position: relative;
     z-index: 1;
-    box-shadow: 0 -5px 30px var(--black);
 }
 
-#education .h2 {
+#experience .h2 {
     font-size: 2em;
     width: 1200px;
     margin: 50px auto -20px;
@@ -16,82 +14,84 @@
     font-weight: 600;
     height: 50px;
     border-width: 3px 3px 0 3px;
-    border-color: var(--black);
+    border-color: var(--primary);
     border-style: solid;
-    background: var(--black);
+    background: var(--primary);
     box-shadow: 0 5px 10px rgb(0 5 7 / 0.83);
     position: relative;
     z-index: 1;
     display: flex;
 }
 
-#education h2 {
+#experience h2 {
     font-size: 1em;
 }
 
-#education .h2 * {
-    color: var(--primary);
+#experience .h2 * {
+    color: var(--black);
 }
 
-#education #courses {
+#experience #jobs {
     justify-content: center;
     margin: 20px auto 60px;
     width: 1200px;
     border-width: 0 3px 3px 3px;
     border-style: solid;
-    border-color: var(--black);
+    border-color: var(--primary);
     border-radius: 0 0 60px 0;
     box-shadow: 0 5px 10px rgb(0 5 7 / 0.63);
-    background: var(--dark);
+    background: var(--gray);
 }
 
-#education .education {
+#experience .experience {
     display: flex;
     flex-direction: column;
 }
 
-#education .education .info {
+#experience .experience .info {
     display: flex;
-    background: var(--dark);
+    background: var(--gray);
     justify-content: space-between;
     margin: 0 10px;
 }
 
-#education .education .data {
+#experience .experience .data {
     display: flex;
     gap: 10px;
 }
 
-#education .education .info .title {
+#experience .experience .info .title {
     padding: 10px;
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
-#education .education .data .list {
+#experience .experience .data .list {
     list-style: none;
     padding: 10px;
 }
 
-#education .education .data .list .content .icon {
+#experience .experience .data .list .content .icon {
     width: 30px;
     height: 30px;
     fill: var(--light);
 }
 
-#education .education .data .list .content {
+#experience .experience .data .list .content {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
 }
 
-#education .education .description {
+#experience .experience .description {
     display: flex;
-    background: var(--gray);
+    flex-direction: row-reverse;
+    background: var(--dark);
 }
 
-#education .education .description .skills {
+#experience .experience .description .skills {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -101,7 +101,7 @@
     box-sizing: border-box;
 }
 
-#education .education .description .phrases {
+#experience .experience .description .phrases {
     width: 75%;
     padding: 10px;
     display: flex;
@@ -110,22 +110,33 @@
     box-sizing: border-box;
 }
 
-#education .education .h3 {
+#experience .experience .h3 {
     font-size: 1.7rem;
     font-weight: bold;
 }
 
-#education .education .h4 {
+#experience .experience .h4 {
     font-size: 1.3rem;
 }
 
-#education .education .description .skills .skill {
+#experience .experience .description .skills .skill {
     padding: 2px 10px;
     border-radius: 10px 0;
     font-weight: bold;
     border: 2px solid var(--black);
 }
 
-#education .education:last-child .description {
+#experience .experience:last-child .description {
     border-radius: 0 0 58px 0;
+}
+
+#experience .experience .info .logo {
+    justify-self: center;
+    align-self: center;
+}
+
+#experience .experience .info .logo .icon {
+    justify-self: center;
+    align-self: center;
+    width: 220px;
 }
