@@ -1,0 +1,13 @@
+@import url("../components/about-me/about-me.css");
+@import url("../components/education/education.css");
+@import url("../components/experience/experience.css");
+@import url("../components/footer/footer.css");
+@import url("../components/header/header.css");
+@import url("../components/home/home.css");
+@import url("../components/navigator/navigator.css");
+@import url("../components/projects/projects.css");
+@import url("./themes/dark-theme.css");
+@import url("./themes/light-theme.css");
+@import url("./utils/fonts.css");
+@import url("./utils/responsive.css");
+@import url("./app.css");

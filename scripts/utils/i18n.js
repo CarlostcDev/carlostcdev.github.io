@@ -1,7 +1,6 @@
-import config from "../config.js";
-import "../config.js";
+import config from "./config.js";
 
-import { renderLanguageOptions } from "../dom/autolanguages.js";
+import { renderLanguageOptions } from "../../components/header/header.js";
 
 const storageKey = "portfolio.language";
 const defaultLanguage = "es";

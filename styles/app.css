@@ -1,9 +1,3 @@
-@import url("style/index.css");
-@import url("responsive/style.css");
-@import url("utils/fonts.css");
-@import url("dark-theme/style.css");
-@import url("light-theme/style.css");
-
 :root {
     --font-general: "Google Sans", "Open Sans", "Google Sans Flex", system-ui;
     --font-code: "Google Sans Code", "Source Code Pro", monospace;

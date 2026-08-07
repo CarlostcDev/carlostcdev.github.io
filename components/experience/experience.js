@@ -1,4 +1,4 @@
-import config from "../config.js";
+import config from "../../scripts/utils/config.js";
 
 const container = document.getElementById("jobs");
 

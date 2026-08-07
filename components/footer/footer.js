@@ -1,4 +1,4 @@
-import config from "../config.js";
+import config from "../../scripts/utils/config.js";
 
 const buttons = document.getElementById("social");
 const socialH2 = config.social.find(item => item.h2);
@@ -11,7 +11,7 @@ buttons.innerHTML = `
             <div class="button-item">
                 <a href="${social.href}" ${social.target ? `target="${social.target}"` : ""} ${social.rel ? `rel="${social.rel}"` : ""}>
                     <button class="${social.class}">
-                        <svg><use href="/sources/svgs/sprite.svg#${social.icon}"></use></svg>
+                        <svg><use href="sources/svgs/sprite.svg#${social.icon}"></use></svg>
                         ${social.i18n ? `<span data-i18n="${social.i18n}">${social.text}</span>` : social.text}
                     </button>
                 </a>
@@ -35,7 +35,7 @@ info.innerHTML = `
 
     return `
                 <div class="list">
-                    <svg class="icon"><use href="/sources/svgs/sprite.svg#${inf.icon}"></use></svg>
+                    <svg class="icon"><use href="sources/svgs/sprite.svg#${inf.icon}"></use></svg>
                     <a href="${href}" target="_blank" rel="noopener noreferrer" class="source" ${i18nAttr}>
                         ${inf.text}
                     </a>

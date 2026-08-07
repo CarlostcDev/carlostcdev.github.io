@@ -128,15 +128,15 @@
         display: none;
     }
 
-    #menu {
+    #navigator {
         display: block;
     }
 
-    #menu .bottom-nav-list li:last-child {
+    #navigator .bottom-nav-list li:last-child {
         position: relative;
     }
 
-    #menu .lang-options {
+    #navigator .lang-options {
         position: absolute;
         top: auto;
         bottom: calc(100% + 15px);
@@ -180,7 +180,7 @@
         align-items: flex-end;
     }
 
-    #menu .nav-item {
+    #navigator .nav-item {
         gap: 0;
     }
 }
