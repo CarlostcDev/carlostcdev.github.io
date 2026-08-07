@@ -129,5 +129,13 @@
       "phrase5": "Administració bàsica de sistemes informàtics i suport tècnic en l'entorn empresarial.",
       "years": "Febrer de 2025 - Maig de 2025"
     }
+  },
+
+  "menu": {
+    "language": "Idioma",
+    "theme": "Tema",
+    "home": "Inici",
+    "projects": "Projectes",
+    "contact": "Contacte"
   }
 }

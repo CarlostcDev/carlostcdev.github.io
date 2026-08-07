@@ -129,5 +129,13 @@
       "phrase5": "Basic administration of computer systems and technical support within the business environment.",
       "years": "February 2025 - May 2025"
     }
+  },
+
+  "menu": {
+    "language": "Language",
+    "theme": "Theme",
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
   }
 }

@@ -129,5 +129,13 @@
       "phrase5": "Administração básica de sistemas informáticos e suporte técnico no ambiente empresarial.",
       "years": "Fevereiro de 2025 - Maio de 2025"
     }
+  },
+
+  "menu": {
+    "language": "Idioma",
+    "theme": "Tema",
+    "home": "Início",
+    "projects": "Projetos",
+    "contact": "Contacto"
   }
 }

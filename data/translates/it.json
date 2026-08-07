@@ -129,5 +129,13 @@
       "phrase5": "Amministrazione di base di sistemi informatici e supporto tecnico nell'ambiente aziendale.",
       "years": "Febbraio 2025 - Maggio 2025"
     }
+  },
+
+  "menu": {
+    "language": "Lingua",
+    "theme": "Tema",
+    "home": "Home",
+    "projects": "Progetti",
+    "contact": "Contatti"
   }
 }

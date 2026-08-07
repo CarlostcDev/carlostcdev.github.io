@@ -129,5 +129,13 @@
       "phrase5": "Administration de base de systèmes informatiques et support technique dans l'environnement d'entreprise.",
       "years": "Février 2025 - Mai 2025"
     }
+  },
+
+  "menu": {
+    "language": "Langue",
+    "theme": "Thème",
+    "home": "Accueil",
+    "projects": "Projets",
+    "contact": "Contact"
   }
 }

@@ -129,5 +129,13 @@
       "phrase5": "Grundlegende Verwaltung von Computersystemen und technischer Support in der Unternehmensumgebung.",
       "years": "Februar 2025 - Mai 2025"
     }
+  },
+
+  "menu": {
+    "language": "Sprache",
+    "theme": "Design",
+    "home": "Startseite",
+    "projects": "Projekte",
+    "contact": "Kontakt"
   }
 }
