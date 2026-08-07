@@ -45,6 +45,7 @@ h1 {
     font-weight: 500;
     font-style: normal;
     color: var(--light);
+    -webkit-tap-highlight-color: transparent;
 }
 
 ::selection {
