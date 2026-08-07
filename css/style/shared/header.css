@@ -42,22 +42,6 @@
     color: var(--black);
 }
 
-#header #menu {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#header #menu span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--light);
-    transition: all 0.5s;
-}
-
 #header .theme-toggle {
     background: transparent;
     border: 2px solid var(--light);
@@ -148,61 +132,4 @@
 
 #header .lang-dropdown.active .arrow {
     transform: translateY(-50%) rotate(135deg);
-}
-
-#header .lang-options {
-    position: absolute;
-    right: 0;
-    top: 120%;
-    list-style: none;
-    background-color: var(--black);
-    border: 2px solid var(--light);
-    border-radius: 20px 0;
-    min-width: 140px;
-    z-index: 2000;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-#header .lang-options[hidden] {
-    display: none;
-}
-
-#header .lang-options li {
-    padding: 10px 14px;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-
-#header .lang-options li:hover {
-    background-color: var(--primary);
-    color: var(--black);
-}
-
-#header .lang-options li.active {
-    color: var(--primary);
-    background-color: var(--dark);
-}
-
-#header .lang-options li.active:hover {
-    background-color: var(--primary);
-    color: var(--black);
-}
-
-#header .lang-options li:first-child:hover {
-    border-radius: 18px 0 0 0;
-}
-
-#header .lang-options li:last-child:hover {
-    border-radius: 0 0 18px 0;
-}
-
-#header .lang-options li:first-child {
-    border-radius: 18px 0 0 0;
-}
-
-#header .lang-options li:last-child {
-    border-radius: 0 0 18px 0;
 }

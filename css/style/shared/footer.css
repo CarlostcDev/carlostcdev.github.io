@@ -9,10 +9,12 @@
 
 #footer .contact {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 10% 50px 10%;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0 auto 50px auto;
     gap: 20px;
+    width: min(100% - 2rem, 1200px);
+    flex-wrap: wrap;
 }
 
 #footer #social {
@@ -22,7 +24,7 @@
 
 #footer #social .buttons-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     list-style: none;
     padding: 0;
@@ -47,7 +49,6 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    width: 100%;
     height: 30px;
 }
 
@@ -84,6 +85,10 @@
 #footer #social svg * {
     fill: white;
     color: white;
+}
+
+#footer #info svg * {
+    fill: var(--black);
 }
 
 #footer #social span {

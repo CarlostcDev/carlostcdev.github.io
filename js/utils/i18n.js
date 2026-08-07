@@ -132,7 +132,7 @@ function getValue(source, path) {
 }
 
 function updateActiveLanguage(language) {
-    document.querySelectorAll("#langOptions [data-lang]").forEach(option => {
+    document.querySelectorAll(".lang-options [data-lang]").forEach(option => {
         const active = option.dataset.lang === language;
 
         option.classList.toggle("active", active);
@@ -143,49 +143,39 @@ function updateActiveLanguage(language) {
 function bindLanguageSelector() {
     if (selectorReady) return;
 
-    const dropdown = document.querySelector(".lang-dropdown");
+    const headerDropdown = document.querySelector(".lang-dropdown");
+    const mobileOptions = document.querySelector("#menu .lang-options");
+    const mobileToggle = document.querySelector(".lang-toggle");
     const selected = document.getElementById("langSelected");
-    const options = document.getElementById("langOptions");
+    const headerOptions = document.querySelector(".lang-dropdown .lang-options");
 
-    if (!dropdown || !selected || !options) return;
-
-    const setOpen = open => {
-        dropdown.classList.toggle("active", open);
-        selected.setAttribute("aria-expanded", String(open));
-        options.hidden = !open;
+    const setOpen = (open) => {
+        if (headerDropdown) headerDropdown.classList.toggle("active", open);
+        if (selected) selected.setAttribute("aria-expanded", String(open));
+        if (headerOptions) headerOptions.hidden = !open;
+        if (mobileOptions) mobileOptions.hidden = !open;
     };
 
-    const selectOption = async option => {
-        if (!option?.dataset.lang) return;
-
-        await applyLanguage(option.dataset.lang);
-        setOpen(false);
-    };
-
-    selected.addEventListener("click", event => {
+    const toggleDropdown = (event) => {
         event.stopPropagation();
-        setOpen(!dropdown.classList.contains("active"));
-    });
+        const isHidden = mobileOptions ? mobileOptions.hidden : true;
+        setOpen(isHidden);
+    };
 
-    options.addEventListener("click", event => {
-        selectOption(event.target.closest("[data-lang]")).then(()=>{});
-    });
+    if (selected) selected.addEventListener("click", toggleDropdown);
+    if (mobileToggle) mobileToggle.addEventListener("click", toggleDropdown);
 
-    options.addEventListener("keydown", event => {
-        if (event.key !== "Enter" && event.key !== " ") return;
-
-        event.preventDefault();
-        selectOption(event.target.closest("[data-lang]")).then(()=>{});
+    document.querySelectorAll(".lang-options").forEach(optionsList => {
+        optionsList.addEventListener("click", event => {
+            const option = event.target.closest("[data-lang]");
+            if (!option?.dataset.lang) return;
+            applyLanguage(option.dataset.lang).then(() => {});
+            setOpen(false);
+        });
     });
 
     document.addEventListener("click", event => {
-        if (!dropdown.contains(event.target)) {
-            setOpen(false);
-        }
-    });
-
-    document.addEventListener("keydown", event => {
-        if (event.key === "Escape") {
+        if (!event.target.closest(".lang-dropdown") && !event.target.closest(".lang-toggle")) {
             setOpen(false);
         }
     });

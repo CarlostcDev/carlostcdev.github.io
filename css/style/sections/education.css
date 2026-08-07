@@ -1,7 +1,6 @@
 #education {
     background: var(--primary);
     padding: 20px;
-    width: 100%;
     position: relative;
     z-index: 1;
     box-shadow: 0 -5px 30px var(--black);
@@ -9,7 +8,7 @@
 
 #education .h2 {
     font-size: 2em;
-    width: 1200px;
+    width: min(100% - 2rem, 1200px);
     margin: 50px auto -20px;
     padding-left: 30px;
     border-radius: 60px 0 0 0;
@@ -36,7 +35,7 @@
 #education #courses {
     justify-content: center;
     margin: 20px auto 60px;
-    width: 1200px;
+    width: min(100% - 2rem, 1200px);
     border-width: 0 3px 3px 3px;
     border-style: solid;
     border-color: var(--black);
@@ -71,6 +70,8 @@
 #education .education .data .list {
     list-style: none;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 #education .education .data .list .content .icon {

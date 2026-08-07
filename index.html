@@ -11,8 +11,7 @@
 <body>
     <header id="header">
         <nav class="nav-menu">
-            <button id="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-            <div class="theme-switch"><button id="themeToggle" class="theme-toggle"><svg><use id="theme-mode" href="/sources/svgs/sprite.svg#light-mode"></use></svg></button></div>
+            <div class="theme-switch"><button class="theme-toggle"><svg><use href="/sources/svgs/sprite.svg#light-mode"></use></svg></button></div>
             <div class="menu-container">
                 <ul class="menu-options">
                     <li><a href="#home" data-i18n="header.home" class="nav-item nav-item-1" id="nav-home">Inicio</a></li>
@@ -28,7 +27,7 @@
                     <span data-i18n="header.language" class="language">Español</span>
                     <span class="arrow" aria-hidden="true"></span>
                 </button>
-                <ul class="lang-options" id="langOptions" role="listbox" hidden></ul>
+                <ul class="lang-options" role="listbox" hidden></ul>
             </div>
         </nav>
     </header>
@@ -43,9 +42,8 @@
                     <p><span data-i18n="home.p2">Soy</span> <span class="name"> Carlos Tormo</span>,</p>
                     <p><span data-i18n="home.p3">Tu próximo </span><span id="roles" class="fade" data-i18n="home.word-animation">desarrollador</span></p>
                     <div class="buttons">
-                        <a href="#about-me"><button data-i18n="home.a1" class="about-me">Sobre mí</button></a>
-                        <div id="spikes"></div>
-                        <a href="./proyectos"><button data-i18n="home.a2" class="projects">Proyectos</button></a>
+                        <a href="#about-me" class="about-me" data-i18n="home.a1">Sobre mí</a>
+                        <a href="./proyectos" class="projects" data-i18n="home.a2">Proyectos</a>
                     </div>
                 </div>
                 <div class="profile-photo"><img src="sources/profile/profile-photo.png" alt="Carlos Tormo Castaño" loading="eager"></div>
@@ -94,6 +92,42 @@
             <p>&copy; &nbsp;</p><p id="year"></p><p>&nbsp;CarlostcDev&nbsp;&middot;&nbsp;</p><p data-i18n="footer.copyright">Todos los derechos no reservados.</p>
         </div>
     </footer>
+
+    <nav id="menu" class="bottom-nav" aria-label="Navigation Bar">
+        <menu class="bottom-nav-list">
+            <li>
+                <ul class="lang-options" role="listbox" hidden></ul>
+                <a class="nav-item lang-toggle" aria-label="Change Language">
+                    <div class="hover"><svg class="icon"><use href="/sources/svgs/sprite.svg#language"></use></svg></div>
+                    <span data-i18n="menu.language">Idioma</span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-item theme-toggle" aria-label="Theme Toggle">
+                    <div class="hover"><svg class="icon"><use href="/sources/svgs/sprite.svg#light-mode"></use></svg></div>
+                    <span data-i18n="menu.theme">Tema</span>
+                </a>
+            </li>
+            <li>
+                <a href="#home" class="nav-item">
+                    <div class="hover"><svg class="icon"><use href="/sources/svgs/sprite.svg#home"></use></svg></div>
+                    <span data-i18n="menu.home">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="./projects" class="nav-item" target="_blank" rel="noopener">
+                    <div class="hover"><svg class="icon"><use href="/sources/svgs/sprite.svg#code"></use></svg></div>
+                    <span data-i18n="menu.projects">Proyectos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#footer" class="nav-item">
+                    <div class="hover"><svg class="icon"><use href="/sources/svgs/sprite.svg#contact"></use></svg></div>
+                    <span data-i18n="menu.contact">Contacto</span>
+                </a>
+            </li>
+        </menu>
+    </nav>
     <script type="module" src="js/index.js"></script>
 </body>
 </html>

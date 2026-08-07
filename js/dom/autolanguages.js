@@ -1,23 +1,14 @@
 export function renderLanguageOptions(languages, selectedLanguage) {
-    const ul = document.getElementById("langOptions");
+    const lists = document.querySelectorAll(".lang-options");
 
-    if (!ul || !Array.isArray(languages)) return;
+    if (!lists.length || !Array.isArray(languages)) return;
 
-    const fragment = document.createDocumentFragment();
+    const html = languages.map(lang => {
+        const isSelected = lang.code === selectedLanguage;
+        return `<li data-lang="${lang.code}" data-i18n="header.${lang.code}" role="option" tabindex="0" class="${isSelected ? "active" : ""}" aria-selected="${isSelected}">${lang.name}</li>`;
+    }).join("");
 
-    for (const language of languages) {
-        const li = document.createElement("li");
-        const isSelected = language.code === selectedLanguage;
-
-        li.dataset.lang = language.code;
-        li.dataset.i18n = `header.${language.code}`;
-        li.textContent = language.name;
-        li.role = "option";
-        li.tabIndex = 0;
-        li.classList.toggle("active", isSelected);
-        li.setAttribute("aria-selected", String(isSelected));
-        fragment.appendChild(li);
-    }
-
-    ul.replaceChildren(fragment);
+    lists.forEach(ul => {
+        ul.innerHTML = html;
+    });
 }
