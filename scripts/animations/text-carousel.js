@@ -27,7 +27,7 @@ export function textCarousel(options = {}) {
     const updateText = () => {
         if (items.length === 0) return;
         i %= items.length;
-        el.textContent = items[i];
+        e.textContent = items[i];
     };
 
     const handleLanguageChange = (event) => {

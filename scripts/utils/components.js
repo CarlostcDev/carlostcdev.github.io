@@ -1,19 +1,17 @@
 export async function loadComponents() {
     const elements = document.querySelectorAll("[data-component]");
-    const componentsPath = new URL("../../components/", import.meta.url);
 
-    for (const element of elements) {
-        const name = element.dataset.component;
-        const base = new URL(`${name}/${name}`, componentsPath);
+    await Promise.all(
+        Array.from(elements).map(async (element) => {
+            const name = element.dataset.component;
+            const htmlPath = `./components/${name}/${name}.html`;
+            const jsPath = `../../components/${name}/${name}.js`;
 
-        const response = await fetch(base + ".html");
-
-        if (!response.ok) {
-            console.error(`No se pudo cargar ${base}.html`);
-            continue;
-        }
-
-        element.innerHTML = await response.text();
-        await import(base + ".js");
-    }
+            const res = await fetch(htmlPath);
+            if (res.ok) {
+                element.innerHTML = await res.text();
+                await import(jsPath).catch(() => null);
+            }
+        })
+    );
 }
