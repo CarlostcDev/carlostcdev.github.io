@@ -9,17 +9,9 @@
     --danger: #7c0515;
 }
 
-html[lang="zh"] {
-    --font-general: "Noto Sans SC", "Google Sans", "Open Sans", "Google Sans Flex", system-ui;
-}
-
-html[lang="ja"] {
-    --font-general: "Noto Sans JP", "Google Sans", "Open Sans", "Google Sans Flex", system-ui;
-}
-
-html[lang="ko"] {
-    --font-general: "Noto Sans KR", "Google Sans", "Open Sans", "Google Sans Flex", system-ui;
-}
+html[lang="zh"] {--font-general: "Noto Sans SC", "Google Sans", "Open Sans", "Google Sans Flex", system-ui;}
+html[lang="ja"] {--font-general: "Noto Sans JP", "Google Sans", "Open Sans", "Google Sans Flex", system-ui;}
+html[lang="ko"] {--font-general: "Noto Sans KR", "Google Sans", "Open Sans", "Google Sans Flex", system-ui;}
 
 html {
     scroll-behavior: smooth;

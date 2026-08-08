@@ -1,30 +1,28 @@
 import config from "../../scripts/utils/config.js";
+import { autoHover } from "../../scripts/animations/auto-hover.js";
 
-const div = document.getElementById("phrases");
-if (div) {
-    const fragment = document.createDocumentFragment();
-
-    for (const phrase of config.phrases ?? []) {
-        const p = document.createElement("p");
-        p.classList.add("phrase");
-        p.dataset.i18n = phrase.key;
-        p.textContent = phrase.text;
-        fragment.appendChild(p);
+class AboutMe {
+    constructor() {
+        this.phrases = document.getElementById("phrases");
     }
 
-    div.replaceChildren(fragment);
+    init() {
+        if (!this.phrases) return;
+        this.render();
+    }
+
+    render() {
+        const fragment = document.createDocumentFragment();
+        for (const phrase of config.phrases ?? []) {
+            const p = document.createElement("p");
+            p.classList.add("phrase");
+            p.dataset.i18n = phrase.key;
+            p.textContent = phrase.text;
+            fragment.appendChild(p);
+        }
+        this.phrases.replaceChildren(fragment);
+        autoHover(".phrase", 4600);
+    }
 }
 
-const phrases = document.querySelectorAll(".phrase");
-if (phrases.length > 0) {
-    let index = 0;
-
-    const nextHover = () => {
-        phrases.forEach(phrase => phrase.classList.remove("hovered"));
-        phrases[index].classList.add("hovered");
-        index = (index + 1) % phrases.length;
-    };
-
-    nextHover();
-    setInterval(nextHover, 4600);
-}
+new AboutMe().init();

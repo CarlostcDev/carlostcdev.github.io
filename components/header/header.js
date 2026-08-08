@@ -1,43 +1,35 @@
-const themeToggles = document.querySelectorAll(".theme-toggle");
+import config from "../../scripts/utils/config.js";
 
-let theme = localStorage.getItem("theme");
+class Header {
+    constructor() {
+        this.header = document.querySelector("#header");
+    }
 
-if (!theme) {
-    theme = "dark-theme";
-    localStorage.setItem("theme", theme);
+    init() {
+        if (!this.header) return;
+        this.render();
+        this.dataPage();
+    }
+
+    dataPage() {
+        if (this.header.dataset.page !== "subpage") return;
+
+        this.header.querySelectorAll("a[href^='#']").forEach(link => {
+            if (!link.href.includes("#footer")) {
+                link.href = `../${link.getAttribute("href")}`;
+            }
+        });
+    }
+
+    render() {
+        const menu = this.header.querySelector("#menu-options");
+        if (!menu || !config.menus?.header) return;
+
+        menu.innerHTML = config.menus.header.map((item, index) => {
+            const key = item.i18n.split(".")[1];
+            return `<li><a href="${item.href}" data-i18n="${item.i18n}" class="nav-item nav-item-${index + 1}" id="nav-${key}">${item.label}</a></li>`;
+        }).join("");
+    }
 }
 
-const updateThemeUI = (currentTheme) => {
-    document.documentElement.classList.remove("dark-theme", "light-theme");
-    document.documentElement.classList.add(currentTheme);
-
-    const iconName = currentTheme === "dark-theme" ? "light-mode" : "dark-mode";
-    document.querySelectorAll(".theme-toggle use").forEach(use => {
-        use.setAttribute("href", `sources/svgs/sprite.svg#${iconName}`);
-    });
-};
-
-updateThemeUI(theme);
-
-themeToggles.forEach(toggle => {
-    toggle.addEventListener("click", () => {
-        theme = theme === "dark-theme" ? "light-theme" : "dark-theme";
-        localStorage.setItem("theme", theme);
-        updateThemeUI(theme);
-    });
-});
-
-export function renderLanguageOptions(languages, selectedLanguage) {
-    const lists = document.querySelectorAll(".lang-options");
-
-    if (!lists.length || !Array.isArray(languages)) return;
-
-    const html = languages.map(lang => {
-        const isSelected = lang.code === selectedLanguage;
-        return `<li data-lang="${lang.code}" data-i18n="header.${lang.code}" role="option" tabindex="0" class="${isSelected ? "active" : ""}" aria-selected="${isSelected}">${lang.name}</li>`;
-    }).join("");
-
-    lists.forEach(ul => {
-        ul.innerHTML = html;
-    });
-}
+new Header().init();
