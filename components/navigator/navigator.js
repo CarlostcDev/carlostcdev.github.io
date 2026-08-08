@@ -11,9 +11,12 @@ class Navigator {
     }
 
     render() {
+        const menuConfig = config.menus?.[this.navigator.dataset.menu];
         const menuList = this.navigator.querySelector(".bottom-nav-list");
-        if (!menuList || !config.menus?.navigator) return;
-        menuList.innerHTML = config.menus.navigator.map(item => {
+
+        if (!menuList || !menuConfig) return;
+
+        menuList.innerHTML = menuConfig.map(item => {
             const href = item.href ? `href="${item.href}" ` : "";
             const cls = item.class ? ` ${item.class}` : "";
             const aria = item.ariaLabel ? `aria-label="${item.ariaLabel}" ` : "";

@@ -22,15 +22,15 @@
   ],
 
   "menus": {
-    "header": [
-      {"label": "Inicio", "href": "#home", "i18n": "header.home"},
-      {"label": "Sobre mi", "href": "#about-me", "i18n": "header.about-me"},
-      {"label": "Aptitudes", "href": "#skills", "i18n": "header.skills"},
-      {"label": "Formación", "href": "#education", "i18n": "header.education"},
-      {"label": "Experiencia", "href": "#experience", "i18n": "header.experience"},
-      {"label": "Contacto", "href": "#footer", "i18n": "header.contact"}
+    "header-portfolio": [
+      {"name": "Inicio", "href": "#home", "i18n": "header.home"},
+      {"name": "Sobre mi", "href": "#about-me", "i18n": "header.about-me"},
+      {"name": "Aptitudes", "href": "#skills", "i18n": "header.skills"},
+      {"name": "Formación", "href": "#education", "i18n": "header.education"},
+      {"name": "Experiencia", "href": "#experience", "i18n": "header.experience"},
+      {"name": "Contacto", "href": "#footer", "i18n": "header.contact"}
     ],
-    "navigator": [
+    "navigator-portfolio": [
       {"name": "Idioma", "i18n": "menu.language", "icon": "language", "class": "lang-toggle", "ariaLabel": "Change Language", "hasLangOptions": true},
       {"name": "Tema", "i18n": "menu.theme", "icon": "light-mode", "class": "theme-toggle", "ariaLabel": "Theme Toggle"},
       {"name": "Inicio", "i18n": "menu.home", "href": "#home", "icon": "home"},

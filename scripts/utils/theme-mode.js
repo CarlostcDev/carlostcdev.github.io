@@ -7,7 +7,8 @@ if (!hasColorTheme) {
 }
 
 const div = document.querySelectorAll(".theme-toggle");
-let theme = localStorage.getItem("theme") || "dark-theme";
+const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light-theme" : "dark-theme";
+let theme = localStorage.getItem("theme") || systemTheme;
 
 function changeTheme(newTheme) {
     theme = newTheme;
@@ -16,12 +17,12 @@ function changeTheme(newTheme) {
     document.documentElement.className = [theme, ...extraClasses].join(" ");
     const icon = theme === "dark-theme" ? "light-mode" : "dark-mode";
     document.querySelectorAll(".theme-toggle use").forEach(use => {
-        use.setAttribute("href", `sources/svgs/sprite.svg#${icon}`);
+        use.setAttribute("href", `/sources/svgs/sprite.svg#${icon}`);
     });
     const themeClasses = document.documentElement.className.trim().split(/\s+/).join(".");
     const link = document.querySelector("link[rel*='icon']");
     if (link && themeClasses) {
-        link.setAttribute("href", `sources/svgs/favicon/${theme}/favicon.${themeClasses}.svg`);
+        link.setAttribute("href", `/sources/svgs/favicon/${theme}/favicon.${themeClasses}.svg`);
     }
 }
 
