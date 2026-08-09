@@ -1,4 +1,4 @@
-import { textCarousel } from '../../scripts/animations/text-carousel.js';
+import { textCarousel } from '../../../scripts/animations/text-carousel.js';
 
 class Home {
     constructor() {

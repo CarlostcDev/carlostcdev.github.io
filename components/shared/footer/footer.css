@@ -175,3 +175,12 @@
     border-radius: inherit;
     z-index: 1;
 }
+
+#footer #copy-mail {
+    cursor: pointer;
+}
+
+#footer #copy-mail::selection {
+    background: transparent;
+    color: var(--black);
+}

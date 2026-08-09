@@ -137,5 +137,17 @@
     "home": "ホーム",
     "projects": "プロジェクト",
     "contact": "お問い合わせ"
+  },
+
+  "header-projects": {
+    "portfolio": "ポートフォリオ",
+    "technologies": "技術"
+  },
+
+  "navigator-projects": {
+    "language": "言語",
+    "theme": "テーマ",
+    "portfolio": "ポートフォリオ",
+    "contact": "お問い合わせ"
   }
 }

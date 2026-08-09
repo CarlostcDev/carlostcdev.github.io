@@ -137,5 +137,17 @@
     "home": "홈",
     "projects": "프로젝트",
     "contact": "연락처"
+  },
+
+  "header-projects": {
+    "portfolio": "포트폴리오",
+    "technologies": "기술"
+  },
+
+  "navigator-projects": {
+    "language": "언어",
+    "theme": "테마",
+    "portfolio": "포트폴리오",
+    "contact": "연락처"
   }
 }

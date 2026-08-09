@@ -137,5 +137,17 @@
     "home": "首页",
     "projects": "项目",
     "contact": "联系方式"
+  },
+
+  "header-projects": {
+    "portfolio": "作品集",
+    "technologies": "技术"
+  },
+
+  "navigator-projects": {
+    "language": "语言",
+    "theme": "主题",
+    "portfolio": "作品集",
+    "contact": "联系方式"
   }
 }

@@ -137,5 +137,17 @@
     "home": "Home",
     "projects": "Projects",
     "contact": "Contact"
+  },
+
+  "header-projects": {
+    "portfolio": "Portfolio",
+    "technologies": "Technologies"
+  },
+
+  "navigator-projects": {
+    "language": "Language",
+    "theme": "Theme",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
   }
 }

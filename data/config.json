@@ -36,6 +36,19 @@
       {"name": "Inicio", "i18n": "menu.home", "href": "#home", "icon": "home"},
       {"name": "Proyectos", "i18n": "menu.projects", "href": "./projects", "icon": "code", "target": "_blank", "rel": "noopener"},
       {"name": "Contacto", "i18n": "menu.contact", "href": "#footer", "icon": "contact"}
+    ],
+    "header-projects": [
+      {"name": "Portafolio", "href": "../index.html", "i18n": "header-projects.portfolio"},
+      {"name": "Tecnologías", "href": "#technologies", "i18n": "header-projects.technologies"},
+      {"name": "GitHub", "href": "https://github.com/CarlostcDev"},
+      {"name": "Contacto", "href": "#footer", "i18n": "header.contact"}
+    ],
+    "navigator-projects": [
+      {"name": "Idioma", "i18n": "navigator-projects.language", "icon": "language", "class": "lang-toggle", "ariaLabel": "Change Language", "hasLangOptions": true},
+      {"name": "Tema", "i18n": "navigator-projects.theme", "icon": "light-mode", "class": "theme-toggle", "ariaLabel": "Theme Toggle"},
+      {"name": "Portafolios", "i18n": "navigator-projects.portfolio", "href": "../index.html", "icon": "portfolio"},
+      {"name": "GitHub", "i18n": "", "href": "https://github.com/CarlostcDev", "icon": "github", "target": "_blank", "rel": "noopener"},
+      {"name": "Contacto", "i18n": "navigator-projects.contact", "href": "#footer", "icon": "contact"}
     ]
   },
 
@@ -59,7 +72,7 @@
     "title": {"h2": "Información", "i18n": "info.h2"},
     "items": [
       {"icon": "location", "text": "Elche, España", "href": "https://maps.app.goo.gl/VyLmG2a6jPgxPa8r8", "i18n": "footer.location"},
-      {"icon": "mail", "text": "carlostccarlos2003@gmail.com", "href": "mailto:carlostccarlos2003@gmail.com", "i18n": null},
+      {"icon": "copy", "text": "carlostccarlos2003@gmail.com", "href": null, "i18n": null},
       {"icon": "download", "text": "Curriculum", "href": "./sources/profile/cv/CV_Carlos_Tormo_Castano", "i18n": "footer.cv"},
       {"icon": "clock", "text": "Hora local:", "href": "https://time.is/Elche", "i18n": "footer.localtime"}
     ]

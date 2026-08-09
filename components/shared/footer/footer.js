@@ -1,4 +1,5 @@
-import config from "../../scripts/utils/config.js";
+import config from "../../../scripts/utils/config.js";
+import { clickCopy } from "../../../scripts/features/click-copy.js";
 
 class Footer {
     constructor() {
@@ -10,6 +11,7 @@ class Footer {
         this.render();
         this.setYear();
         this.setLocalTime();
+        this.setCopy();
     }
 
     render() {
@@ -19,35 +21,45 @@ class Footer {
         const language = localStorage.getItem("portfolio.language") || "EN";
 
         info.innerHTML = `
-            <h2 data-i18n="${config.info.title.i18n}">${config.info.title.h2}</h2>
-            <div class="info-container">
-                ${config.info.items.map(item => {
-                    const href = item.i18n === "footer.cv" ? `${item.href}_${language.toUpperCase()}.pdf` : item.href;
-                    return `
+        <h2 data-i18n="${config.info.title.i18n}">${config.info.title.h2}</h2>
+        <div class="info-container">
+            ${config.info.items.map(item => {
+                const hrefVal = item.i18n === "footer.cv" ? `${item.href}_${language.toUpperCase()}.pdf` : item.href;
+                const hrefAttr = hrefVal != null ? `href="${hrefVal}"` : "";
+                const idAttr = item.icon === "copy" ? 'id="copy-mail"' : "";
+                const i18nAttr = item.i18n ? `data-i18n="${item.i18n}"` : "";
+    
+                return `
                         <div class="list">
                             <svg class="icon"><use href="sources/svgs/sprite.svg#${item.icon}"></use></svg>
-                            <a href="${href}" target="_blank" rel="noopener noreferrer" class="source" ${item.i18n ? `data-i18n="${item.i18n}"` : ""}>${item.text}</a>
+                            <a ${idAttr} ${hrefAttr} target="_blank" rel="noopener noreferrer" class="source" ${i18nAttr}>${item.text}</a>
                             ${item.i18n === "footer.localtime" ? `<span id="localtime"></span>` : ""}
                         </div>
                     `;
-                }).join("")}
-            </div>
+            }).join("")}
+        </div>
         `;
 
         social.innerHTML = `
-            <h2 data-i18n="${config.social.title.i18n}">${config.social.title.h2}</h2>
-            <div class="buttons-container">
-                ${config.social.items.map(item => `
-                    <div class="button-item">
-                        <a href="${item.href}" ${item.target ? `target="${item.target}"` : ""} ${item.rel ? `rel="${item.rel}"` : ""}>
-                            <button class="${item.class}">
-                                <svg><use href="sources/svgs/sprite.svg#${item.icon}"></use></svg>
-                                ${item.i18n ? `<span data-i18n="${item.i18n}">${item.text}</span>` : item.text}
-                            </button>
-                        </a>
-                    </div>
-                `).join("")}
-            </div>
+        <h2 data-i18n="${config.social.title.i18n}">${config.social.title.h2}</h2>
+        <div class="buttons-container">
+            ${config.social.items.map(item => {
+                const hrefAttr = item.href != null ? `href="${item.href}"` : "";
+                const targetAttr = item.target ? `target="${item.target}"` : "";
+                const relAttr = item.rel ? `rel="${item.rel}"` : "";
+        
+                return `
+                        <div class="button-item">
+                            <a ${hrefAttr} ${targetAttr} ${relAttr}>
+                                <button class="${item.class}">
+                                    <svg><use href="sources/svgs/sprite.svg#${item.icon}"></use></svg>
+                                    ${item.i18n ? `<span data-i18n="${item.i18n}">${item.text}</span>` : item.text}
+                                </button>
+                            </a>
+                        </div>
+                    `;
+            }).join("")}
+        </div>
         `;
 
         stats.innerHTML = `
@@ -81,6 +93,10 @@ class Footer {
             updateTime();
             setInterval(updateTime, 1000);
         }
+    }
+
+    setCopy() {
+        clickCopy("copy-mail");
     }
 }
 

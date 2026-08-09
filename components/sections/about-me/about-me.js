@@ -1,5 +1,5 @@
-import config from "../../scripts/utils/config.js";
-import { autoHover } from "../../scripts/animations/auto-hover.js";
+import config from "../../../scripts/utils/config.js";
+import { autoHover } from "../../../scripts/animations/auto-hover.js";
 
 class AboutMe {
     constructor() {

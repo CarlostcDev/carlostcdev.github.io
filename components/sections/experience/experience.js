@@ -1,4 +1,4 @@
-import config from "../../scripts/utils/config.js";
+import config from "../../../scripts/utils/config.js";
 
 class Experience {
     constructor() {
