@@ -19,24 +19,27 @@ class Footer {
         const social = this.footer.querySelector("#social");
         const stats = this.footer.querySelector("#stats");
         const language = localStorage.getItem("portfolio.language") || "EN";
+        const isSubpage = this.footer.dataset.subpage === "true";
+        const basePath = isSubpage ? "../../" : "";
 
         info.innerHTML = `
         <h2 data-i18n="${config.info.title.i18n}">${config.info.title.h2}</h2>
         <div class="info-container">
             ${config.info.items.map(item => {
-                const hrefVal = item.i18n === "footer.cv" ? `${item.href}_${language.toUpperCase()}.pdf` : item.href;
-                const hrefAttr = hrefVal != null ? `href="${hrefVal}"` : "";
-                const idAttr = item.icon === "copy" ? 'id="copy-mail"' : "";
-                const i18nAttr = item.i18n ? `data-i18n="${item.i18n}"` : "";
-    
-                return `
+            const rawHref = item.i18n === "footer.cv" ? `${item.href}_${language.toUpperCase()}.pdf` : item.href;
+            const hrefVal = rawHref && !rawHref.startsWith("http") && !rawHref.startsWith("mailto:") ? `${basePath}${rawHref}` : rawHref;
+            const hrefAttr = hrefVal != null ? `href="${hrefVal}"` : "";
+            const idAttr = item.icon === "copy" ? 'id="copy-mail"' : "";
+            const i18nAttr = item.i18n ? `data-i18n="${item.i18n}"` : "";
+
+            return `
                         <div class="list">
-                            <svg class="icon"><use href="sources/svgs/sprite.svg#${item.icon}"></use></svg>
+                            <svg class="icon"><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
                             <a ${idAttr} ${hrefAttr} target="_blank" rel="noopener noreferrer" class="source" ${i18nAttr}>${item.text}</a>
                             ${item.i18n === "footer.localtime" ? `<span id="localtime"></span>` : ""}
                         </div>
                     `;
-            }).join("")}
+        }).join("")}
         </div>
         `;
 
@@ -44,21 +47,23 @@ class Footer {
         <h2 data-i18n="${config.social.title.i18n}">${config.social.title.h2}</h2>
         <div class="buttons-container">
             ${config.social.items.map(item => {
-                const hrefAttr = item.href != null ? `href="${item.href}"` : "";
-                const targetAttr = item.target ? `target="${item.target}"` : "";
-                const relAttr = item.rel ? `rel="${item.rel}"` : "";
-        
-                return `
+            const rawHref = item.href;
+            const hrefVal = rawHref && !rawHref.startsWith("http") ? `${basePath}${rawHref}` : rawHref;
+            const hrefAttr = hrefVal != null ? `href="${hrefVal}"` : "";
+            const targetAttr = item.target ? `target="${item.target}"` : "";
+            const relAttr = item.rel ? `rel="${item.rel}"` : "";
+
+            return `
                         <div class="button-item">
                             <a ${hrefAttr} ${targetAttr} ${relAttr}>
                                 <button class="${item.class}">
-                                    <svg><use href="sources/svgs/sprite.svg#${item.icon}"></use></svg>
+                                    <svg><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
                                     ${item.i18n ? `<span data-i18n="${item.i18n}">${item.text}</span>` : item.text}
                                 </button>
                             </a>
                         </div>
                     `;
-            }).join("")}
+        }).join("")}
         </div>
         `;
 

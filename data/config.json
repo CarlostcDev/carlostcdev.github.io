@@ -38,6 +38,7 @@
       {"name": "Contacto", "i18n": "menu.contact", "href": "#footer", "icon": "contact"}
     ],
     "header-projects": [
+      {"name": "Inicio", "href": "#hero", "i18n": "header-projects.hero"},
       {"name": "Portafolio", "href": "../index.html", "i18n": "header-projects.portfolio"},
       {"name": "Tecnologías", "href": "#technologies", "i18n": "header-projects.technologies"},
       {"name": "GitHub", "href": "https://github.com/CarlostcDev"},

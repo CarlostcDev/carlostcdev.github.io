@@ -1,4 +1,133 @@
 #projects {
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(to bottom, var(--transparent) 0%, var(--black) 100%);
+    position: relative;
+    z-index: 10;
+}
+
+#projects .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 380px));
+    gap: 30px;
+    width: min(100% - 2rem, 1200px);
+}
+
+#projects .projects-list .project-box {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    border-radius: 55px 0;
+    overflow: hidden;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#projects .projects-list .project-box::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image:
+            linear-gradient(var(--primary), var(--primary)),
+            linear-gradient(var(--secondary), var(--secondary)),
+            linear-gradient(var(--primary), var(--primary)),
+            linear-gradient(var(--secondary), var(--secondary));
+    animation: rotate 30s linear infinite;
+}
+
+#projects .projects-list .project-box::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: var(--black);
+    border-radius: 50px 0;
+}
+
+#projects .projects-list .project-box .box-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#projects .projects-list .project-box .box-url {
+    padding: 10px 25px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    background: var(--primary);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0;
+}
+
+#projects .projects-list .project-box .box-button {
+    background: transparent;
+    border: none;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#projects .projects-list .project-box .box-svg {
+    fill: var(--black);
+    width: 30px;
+    height: 30px;
+}
+
+#projects .projects-list .box-desc {
+    font-family: var(--font-code), system-ui;
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    color: var(--light);
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+#projects .projects-list .project-box .box-url:hover {
     background: var(--dark);
+}
+
+#projects .projects-list .project-box .box-url:hover .box-button {
+    color: var(--primary);
+}
+
+#projects .projects-list .project-box .box-url:hover .box-svg {
+    fill: var(--primary);
+}
+
+#projects .box-ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#projects .box-ul .box-li {
+    padding: 0 10px;
+    border-radius: 5px;
+    color: white;
+    text-transform: capitalize;
 }
