@@ -1,0 +1,13 @@
+#robot-animation {
+    width: 250px;
+    height: 100%;
+}
+
+#robot-animation > svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    cursor: pointer;
+}
+
+

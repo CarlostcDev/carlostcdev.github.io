@@ -1,3 +1,38 @@
 #hero {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#hero .hero-container {
+    background: var(--transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(100% - 2rem, 1200px);
+    height: 70%;
+    border-radius: 100px 0;
+}
+
+#hero .hero-container .hero-h2 {
+    font-size: 5rem;
+}
+
+#hero .hero-container .hero-button {
+    color: var(--black);
+    background: var(--primary);
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#hero .hero-container .hero-button:hover {
+    background: var(--black);
+    color: var(--primary);
 }

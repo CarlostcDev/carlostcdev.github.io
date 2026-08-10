@@ -5,7 +5,7 @@ class Project {
 
     init() {
         if (!this.projects) return;
-        this.getProjects().then(p => this.projects.innerHTML = JSON.stringify(p));
+        //this.getProjects().then(p => this.projects.innerHTML = JSON.stringify(p));
     }
 
     async getProjects() {
@@ -16,11 +16,8 @@ class Project {
             const response = await fetch("https://api.github.com/users/CarlostcDev/repos?type=owner&sort=updated&per_page=100", {
                 headers: { Accept: "application/vnd.github+json" }
             });
-
             if (!response.ok) throw new Error(`GitHub API HTTP ${response.status}`);
-
             const data = await response.json();
-
             return data.reduce((acc, repo) => {
                 if (repo.topics?.includes("project")) {
                     acc.push({
