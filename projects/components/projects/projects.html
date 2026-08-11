@@ -1,1 +1,59 @@
+<form class="projects-filter" action="#">
+    <details class="filter-select">
+        <summary>
+            <svg class="filter-svg" aria-hidden="true"><use href="../sources/svgs/sprite.svg#sort"></use></svg>
+            <span>Ordenar</span>
+        </summary>
+        <div class="filter-options">
+            <button class="filter-btn" type="button" data-sort="pushedAt" data-order="desc">Recientes</button>
+            <button class="filter-btn" type="button" data-sort="pushedAt" data-order="asc">Antiguos</button>
+        </div>
+    </details>
+
+    <details class="filter-select">
+        <summary>
+            <svg class="filter-svg" aria-hidden="true"><use href="../sources/svgs/sprite.svg#star"></use></svg>
+            <span>Estrellas</span>
+        </summary>
+        <div class="filter-options range-container">
+            <div class="range-wrapper">
+                <span class="range-tooltip hidden" id="range-tooltip">0</span>
+                <input class="filter-range" type="range" min="0" max="50" step="5" value="0" data-prop="stars">
+            </div>
+        </div>
+    </details>
+
+    <details class="filter-select">
+        <summary>
+            <svg class="filter-svg" aria-hidden="true"><use href="../sources/svgs/sprite.svg#code"></use></svg>
+            <span>Lenguaje</span>
+        </summary>
+        <div class="filter-options">
+            <button class="filter-btn" type="button" data-prop="topics" data-value="java">
+                <span>Java</span>
+                <span class="filter-switch"></span>
+            </button>
+            <button class="filter-btn" type="button" data-prop="topics" data-value="javascript">
+                <span>JavaScript</span>
+                <span class="filter-switch"></span>
+            </button>
+            <button class="filter-btn" type="button" data-prop="topics" data-value="typescript">
+                <span>TypeScript</span>
+                <span class="filter-switch"></span>
+            </button>
+            <button class="filter-btn" type="button" data-prop="topics" data-value="sql">
+                <span>SQL</span>
+                <span class="filter-switch"></span>
+            </button>
+        </div>
+    </details>
+
+    <div class="search-bar">
+        <svg class="search">
+            <use href="../sources/svgs/sprite.svg#search"></use>
+        </svg>
+        <input class="filter-input" type="search" placeholder="Buscar...">
+    </div>
+</form>
+
 <div class="projects-list"></div>
