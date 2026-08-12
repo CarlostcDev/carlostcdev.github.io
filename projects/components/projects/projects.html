@@ -23,7 +23,7 @@
         </div>
     </details>
 
-    <details class="filter-select">
+    <details class="filter-select filter-buttons">
         <summary>
             <svg class="filter-svg" aria-hidden="true"><use href="../sources/svgs/sprite.svg#code"></use></svg>
             <span>Lenguaje</span>
@@ -49,10 +49,14 @@
     </details>
 
     <div class="search-bar">
-        <svg class="search">
-            <use href="../sources/svgs/sprite.svg#search"></use>
-        </svg>
+        <svg class="search"><use href="../sources/svgs/sprite.svg#search"></use></svg>
         <input class="filter-input" type="search" placeholder="Buscar...">
+        <svg class="clear"><use href="../sources/svgs/sprite.svg#close"></use></svg>
+    </div>
+
+    <div class="reset-filters" role="button" tabindex="0">
+        <svg class="reset-svg" aria-hidden="true"><use href="../sources/svgs/sprite.svg#reset"></use></svg>
+        <span class="reset-text">Reiniciar</span>
     </div>
 </form>
 

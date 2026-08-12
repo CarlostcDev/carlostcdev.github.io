@@ -1,14 +1,14 @@
 #projects {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    background: linear-gradient(to bottom, var(--transparent) 0%, var(--black) 100%);
-    position: relative;
-    z-index: 10;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 40px;
     width: 100%;
+    padding: 50px;
+    background: linear-gradient(to bottom, var(--transparent), black);
+    position: relative;
+    z-index: 10;
 }
 
 #projects .projects-list {
@@ -23,23 +23,23 @@
 #projects .projects-list .project-box {
     position: relative;
     z-index: 0;
-    width: 100%;
-    border-radius: 55px 0;
-    overflow: hidden;
-    padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: space-between;
+    gap: 20px;
+    width: 100%;
     max-width: 400px;
+    padding: 2rem;
+    border-radius: 55px 0;
+    overflow: hidden;
 }
 
 #projects .projects-list .project-box::before {
     content: '';
     position: absolute;
     z-index: -2;
-    left: -50%;
     top: -50%;
+    left: -50%;
     width: 200%;
     height: 200%;
     background-color: transparent;
@@ -58,8 +58,8 @@
     content: '';
     position: absolute;
     z-index: -1;
-    left: 6px;
     top: 6px;
+    left: 6px;
     width: calc(100% - 12px);
     height: calc(100% - 12px);
     background: var(--black);
@@ -72,44 +72,16 @@
 }
 
 #projects .projects-list .project-box .box-url {
-    padding: 10px 25px;
-    cursor: pointer;
-    text-decoration: none;
     display: flex;
-    background: var(--primary);
-    gap: 20px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 25px;
+    background: var(--primary);
     border-radius: 20px 0;
-}
-
-#projects .projects-list .project-box .box-button {
-    background: transparent;
-    border: none;
-    color: var(--black);
-    font-size: 1rem;
-    font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
-}
-
-#projects .projects-list .project-box .box-svg {
-    fill: var(--black);
-    width: 30px;
-    height: 30px;
-}
-
-#projects .projects-list .box-desc {
-    font-family: var(--font-code), system-ui;
-    font-size: 1rem;
-    line-height: 1.6;
-    white-space: pre-wrap;
-    color: var(--light);
-}
-
-@keyframes rotate {
-    100% {
-        transform: rotate(1turn);
-    }
+    transition: var(--transition);
 }
 
 #projects .projects-list .project-box .box-url:hover {
@@ -124,29 +96,56 @@
     fill: var(--primary);
 }
 
+#projects .projects-list .project-box .box-url .box-button, #projects .projects-list .project-box .box-url .box-svg {
+    transition: var(--transition);
+}
+
+#projects .projects-list .project-box .box-button {
+    background: transparent;
+    border: none;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#projects .projects-list .project-box .box-svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--black);
+}
+
+#projects .projects-list .box-desc {
+    color: var(--light);
+    font-family: var(--font-code), system-ui;
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
 #projects .box-ul {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    list-style: none;
 }
 
 #projects .box-ul .box-li {
     padding: 0 10px;
-    border-radius: 5px;
     color: white;
+    border-radius: 5px;
     text-transform: capitalize;
 }
 
 #projects .projects-filter {
     display: flex;
+    align-items: center;
+    gap: 10px;
     width: 100%;
     max-width: 1200px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     box-sizing: border-box;
-    gap: 10px;
-    align-items: center;
 }
 
 #projects .projects-filter .filter-select {
@@ -154,23 +153,23 @@
     flex-shrink: 0;
 }
 
-#projects .projects-filter .filter-select summary {
+#projects .projects-filter .filter-select summary, #projects .reset-filters {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 50px;
     gap: 5px;
     padding: 10px 15px;
-    box-sizing: border-box;
     background: var(--dark);
     color: var(--light);
     border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
     font-size: 0.9rem;
+    font-weight: bold;
     list-style: none;
+    cursor: pointer;
     user-select: none;
     transition: var(--transition);
+    box-sizing: border-box;
 }
 
 #projects .projects-filter .filter-select summary::-webkit-details-marker {
@@ -179,6 +178,11 @@
 
 #projects .projects-filter .filter-select summary:hover {
     background: var(--gray);
+}
+
+#projects .projects-filter .filter-select summary:hover .filter-svg,
+#projects .projects-filter .filter-select[open] .filter-svg {
+    color: var(--primary);
 }
 
 #projects .projects-filter .filter-select summary span {
@@ -192,42 +196,38 @@
     transition: var(--transition);
 }
 
-#projects .projects-filter .filter-select summary:hover .filter-svg {
-    color: var(--primary);
-}
-
-#projects .projects-filter .filter-select[open] .filter-svg {
-    color: var(--primary);
-}
-
 #projects .projects-filter .filter-select .filter-options {
     position: absolute;
     top: 52px;
     left: 0;
-    min-width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    min-width: 100%;
+    padding: 5px;
     background: var(--dark);
     border-radius: 10px;
     box-shadow: 0 15px 30px rgb(0 0 0 / 35%);
+    box-sizing: border-box;
     z-index: 100;
 }
 
 #projects .projects-filter .filter-select .filter-options .filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
     width: 100%;
     padding: 12px 15px;
     background: transparent;
     border: none;
     color: var(--light);
     border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
     font-size: 0.9rem;
+    font-weight: bold;
     text-align: left;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 #projects .projects-filter .filter-select .filter-options .filter-btn:hover {
@@ -239,136 +239,28 @@
     color: var(--black);
 }
 
-#projects .projects-filter .search-bar {
-    flex: 1;
-    min-width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    background: var(--dark);
-    border-radius: 50px;
-    gap: 10px;
-    padding: 10px;
-    margin-left: 30px;
-}
-
-#projects .projects-filter .search-bar .search {
-    width: 25px;
-    fill: var(--light);
-    margin: 5px;
-}
-
-#projects .projects-filter .search-bar .filter-input {
-    width: 100%;
-    border: none;
-    outline: none;
-    height: 100%;
-    background: transparent;
-    font-size: 1.2rem;
-}
-
-#projects .range-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#projects .range-container {
-    height: 50px;
-    padding: 0 20px !important;
-}
-
-#projects .range-tooltip {
-    position: absolute;
-    top: -20px;
-    left: 0;
-    transform: translateX(-50%);
-    background: var(--gray);
-    color: var(--light);
-    font-size: 0.7rem;
-    border-radius: 100px;
-    width: 35px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-}
-
-#projects .range-tooltip.hidden {
-    display: none;
-}
-
-#projects .filter-range {
-    appearance: none;
-    cursor: pointer;
-    width: 250px;
-    padding: 30px 0;
-    border-radius: 20px;
-    height: 12px;
-    background: transparent;
-}
-
-#projects .filter-range::-webkit-slider-thumb {
-    appearance: none;
+#projects .projects-filter .filter-select .filter-options .filter-btn.active .filter-switch {
     background: var(--primary);
-    border-radius: 15px;
-    height: 40px;
-    width: 14px;
-    border: 6px solid var(--dark);
-    margin-top: -14px;
 }
 
-#projects .filter-range::-moz-range-thumb {
-    background: var(--primary);
-    border: none;
-    border-radius: 50%;
-    height: 16px;
-    width: 16px;
+#projects .projects-filter .filter-select .filter-options .filter-btn.active .filter-switch::after {
+    left: 21px;
+    background: var(--secondary);
 }
 
-#projects .filter-range::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, var(--primary) var(--value-percent, 0%), var(--gray) var(--value-percent, 0%));
-    border-radius: 20px;
-    height: 12px;
-}
-
-#projects .filter-range::-moz-range-track {
-    background: #blue;
-    border-radius: 8px;
-    height: 80px;
-}
-
-#projects .projects-filter .filter-select .filter-options .filter-btn {
-    width: 100%;
-    padding: 12px 15px;
+#projects .projects-filter .filter-buttons .filter-options .filter-btn.active {
     background: transparent;
-    border: none;
     color: var(--light);
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-align: left;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
 }
 
 #projects .projects-filter .filter-select .filter-options .filter-btn .filter-switch {
     position: relative;
+    flex-shrink: 0;
     width: 40px;
     height: 22px;
     background: var(--gray);
     border-radius: 20px;
     transition: var(--transition);
-    flex-shrink: 0;
 }
 
 #projects .projects-filter .filter-select .filter-options .filter-btn .filter-switch::after {
@@ -378,21 +270,175 @@
     left: 3px;
     width: 16px;
     height: 16px;
-    background: var(--light);
+    background: var(--secondary);
     border-radius: 50%;
     transition: var(--transition);
 }
 
-#projects .projects-filter .filter-select .filter-options .filter-btn.active {
+#projects .projects-filter .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 200px;
+    height: 50px;
+    gap: 10px;
+    padding: 10px;
+    margin: 0 30px;
+    background: var(--dark);
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+#projects .projects-filter .search-bar:hover,
+#projects .projects-filter .search-bar:focus-within {
+    background: var(--gray);
+}
+
+#projects .projects-filter .search-bar:has(.filter-input:not(:placeholder-shown)) .clear {
+    display: block;
+}
+
+#projects .projects-filter .search-bar .search {
+    width: 25px;
+    margin: 5px;
+    fill: var(--light);
+}
+
+#projects .projects-filter .search-bar .filter-input {
+    width: 100%;
+    height: 100%;
     background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    margin-right: 25px;
+}
+
+#projects .projects-filter .search-bar .filter-input::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+#projects .clear {
+    position: absolute;
+    right: 10px;
+    display: none;
+    width: 25px;
+    height: 25px;
+    fill: var(--light);
+    cursor: pointer;
+}
+
+#projects .range-container {
+    height: 50px;
+    padding: 0 20px !important;
+}
+
+#projects .range-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#projects .range-tooltip {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 30px;
+    background: var(--gray);
     color: var(--light);
+    font-size: 0.7rem;
+    border-radius: 100px;
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
-#projects .projects-filter .filter-select .filter-options .filter-btn.active .filter-switch {
+#projects .range-tooltip.hidden {
+    display: none;
+}
+
+#projects .filter-range {
+    width: 250px;
+    height: 12px;
+    padding: 30px 0;
+    background: transparent;
+    border-radius: 20px;
+    appearance: none;
+    cursor: pointer;
+}
+
+#projects .filter-range::-webkit-slider-thumb {
+    width: 14px;
+    height: 40px;
+    margin-top: -14px;
     background: var(--primary);
+    border: 6px solid var(--dark);
+    border-radius: 15px;
+    appearance: none;
 }
 
-#projects .projects-filter .filter-select .filter-options .filter-btn.active .filter-switch::after {
-    left: 21px;
-    background: var(--black);
+#projects .filter-range::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--primary);
+    border: none;
+    border-radius: 50%;
+}
+
+#projects .filter-range::-webkit-slider-runnable-track {
+    height: 12px;
+    background: linear-gradient(to right, var(--primary) var(--value-percent, 0%), var(--gray) var(--value-percent, 0%));
+    border-radius: 20px;
+}
+
+#projects .filter-range::-moz-range-track {
+    height: 80px;
+    border-radius: 8px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+#projects .no-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: var(--dark);
+    border-radius: 30px;
+}
+
+#projects .no-projects .no-svg {
+    fill: var(--light);
+    width: 25px;
+}
+
+#projects .no-projects .no-p {
+    font-size: 1rem;
+}
+
+#projects .reset-filters .reset-svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--light);
+    transition: var(--transition);
+}
+
+#projects .reset-filters:hover {
+    background: var(--gray);
+}
+
+#projects .reset-filters:hover .reset-svg {
+    color: var(--primary);
 }
