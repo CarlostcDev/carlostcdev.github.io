@@ -7,10 +7,10 @@ class Home {
 
     init() {
         if (!this.home) return;
-        this.carousel();
+        this.#carousel();
     }
 
-    carousel() {
+    #carousel() {
         textCarousel({
             elementId: "roles",
             interval: 5000,

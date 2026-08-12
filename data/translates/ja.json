@@ -1,153 +1,114 @@
 {
-  "header": {
-    "home": "ホーム",
-    "about-me": "自己紹介",
-    "skills": "スキル",
-    "education": "学歴・教育",
-    "experience": "職歴・経験",
-    "contact": "お問い合わせ",
+  "global": {
     "language": "日本語",
-    "es": "スペイン語",
-    "en": "英語",
-    "zh": "中国語",
-    "ja": "日本語",
-    "va": "バレンシア語",
-    "fr": "フランス語",
-    "it": "イタリア語",
-    "de": "ドイツ語",
-    "ko": "韓国語",
-    "pt": "ポルトガル語"
+    "languages": {
+      "es": "スペイン語", "en": "英語", "zh": "中国語", "ja": "日本語", "va": "バレンシア語",
+      "fr": "フランス語", "it": "イタリア語", "de": "ドイツ語", "ko": "韓国語", "pt": "ポルトガル語"
+    },
+    "portfolio": { "title": "Carlos Tormo | ポートフォリオ", "h1": "Carlos Tormo Castaño ポートフォリオ" },
+    "projects": { "title": "Carlos Tormo | プロジェクト", "h1": "CarlostcDev プロジェクト一覧" },
+    "copyright": "All rights non-reserved."
   },
-
-  "main": {
-    "h1": "Carlos Tormo Castaño のポートフォリオ"
-  },
-
-  "home": {
-    "p1": "ようこそ、",
-    "p2": "私は",
-    "p3": "あなたの次の ",
-    "a1": "自己紹介",
-    "a2": "プロジェクト",
-    "word-animation": "開発者",
-    "roles-list": [
-      "開発者",
-      "プログラマー",
-      "管理者",
-      "ITエンジニア"
-    ]
-  },
-
-  "about-me": {
-    "h2": "自己紹介",
-    "phrase1": "エルチェ出身のITエンジニアで、テクノロジーを理解し極めることに情熱を注いでいます。",
-    "phrase2": "複雑な課題に焦点を当て、拡張性と効率性の高いソリューションを設計します。",
-    "phrase3": "几帳面で完璧主義であり、素早い学習能力を備えています。",
-    "phrase4": "新しい視点から改善策やソリューションを提案し、周囲の環境に貢献します。",
-    "phrase5": "プロフェッショナルとして成長し、チームおよび企業の成功に貢献することを目指しています。",
-    "phrase6": "スペイン語が母国語で、中級レベルの英語力とバレンシア語の受容的理解力を有しています。"
-  },
-
-  "projects": {
-    "h2": "プロジェクト",
-    "p": "最新の実績と開発したプロジェクトをご覧ください。",
-    "a": "プロジェクトを見る"
-  },
-
-  "footer": {
-    "h2": "お問い合わせ",
+  "shared": {
+    "home": "ホーム",
+    "about-me": "私について",
+    "skills": "スキル",
+    "education": "学歴・学修",
+    "experience": "職務経歴",
+    "contact": "お問い合わせ",
     "projects": "プロジェクト",
+    "theme": "テーマ",
+    "language": "言語",
+    "portfolio": "ポートフォリオ",
+    "technologies": "使用用技術",
+    "info": "基本情報",
+    "social": "ソーシャル",
+    "stats": "統計データ",
     "phone": "電話番号",
-    "copyright": "全著作権不保持。",
     "location": "エルチェ、スペイン",
     "cv": "履歴書",
     "localtime": "現地時間:"
   },
-
-  "education": {
-    "h2": "学歴・職歴",
-    "dam": {
-      "title": "マルチプラットフォームアプリケーション開発",
-      "subtitle": "高等職業専門学",
-      "location": "エルチェ、スペイン",
-      "phrase1": "Javaを用いたマルチプラットフォームアプリケーションの開発、オブジェクト指向プログラミング、データ構造、およびデザインパターンの適用。",
-      "phrase2": "JavaFXによるグラフィカルユーザーインターフェースの実装、およびHTML、CSS、JavaScriptを用いたWebアプリケーション開発（REST APIの消費と統合を含む）。",
-      "phrase3": "MariaDB、PostgreSQL、MongoDB、Redisを用いたリレーショナルおよびNoSQLデータベースの設計、モデリング、管理。",
-      "phrase4": "Gitによるバージョン管理とコラボレーションワークフローの運用。",
-      "phrase5": "UMLを用いたソフトウェアソリューションの分析および設計、Clean Code原則、ドキュメントのベストプラクティス、開発手法の適用による保守可能で拡張性の高いアプリケーションの構築。"
+  "portfolio": {
+    "home": {
+      "welcome": "ようこそ、",
+      "iam": "私は", "yournext": "あなたの次の", "rol": "開発者です",
+      "roles-list": ["開発者", "プログラマー", "システム管理者", "ITエンジニア"],
+      "a1": "私について", "a2": "プロジェクト"
     },
-    "smr": {
-      "title": "マイクロコンピュータシステムおよびネットワーク",
-      "subtitle": "中等職業専門学位",
-      "location": "エルチェ、スペイン",
-      "phrase1": "LinuxおよびWindowsサーバーの設定と管理、DHCP、DNS、HTTP、FTPなどのネットワークサービスの構築と運用。",
-      "phrase2": "VirtualBoxを用いたネットワークインフラおよび仮想化環境の設計と管理。",
-      "phrase3": "MemTest86、Cinebench、3DMarkなどのツールを使用したハードウェア診断、ストレステスト、およびパフォーマンス分析の実施。",
-      "phrase4": "Wiresharkによるネットワークトラフィックの監視と分析、ファイアウォール、ウイルス対策ソリューション、OpenVASなどの脆弱性診断ツールを用いたサイバーセキュリティ対策の実装。",
-      "phrase5": "オペレーティングシステム、サーバー環境、開発ツール、およびITインフラストラクチャの統合管理。"
+    "about-me": {
+      "phrase1": "スペイン・エルチェ出身のITエンジニアです。テクノロジーの深い理解と習得に情熱を注いでいます。",
+      "phrase2": "複雑な課題に対して、拡張性と効率性の高いソリューションを設計・構築することを得意としています。",
+      "phrase3": "整理整頓を好み、完璧主義で素早いキャッチアップ能力を備えています。",
+      "phrase4": "チーム環境の向上のため、新しい視点からの改善策や解決策を提案します。",
+      "phrase5": "エンジニアとしての成長を図りつつ、チームおよび企業の成功に貢献することを目指しています。",
+      "phrase6": "スペイン語が母国語で、日常会話レベルの英語力とバレンシア語の受容的知識を持ちます。"
+    },
+    "projects": {
+      "phrase": "最近の成果物や開発したプロジェクトをご覧ください。",
+      "button": "プロジェクトを見る"
+    },
+    "education": {
+      "dam": {
+        "title": "マルチプラットフォームアプリケーション開発",
+        "subtitle": "高等職業教育 (FP)",
+        "phrase1": "Javaを用いたマルチプラットフォーム開発。オブジェクト指向、データ構造、デザインパターンを適用。",
+        "phrase2": "JavaFXによるGUI構築、HTML/CSS/JavaScriptによるWebアプリ開発およびREST APIの消費・統合。",
+        "phrase3": "MariaDB、PostgreSQL、MongoDB、Redisを用いたリレーショナルおよびNoSQLデータベースの設計と管理。",
+        "phrase4": "Gitによるバージョン管理とチームでの共同開発フローの運用。",
+        "phrase5": "UMLによるシステム分析・設計、Clean Code原則、ドキュメントのベストプラクティスの実践。"
+      },
+      "smr": {
+        "title": "マイクロコンピュータシステムおよびネットワーク",
+        "subtitle": "中級職業教育 (FP)",
+        "phrase1": "LinuxおよびWindowsサーバーの構築・運用。DHCP、DNS、HTTP、FTP等のネットワークサービス管理。",
+        "phrase2": "VirtualBoxを活用した仮想化環境およびネットワークインフラの設計・管理。",
+        "phrase3": "MemTest86、Cinebench、3DMark等のツールを用いたハードウェア診断およびベンチマークテストの実施。",
+        "phrase4": "Wiresharkによるパケット解析、ファイアウォールやOpenVASを用いたセキュリティ脆弱性対策の実施。",
+        "phrase5": "OS、サーバー環境、開発ツール、ITインフラ全般の管理運用。"
+      }
+    },
+    "experience": {
+      "nttdata": {
+        "job": "フルスタックエンジニア（インターン）",
+        "company": "NTT Data スペイン",
+        "location": "プラヤ・デ・サン・フアン、スペイン",
+        "business": "NTT Data San Juan",
+        "phrase1": "Java 18およびSpring Bootを用いたバックエンド開発。REST API実装、Spring Securityによる認証・認可、JUnit/Mockitoによる単体テストの実施。",
+        "phrase2": "Angular、TypeScript、HTML、CSSを用いたフロントエンド開発。Node.jsエコシステムに基づく現代的Web開発手法の適用。",
+        "phrase3": "Mavenを用いた依存関係管理およびビルドの自動化。",
+        "phrase4": "PostgreSQLを用いた永続化層の設計・実装およびデータベース管理。",
+        "phrase5": "Gitを用いたバージョン管理およびエンタープライズ環境でのチーム開発手法の実践。",
+        "phrase6": "AIツールおよびエージェントの導入による開発ワークフローの効率化と生産性向上。",
+        "years": "2026年4月 - 2026年6月"
+      },
+      "neuric": {
+        "job": "Webエンジニア",
+        "company": "Neuric",
+        "business": "Neuric Consultoría",
+        "phrase1": "実務環境におけるWordPress Webサイトの開発、カスタマイズおよびパフォーマンス最適化。",
+        "phrase2": "ElementorおよびWooCommerceを用いた高度なUIおよび機能のカスタマイズ開発。",
+        "phrase3": "HTML、CSS、JavaScriptによる独自コンポーネント開発とCSSスタイリングの実践。",
+        "phrase4": "Webサイトの軽量化、セキュリティ強化、SEO対策の実践によるユーザー体験の向上。",
+        "phrase5": "社内ITシステム基礎運用およびテクニカルサポート業務の担当。",
+        "years": "2025年2月 - 2025年5月"
+      }
     }
   },
-
-  "title": "Carlos Tormo | ポートフォリオ",
-
-  "stats": {
-    "h2": "統計"
-  },
-
-  "social": {
-    "h2": "SNS"
-  },
-
-  "info": {
-    "h2": "情報"
-  },
-
-  "experience": {
-    "h2": "職歴・経験",
-    "nttdata": {
-      "job": "フルスタック開発者（インターン）",
-      "company": "NTT Data スペイン",
-      "location": "サンフアンビーチ、スペイン",
-      "business": "NTT Data San Juan",
-      "phrase1": "Java 18 と Spring Boot を使用したバックエンドアプリケーション開発、REST API、Spring Security による認証・認可、JUnit と Mockito による単体テストの実装。",
-      "phrase2": "Angular、TypeScript、HTML、CSS を使用したフロントエンドアプリケーション開発。モダンなWeb開発手法と Node.js エコシステムのツールを適用。",
-      "phrase3": "構造化された開発フローに沿った Maven による依存関係管理、コンパイル、プロジェクトの自動化。",
-      "phrase4": "PostgreSQL を使用した永続層の設計、実装、管理。",
-      "phrase5": "Git によるバージョン管理と、専門的なソフトウェア開発環境でのコラボレーション。",
-      "phrase6": "AI ベースのツールとエージェントの統合により、開発フローを最適化し生産性を向上。",
-      "years": "2026年4月 - 2026年6月"
+  "projects": {
+    "hero": {
+      "phrase": "アプリケーション、システム開発から個人実験プロジェクトまでの開発実績をご覧いただけます。",
+      "button": "プロジェクトを見る"
     },
-    "neuric": {
-      "job": "Web開発者",
-      "company": "Neuric",
-      "location": "エルチェ、スペイン",
-      "business": "Neuric コンサルティング",
-      "phrase1": "専門的な環境での WordPress を使用したWebサイトの開発、カスタマイズ、最適化。",
-      "phrase2": "Elementor と WooCommerce を使用した高度なインターフェースと機能の作成。各プロジェクトのニーズに合わせてソリューションを調整。",
-      "phrase3": "HTML、CSS、JavaScript によるコンポーネントとカスタマイズの開発。設計、レイアウト、高度なCSSスタイルに関する確かな基盤を習得。",
-      "phrase4": "パフォーマンス最適化技術、Webセキュリティ、ベストプラクティスの適用によるユーザー体験とサイトの検索順位の向上。",
-      "phrase5": "社内環境におけるコンピュータシステムの基礎管理と技術サポート。",
-      "years": "2025年2月 - 2025年5月"
+    "projects": {
+      "sort": "並び替え",
+      "desc": "降順",
+      "asc": "昇順",
+      "stars": "Star数",
+      "language": "言語",
+      "reset": "リセット",
+      "no-projects": "選択条件に一致するプロジェクトはありません。",
+      "buttons": "プロジェクトを見る"
     }
-  },
-
-  "menu": {
-    "language": "言語",
-    "theme": "テーマ",
-    "home": "ホーム",
-    "projects": "プロジェクト",
-    "contact": "お問い合わせ"
-  },
-
-  "header-projects": {
-    "portfolio": "ポートフォリオ",
-    "technologies": "技術"
-  },
-
-  "navigator-projects": {
-    "language": "言語",
-    "theme": "テーマ",
-    "portfolio": "ポートフォリオ",
-    "contact": "お問い合わせ"
   }
 }

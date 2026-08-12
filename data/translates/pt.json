@@ -1,153 +1,114 @@
 {
-  "header": {
+  "global": {
+    "language": "Português",
+    "languages": {
+      "es": "Espanhol", "en": "Inglês", "zh": "Chinês", "ja": "Japonês", "va": "Valenciano",
+      "fr": "Francês", "it": "Italiano", "de": "Alemão", "ko": "Coreano", "pt": "Português"
+    },
+    "portfolio": { "title": "Carlos Tormo | Portfólio", "h1": "Portfólio de Carlos Tormo Castaño" },
+    "projects": { "title": "Carlos Tormo | Projetos", "h1": "Projetos de CarlostcDev" },
+    "copyright": "Todos os direitos não reservados."
+  },
+  "shared": {
     "home": "Início",
     "about-me": "Sobre mim",
-    "skills": "Habilidades",
+    "skills": "Competências",
     "education": "Formação",
     "experience": "Experiência",
     "contact": "Contacto",
-    "language": "Português",
-    "es": "Espanhol",
-    "en": "Inglês",
-    "zh": "Chinês",
-    "ja": "Japonês",
-    "va": "Valenciano",
-    "fr": "Francês",
-    "it": "Italiano",
-    "de": "Alemão",
-    "ko": "Coreano",
-    "pt": "Português"
-  },
-
-  "main": {
-    "h1": "Portfólio de Carlos Tormo Castaño"
-  },
-
-  "home": {
-    "p1": "Bem-vindo,",
-    "p2": "Sou",
-    "p3": "O teu próximo ",
-    "a1": "Sobre mim",
-    "a2": "Projetos",
-    "word-animation": "desenvolvedor",
-    "roles-list": [
-      "desenvolvedor",
-      "programador",
-      "administrador",
-      "informático"
-    ]
-  },
-
-  "about-me": {
-    "h2": "Sobre mim",
-    "phrase1": "Sou um técnico informático de Elche apaixonado por compreender e dominar a tecnologia.",
-    "phrase2": "Foco-me em problemas complexos para conceber soluções escaláveis e eficientes.",
-    "phrase3": "Organizado, perfeccionista e com elevada capacidade de aprendizagem rápida.",
-    "phrase4": "Proponho melhorias e soluções sob uma nova perspetiva que ajudam o ambiente de trabalho.",
-    "phrase5": "Procuro crescer profissionalmente e contribuir para o sucesso da equipa e da empresa.",
-    "phrase6": "Sou falante nativo de espanhol, com nível intermédio de inglês e compreensão passiva de valenciano."
-  },
-
-  "projects": {
-    "h2": "Projetos",
-    "p": "Explore os meus trabalhos mais recentes e projetos desenvolvidos.",
-    "a": "Ver projetos"
-  },
-
-  "footer": {
-    "h2": "Contacto",
     "projects": "Projetos",
+    "theme": "Tema",
+    "language": "Idioma",
+    "portfolio": "Portfólio",
+    "technologies": "Tecnologias",
+    "info": "Informação",
+    "social": "Social",
+    "stats": "Estatísticas",
     "phone": "Telefone",
-    "copyright": "Todos os direitos não reservados.",
     "location": "Elche, Espanha",
     "cv": "Currículo",
     "localtime": "Hora local:"
   },
-
-  "education": {
-    "h2": "Formação",
-    "dam": {
-      "title": "Desenvolvimento de Aplicações Multiplataforma",
-      "subtitle": "Curso Técnico Superior Profissional",
-      "location": "Elche, Espanha",
-      "phrase1": "Desenvolvimento de aplicações multiplataforma utilizando Java, aplicando programação orientada a objetos, estruturas de dados e padrões de projeto.",
-      "phrase2": "Implementação de interfaces gráficas com JavaFX e desenvolvimento de aplicações web com HTML, CSS e JavaScript, incluindo o consumo e integração de APIs REST.",
-      "phrase3": "Design, modelagem e gestão de bases de dados relacionais e NoSQL através de MariaDB, PostgreSQL, MongoDB e Redis.",
-      "phrase4": "Controlo de versões com Git e aplicação de fluxos de trabalho colaborativos.",
-      "phrase5": "Análise e design de soluções de software utilizando UML, em conjunto com a aplicação de princípios de Clean Code, boas práticas de documentação e metodologias de desenvolvimento para a criação de aplicações sustentáveis e escaláveis."
+  "portfolio": {
+    "home": {
+      "welcome": "Bem-vindo,",
+      "iam": "Sou", "yournext": "O seu próximo ", "rol": "desenvolvedor",
+      "roles-list": ["desenvolvedor", "programador", "administrador", "informático"],
+      "a1": "Sobre mim", "a2": "Projetos"
     },
-    "smr": {
-      "title": "Sistemas Microinformáticos e Redes",
-      "subtitle": "Curso Técnico Profissional Intermédio",
-      "location": "Elche, Espanha",
-      "phrase1": "Configuração e administração de servidores Linux e Windows, implementando e gerindo serviços de rede como DHCP, DNS, HTTP e FTP.",
-      "phrase2": "Design e administração de infraestruturas de rede e ambientes virtualizados através do VirtualBox.",
-      "phrase3": "Realização de diagnósticos de hardware, testes de esforço e análise de desempenho com ferramentas como MemTest86, Cinebench e 3DMark.",
-      "phrase4": "Monitorização e análise de tráfego de rede com Wireshark, juntamente com a implementação de medidas de cibersegurança através de firewalls, soluções antivírus e ferramentas de análise de vulnerabilidades como OpenVAS.",
-      "phrase5": "Administração de sistemas operativos, ambientes de servidor, ferramentas de desenvolvimento e infraestruturas informáticas."
+    "about-me": {
+      "phrase1": "Sou um técnico de informática de Elche apaixonado por compreender e dominar a tecnologia.",
+      "phrase2": "Foco-me em problemas complexos para conceber soluções escaláveis e eficientes.",
+      "phrase3": "Organizado, perfeccionista e com elevada capacidade de aprendizagem rápida.",
+      "phrase4": "Proponho melhorias e soluções com perspetivas inovadoras para beneficiar a equipa.",
+      "phrase5": "Procuro crescer profissionalmente e contribuir para o sucesso da empresa.",
+      "phrase6": "Espanhol nativo, com nível intermédio de inglês e compreensão passiva de valenciano."
+    },
+    "projects": {
+      "phrase": "Explore os meus trabalhos mais recentes e projetos desenvolvidos.",
+      "button": "Ver projetos"
+    },
+    "education": {
+      "dam": {
+        "title": "Desenvolvimento de Aplicações Multiplataforma",
+        "subtitle": "Curso Técnico Superior Profissional",
+        "phrase1": "Desenvolvimento de aplicações multiplataforma utilizando Java, aplicando programação orientada a objetos, estruturas de dados e padrões de projeto.",
+        "phrase2": "Implementação de interfaces gráficas com JavaFX e desenvolvimento web com HTML, CSS e JavaScript, incluindo consumo e integração de APIs REST.",
+        "phrase3": "Design, modelação e gestão de bases de dados relacionais e NoSQL através de MariaDB, PostgreSQL, MongoDB e Redis.",
+        "phrase4": "Controlo de versões com Git e aplicação de fluxos de trabalho colaborativos.",
+        "phrase5": "Análise e design de soluções de software utilizando UML, em conjunto com princípios de Clean Code e boas práticas de documentação."
+      },
+      "smr": {
+        "title": "Sistemas Microinformáticos e Redes",
+        "subtitle": "Curso Técnico Profissional",
+        "phrase1": "Configuração e administração de servidores Linux e Windows, gerindo serviços de rede como DHCP, DNS, HTTP e FTP.",
+        "phrase2": "Design e gestão de infraestruturas de rede e ambientes virtualizados com VirtualBox.",
+        "phrase3": "Diagnóstico de hardware, testes de esforço e análise de desempenho com ferramentas como MemTest86, Cinebench e 3DMark.",
+        "phrase4": "Monitorização e análise de tráfego de rede com Wireshark, juntamente com implementação de cibersegurança usando firewalls, antivírus e OpenVAS.",
+        "phrase5": "Administração de sistemas operativos, ambientes de servidor e infraestruturas informáticas."
+      }
+    },
+    "experience": {
+      "nttdata": {
+        "job": "Desenvolvedor Full-Stack Estagiário",
+        "company": "NTT Data Espanha",
+        "location": "Playa de San Juan, Espanha",
+        "business": "NTT Data San Juan",
+        "phrase1": "Desenvolvimento backend utilizando Java 18 e Spring Boot, implementação de APIs REST, autenticação/autorização com Spring Security e testes unitários com JUnit e Mockito.",
+        "phrase2": "Desenvolvimento frontend com Angular, TypeScript, HTML e CSS, aplicando práticas modernas do ecossistema Node.js.",
+        "phrase3": "Gestão de dependências e automatização de compilação com Maven.",
+        "phrase4": "Design, implementação e gestão da camada de persistência com PostgreSQL.",
+        "phrase5": "Controlo de versões com Git e colaboração num ambiente profissional de desenvolvimento de software.",
+        "phrase6": "Integração de ferramentas e agentes de inteligência artificial para otimizar processos e aumentar a produtividade.",
+        "years": "Abril 2026 - Junho 2026"
+      },
+      "neuric": {
+        "job": "Desenvolvedor Web",
+        "company": "Neuric",
+        "business": "Neuric Consultoría",
+        "phrase1": "Desenvolvimento, personalização e otimização de websites em WordPress num ambiente profissional.",
+        "phrase2": "Criação de interfaces e funcionalidades avançadas com Elementor e WooCommerce, adaptando soluções às necessidades dos projetos.",
+        "phrase3": "Desenvolvimento de componentes com HTML, CSS e JavaScript, consolidando competências em design web e CSS avançado.",
+        "phrase4": "Aplicação de técnicas de otimização de desempenho, segurança web e boas práticas de SEO.",
+        "phrase5": "Administração básica de sistemas informáticos e suporte técnico empresarial.",
+        "years": "Fevereiro 2025 - Maio 2025"
+      }
     }
   },
-
-  "title": "Carlos Tormo | Portfólio",
-
-  "stats": {
-    "h2": "Estatísticas"
-  },
-
-  "social": {
-    "h2": "Social"
-  },
-
-  "info": {
-    "h2": "Informação"
-  },
-
-  "experience": {
-    "h2": "Experiência",
-    "nttdata": {
-      "job": "Desenvolvedor Full-Stack Estagiário",
-      "company": "NTT Data Espanha",
-      "location": "Praia de San Juan, Espanha",
-      "business": "NTT Data San Juan",
-      "phrase1": "Desenvolvimento de aplicações backend com Java 18 e Spring Boot, implementação de APIs REST, autenticação e autorização com Spring Security, além de testes unitários com JUnit e Mockito.",
-      "phrase2": "Desenvolvimento de aplicações frontend com Angular, TypeScript, HTML e CSS, aplicando práticas modernas de desenvolvimento web e ferramentas do ecossistema Node.js.",
-      "phrase3": "Gestão de dependências, compilação e automatização de projetos com Maven, seguindo fluxos de trabalho estruturados.",
-      "phrase4": "Conceção, implementação e gestão da camada de persistência com PostgreSQL.",
-      "phrase5": "Controlo de versões com Git e colaboração num ambiente profissional de desenvolvimento de software.",
-      "phrase6": "Integração de ferramentas e agentes baseados em inteligência artificial para otimizar os fluxos de desenvolvimento e aumentar a produtividade.",
-      "years": "Abril de 2026 - Junho de 2026"
+  "projects": {
+    "hero": {
+      "phrase": "Descubra todos os meus projetos, desde aplicações e sistemas a experiências e desenvolvimentos pessoais.",
+      "button": "Ver projetos"
     },
-    "neuric": {
-      "job": "Desenvolvedor Web",
-      "company": "Neuric",
-      "location": "Elche, Espanha",
-      "business": "Neuric Consultoria",
-      "phrase1": "Desenvolvimento, personalização e otimização de sites com WordPress num ambiente profissional.",
-      "phrase2": "Criação de interfaces e funcionalidades avançadas com Elementor e WooCommerce, adaptando as soluções às necessidades de cada projeto.",
-      "phrase3": "Desenvolvimento de componentes e personalizações com HTML, CSS e JavaScript, adquirindo uma base sólida em design, layout e estilos avançados com CSS.",
-      "phrase4": "Aplicação de técnicas de otimização de desempenho, segurança web e boas práticas para melhorar a experiência do utilizador e o posicionamento dos sites.",
-      "phrase5": "Administração básica de sistemas informáticos e suporte técnico no ambiente empresarial.",
-      "years": "Fevereiro de 2025 - Maio de 2025"
+    "projects": {
+      "sort": "Ordenar",
+      "desc": "Decrescente",
+      "asc": "Crescente",
+      "stars": "Estrelas",
+      "language": "Linguagem",
+      "reset": "Repor",
+      "no-projects": "Nenhum projeto corresponde aos filtros selecionados.",
+      "buttons": "Ver projeto"
     }
-  },
-
-  "menu": {
-    "language": "Idioma",
-    "theme": "Tema",
-    "home": "Início",
-    "projects": "Projetos",
-    "contact": "Contacto"
-  },
-
-  "header-projects": {
-    "portfolio": "Portfólio",
-    "technologies": "Tecnologias"
-  },
-
-  "navigator-projects": {
-    "language": "Idioma",
-    "theme": "Tema",
-    "portfolio": "Portfólio",
-    "contact": "Contacto"
   }
 }

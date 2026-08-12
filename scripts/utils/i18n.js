@@ -14,7 +14,7 @@ export function renderLanguageOptions(languages = config.languages, selectedLang
         const selected = language.code === selectedLanguage;
         return `
             <li data-lang="${language.code}"
-                data-i18n="header.${language.code}"
+                data-i18n="global.languages.${language.code}"
                 role="option"
                 tabindex="0"
                 class="${selected ? "active" : ""}"
@@ -27,26 +27,38 @@ export function renderLanguageOptions(languages = config.languages, selectedLang
 }
 
 export async function applyLanguage(language) {
-    let code = resolveLanguage(language) ?? lang;
-    let translations = await loadTranslations(code);
-    if (!translations && code !== lang) {
-        code = lang;
+    const targetCode = resolveLanguage(language) ?? lang;
+    let translations = await loadTranslations(targetCode);
+
+    if (!translations && targetCode !== lang) {
         translations = await loadTranslations(lang);
     }
     if (!translations) return;
-    const fallback = code === lang ? translations : await loadTranslations(lang);
-    languageState = { code, translations, roles: getValue(translations, "home.roles-list") ?? getValue(fallback, "home.roles-list") ?? [] };
-    document.documentElement.lang = code;
+
+    const fallback = targetCode === lang
+        ? translations
+        : (await loadTranslations(lang)) ?? translations;
+
+    const roles = getValue(translations, "portfolio.home.roles-list")
+        ?? getValue(fallback, "portfolio.home.roles-list")
+        ?? [];
+
+    languageState = { code: targetCode, translations, roles };
+
+    document.documentElement.lang = targetCode;
     translateDocument(translations, fallback);
-    updateActiveLanguage(code);
-    setStoredLanguage(code);
+    updateActiveLanguage(targetCode);
+    setStoredLanguage(targetCode);
+
     window.dispatchEvent(new CustomEvent("portfolio:languagechange", { detail: languageState }));
 }
 
 async function loadTranslations(language) {
     if (translationsCache.has(language)) return translationsCache.get(language);
     try {
-        const translations = await fetch(`/data/translates/${language}.json`).then(response => response.json());
+        const response = await fetch(`/data/translates/${language}.json`);
+        if (!response.ok) return null;
+        const translations = await response.json();
         translationsCache.set(language, translations);
         return translations;
     } catch {
@@ -57,7 +69,9 @@ async function loadTranslations(language) {
 function getInitialLanguage() {
     const storedLanguage = resolveLanguage(getStoredLanguage());
     if (storedLanguage) return storedLanguage;
-    for (const language of navigator.languages ?? [navigator.language]) {
+
+    const browserLangs = navigator.languages ?? [navigator.language];
+    for (const language of browserLangs) {
         const resolvedLanguage = resolveLanguage(language);
         if (resolvedLanguage) return resolvedLanguage;
     }
@@ -66,11 +80,16 @@ function getInitialLanguage() {
 
 function resolveLanguage(language) {
     if (!language) return null;
-    const normalizedLanguage = normalizeLanguage(language);
-    const baseLanguage = normalizedLanguage.split("-")[0];
-    for (const supportedLanguage of config.languages) {
-        const codes = [supportedLanguage.code, ...(supportedLanguage.aliases ?? [])].map(normalizeLanguage);
-        if (codes.includes(normalizedLanguage) || codes.includes(baseLanguage)) return supportedLanguage.code;
+    const normalized = normalizeLanguage(language);
+    const base = normalized.split("-")[0];
+
+    for (const item of config.languages) {
+        const itemCode = normalizeLanguage(item.code);
+        const aliases = (item.aliases ?? []).map(normalizeLanguage);
+
+        if (itemCode === normalized || itemCode === base || aliases.includes(normalized) || aliases.includes(base)) {
+            return item.code;
+        }
     }
     return null;
 }
@@ -81,16 +100,25 @@ function normalizeLanguage(language) {
 
 function translateDocument(translations, fallback) {
     document.querySelectorAll("[data-i18n]").forEach(element => {
-        const value = getValue(translations, element.dataset.i18n) ?? getValue(fallback, element.dataset.i18n);
+        const keyPath = element.dataset.i18n;
+        if (!keyPath) return;
+
+        const value = getValue(translations, keyPath) ?? getValue(fallback, keyPath);
+        if (value === undefined || value === null) return;
         if (typeof value !== "string" && typeof value !== "number") return;
+
         const attribute = element.dataset.i18nAttr;
-        if (attribute) element.setAttribute(attribute, value);
-        else element.textContent = value;
+        if (attribute) {
+            element.setAttribute(attribute, String(value));
+        } else {
+            element.textContent = String(value);
+        }
     });
 }
 
 function getValue(source, path) {
-    return path.split(".").reduce((value, key) => value?.[key], source);
+    if (!source || !path) return undefined;
+    return path.split(".").reduce((acc, k) => acc?.[k], source);
 }
 
 function updateActiveLanguage(language) {
@@ -126,10 +154,13 @@ export function bindLanguageSelector() {
             return;
         }
 
-        if (optionItem?.dataset.lang) {
-            applyLanguage(optionItem.dataset.lang).then(() => {});
-            setOpen(false);
-            return;
+        if (optionItem) {
+            const selectedLang = optionItem.getAttribute("data-lang");
+            if (selectedLang) {
+                applyLanguage(selectedLang);
+                setOpen(false);
+                return;
+            }
         }
 
         if (!event.target.closest(".lang-dropdown")) {
@@ -145,15 +176,18 @@ function getCurrentLanguage() {
 }
 
 function getStoredLanguage() {
-    try { return localStorage.getItem(key); }
-    catch { return null; }
+    try {
+        return localStorage.getItem(key);
+    } catch {
+        return null;
+    }
 }
 
 function setStoredLanguage(language) {
     try {
         localStorage.setItem(key, language);
-        const cv = document.querySelector('[data-i18n="footer.cv"]');
-        const info = config.info?.items?.find(item => item.i18n === "footer.cv");
+        const cv = document.querySelector('[data-i18n="shared.cv"]');
+        const info = config.info?.items?.find(item => item.i18n === "shared.cv");
         if (cv && info) cv.href = `${info.href}_${language.toUpperCase()}.pdf`;
     } catch {
         return null;

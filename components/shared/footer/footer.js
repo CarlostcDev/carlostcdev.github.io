@@ -8,99 +8,108 @@ class Footer {
 
     init() {
         if (!this.footer) return;
-        this.render();
-        this.setYear();
-        this.setLocalTime();
-        this.setCopy();
+        this.#render();
+        this.#setYear();
+        this.#setLocalTime();
+        this.#setCopy();
     }
 
-    render() {
+    #render() {
         const info = this.footer.querySelector("#info");
         const social = this.footer.querySelector("#social");
         const stats = this.footer.querySelector("#stats");
-        const language = localStorage.getItem("portfolio.language") || "EN";
-        const isSubpage = this.footer.dataset.subpage === "true";
-        const basePath = isSubpage ? "../../" : "";
+        if (!info || !social || !stats) return;
 
-        info.innerHTML = `
-        <h2 data-i18n="${config.info.title.i18n}">${config.info.title.h2}</h2>
-        <div class="info-container">
-            ${config.info.items.map(item => {
-            const rawHref = item.i18n === "footer.cv" ? `${item.href}_${language.toUpperCase()}.pdf` : item.href;
+        const language = (localStorage.getItem("portfolio.language") || "EN").toUpperCase();
+        const basePath = this.footer.dataset.subpage === "true" ? "../../" : "";
+
+        // 1. Info section
+        const infoItems = config.info?.items;
+        const infoLen = infoItems?.length ?? 0;
+        let infoHtml = `<h2 data-i18n="${config.info?.title?.i18n ?? ""}">${config.info?.title?.h2 ?? ""}</h2><div class="info-container">`;
+
+        for (let i = 0; i < infoLen; i++) {
+            const item = infoItems[i];
+            const rawHref = item.i18n === "shared.cv" ? `${item.href}_${language}.pdf` : item.href;
             const hrefVal = rawHref && !rawHref.startsWith("http") && !rawHref.startsWith("mailto:") ? `${basePath}${rawHref}` : rawHref;
             const hrefAttr = hrefVal != null ? `href="${hrefVal}"` : "";
             const idAttr = item.icon === "copy" ? 'id="copy-mail"' : "";
             const i18nAttr = item.i18n ? `data-i18n="${item.i18n}"` : "";
 
-            return `
-                        <div class="list">
-                            <svg class="icon"><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
-                            <a ${idAttr} ${hrefAttr} target="_blank" rel="noopener noreferrer" class="source" ${i18nAttr}>${item.text}</a>
-                            ${item.i18n === "footer.localtime" ? `<span id="localtime"></span>` : ""}
-                        </div>
-                    `;
-        }).join("")}
-        </div>
-        `;
+            infoHtml += `
+                <div class="list">
+                    <svg class="icon"><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
+                    <a ${idAttr} ${hrefAttr} target="_blank" rel="noopener noreferrer" class="source" ${i18nAttr}>${item.text}</a>
+                    ${item.i18n === "shared.localtime" ? '<span id="localtime"></span>' : ""}
+                </div>`;
+        }
+        infoHtml += "</div>";
+        info.innerHTML = infoHtml;
 
-        social.innerHTML = `
-        <h2 data-i18n="${config.social.title.i18n}">${config.social.title.h2}</h2>
-        <div class="buttons-container">
-            ${config.social.items.map(item => {
+        // 2. Social section
+        const socialItems = config.social?.items;
+        const socialLen = socialItems?.length ?? 0;
+        let socialHtml = `<h2 data-i18n="${config.social?.title?.i18n ?? ""}">${config.social?.title?.h2 ?? ""}</h2><div class="buttons-container">`;
+
+        for (let i = 0; i < socialLen; i++) {
+            const item = socialItems[i];
             const rawHref = item.href;
             const hrefVal = rawHref && !rawHref.startsWith("http") ? `${basePath}${rawHref}` : rawHref;
             const hrefAttr = hrefVal != null ? `href="${hrefVal}"` : "";
             const targetAttr = item.target ? `target="${item.target}"` : "";
             const relAttr = item.rel ? `rel="${item.rel}"` : "";
 
-            return `
-                        <div class="button-item">
-                            <a ${hrefAttr} ${targetAttr} ${relAttr}>
-                                <button class="${item.class}">
-                                    <svg><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
-                                    ${item.i18n ? `<span data-i18n="${item.i18n}">${item.text}</span>` : item.text}
-                                </button>
-                            </a>
-                        </div>
-                    `;
-        }).join("")}
-        </div>
-        `;
+            socialHtml += `
+                <div class="button-item">
+                    <a ${hrefAttr} ${targetAttr} ${relAttr}>
+                        <button class="${item.class}">
+                            <svg><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
+                            ${item.i18n ? `<span data-i18n="${item.i18n}">${item.text}</span>` : item.text}
+                        </button>
+                    </a>
+                </div>`;
+        }
+        socialHtml += "</div>";
+        social.innerHTML = socialHtml;
 
+        // 3. Stats section
         stats.innerHTML = `
-            <h2 data-i18n="stats.h2">Estadísticas</h2>
+            <h2 data-i18n="shared.stats">Estadísticas</h2>
             <div class="image-stats">
                 <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=CarlostcDev&layout=compact&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9&hide_border=true&width=100%"
                      width="100%" class="image-stats" loading="lazy" alt="Carlos Tormo - Developer Stats">
-            </div>
-        `;
+            </div>`;
     }
 
-    setYear() {
+    #setYear() {
         const year = this.footer.querySelector("#year");
-        if (year) {
+        if (!year) return;
+
+        try {
             const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            try {
-                year.textContent = new Date().toLocaleDateString('es-ES', {timeZone: timezone, year: 'numeric'});
-            } catch {
-                year.textContent = new Date().getFullYear().toString();
-            }
+            year.textContent = new Date().toLocaleDateString("es-ES", { timeZone: timezone, year: "numeric" });
+        } catch {
+            year.textContent = new Date().getFullYear();
         }
     }
 
-    setLocalTime() {
+    #setLocalTime() {
         const clock = this.footer.querySelector("#localtime");
-        if (clock) {
-            const timeFormatter = new Intl.DateTimeFormat("es-ES", {
-                timeZone: "Europe/Madrid", hour: "2-digit", minute: "2-digit", second: "2-digit"
-            });
-            const updateTime = () => {clock.textContent = timeFormatter.format(new Date());};
-            updateTime();
-            setInterval(updateTime, 1000);
-        }
+        if (!clock) return;
+
+        const timeFormatter = new Intl.DateTimeFormat("es-ES", {
+            timeZone: "Europe/Madrid",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        });
+
+        const updateTime = () => { clock.textContent = timeFormatter.format(new Date()); };
+        updateTime();
+        setInterval(updateTime, 1000);
     }
 
-    setCopy() {
+    #setCopy() {
         clickCopy("copy-mail");
     }
 }

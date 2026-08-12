@@ -193,21 +193,20 @@ class Project {
             div.innerHTML = `
                 <div class="no-projects">
                     <svg class="no-svg"><use href="../sources/svgs/sprite.svg#alert"></use></svg>
-                    <p class="no-p">No hay proyectos que coincidan con los filtros.</p>
+                    <p class="no-p" data-i18n="projects.projects.no-projects">No hay proyectos que coincidan con los filtros.</p>
                 </div>`;
             return;
         }
 
         div.innerHTML = list.map(p => {
-            const key = p.name.toLowerCase().replace(/\s+/g, "-");
             const topics = p.topics.map(t => `<li class="box-li ${t.toLowerCase().replace(/\s+/g, "-")}">${t}</li>`).join("");
             return `
                 <article class="project-box">
-                    <h3 class="box-title" data-i18n="projects.${key}.title">${p.name}</h3>
-                    <p class="box-desc" data-i18n="projects.${key}.desc">${p.description}</p>
+                    <h3 class="box-title">${p.name}</h3>
+                    <p class="box-desc"">${p.description}</p>
                     ${topics ? `<ul class="box-ul">${topics}</ul>` : ""}
                     <a class="box-url" href="${p.homepage || p.url}" target="_blank" rel="noopener noreferrer">
-                        <button class="box-button" data-i18n="projects.${key}.button">Ver proyecto</button>
+                        <button class="box-button" data-i18n="projects.projects.buttons">Ver proyecto</button>
                         <svg class="box-svg"><use href="../../sources/svgs/sprite.svg#arrow-open"></use></svg>
                     </a>
                 </article>`;

@@ -1,4 +1,4 @@
-import {RobotAnimation} from "../robot-animation/robot-animation.js";
+import { RobotAnimation } from "../robot-animation/robot-animation.js";
 
 class Hero {
     constructor() {
@@ -8,10 +8,10 @@ class Hero {
 
     init() {
         if (!this.hero) return;
-        this.render();
+        this.#render();
     }
 
-    render() {
+    #render() {
         this.alertTimer = null;
         this.mouseX = 0;
         this.directionChanges = 0;

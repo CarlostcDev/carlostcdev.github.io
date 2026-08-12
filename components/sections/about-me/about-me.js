@@ -8,16 +8,20 @@ class AboutMe {
 
     init() {
         if (!this.phrases) return;
-        this.render();
+        this.#render();
     }
 
-    render() {
+    #render() {
+        const list = config.phrases;
+        if (!this.phrases || !list?.length) return;
         const fragment = document.createDocumentFragment();
-        for (const phrase of config.phrases ?? []) {
+        const len = list.length;
+        for (let i = 0; i < len; i++) {
+            const item = list[i];
             const p = document.createElement("p");
-            p.classList.add("phrase");
-            p.dataset.i18n = phrase.key;
-            p.textContent = phrase.text;
+            p.className = "phrase";
+            p.dataset.i18n = item.key;
+            p.textContent = item.text;
             fragment.appendChild(p);
         }
         this.phrases.replaceChildren(fragment);

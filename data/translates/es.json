@@ -1,153 +1,121 @@
 {
-  "header": {
+  "global": {
+    "language": "Español",
+    "languages": {
+      "es": "Español", "en": "Inglés", "zh": "Chino", "ja": "Japonés", "va": "Valenciano",
+      "fr": "Francés", "it": "Italiano", "de": "Alemán", "ko": "Coreano", "pt": "Portugués"
+    },
+    "portfolio": { "title": "Carlos Tormo | Portafolios", "h1": "Portafolio de Carlos Tormo Castaño" },
+    "projects": { "title": "Carlos Tormo | Proyectos", "h1": "Proyectos de CarlostcDev" },
+    "copyright": "Todos los derechos no reservados."
+  },
+
+  "shared": {
     "home": "Inicio",
     "about-me": "Sobre mí",
     "skills": "Aptitudes",
     "education": "Formación",
     "experience": "Experiencia",
     "contact": "Contacto",
-    "language": "Español",
-    "es": "Español",
-    "en": "Inglés",
-    "zh": "Chino",
-    "ja": "Japonés",
-    "va": "Valenciano",
-    "fr": "Francés",
-    "it": "Italiano",
-    "de": "Alemán",
-    "ko": "Coreano",
-    "pt": "Portugués"
-  },
-
-  "main": {
-    "h1": "Portafolio de Carlos Tormo Castaño"
-  },
-
-  "home": {
-    "p1": "Bienvenido,",
-    "p2": "Soy",
-    "p3": "Tu próximo ",
-    "a1": "Sobre mí",
-    "a2": "Proyectos",
-    "word-animation": "desarrollador",
-    "roles-list": [
-      "desarrollador",
-      "programador",
-      "administrador",
-      "informático"
-    ]
-  },
-
-  "about-me": {
-    "h2": "Sobre mí",
-    "phrase1": "Soy un técnico informático ilicitano apasionado por comprender y dominar la tecnología.",
-    "phrase2": "Me enfoco en los problemas complejos para diseñar soluciones escalables y eficientes.",
-    "phrase3": "Ordenado, perfeccionista y con alta capacidad de rápido aprendizaje.",
-    "phrase4": "Propongo mejoras y soluciones con otra perspectiva que ayudan al entorno.",
-    "phrase5": "Busco crecer profesionalmente y contribuir al éxito del equipo y de la empresa.",
-    "phrase6": "Poseo español nativo, con nivel intermedio de inglés y comprensión pasiva de valenciano."
-  },
-
-  "projects": {
-    "h2": "Proyectos",
-    "p": "Explora mis trabajos más recientes y proyectos desarrollados.",
-    "a": "Ver proyectos"
-  },
-
-  "footer": {
-    "h2": "Contacto",
     "projects": "Proyectos",
+    "theme": "Tema",
+    "language": "Idioma",
+    "portfolio": "Portafolios",
+    "technologies": "Tecnologías",
+    "info": "Información",
+    "social": "Social",
+    "stats": "Estadísticas",
     "phone": "Teléfono",
-    "copyright": "Todos los derechos no reservados.",
     "location": "Elche, España",
-    "cv": "Currículum",
+    "cv": "Curriculum",
     "localtime": "Hora local:"
   },
 
-  "education": {
-    "h2": "Formación",
-    "dam": {
-      "title": "Desarrollo de Aplicaciones Multiplataforma",
-      "subtitle": "Grado Superior de FP",
-      "location": "Elche, España",
-      "phrase1": "Desarrollo de aplicaciones multiplataforma utilizando Java, aplicando programación orientada a objetos, estructuras de datos y patrones de diseño.",
-      "phrase2": "Implementación de interfaces gráficas con JavaFX y desarrollo de aplicaciones web con HTML, CSS y JavaScript, incluyendo el consumo e integración de APIs REST.",
-      "phrase3": "Diseño, modelado y gestión de bases de datos relacionales y NoSQL mediante MariaDB, PostgreSQL, MongoDB y Redis.",
-      "phrase4": "Control de versiones con Git y aplicación de flujos de trabajo colaborativos.",
-      "phrase5": "Análisis y diseño de soluciones software mediante UML, junto con la aplicación de principios de Clean Code, buenas prácticas de documentación y metodologías de desarrollo para la creación de aplicaciones mantenibles y escalables."
+  "portfolio": {
+    "home": {
+      "welcome": "Bienvenido,",
+      "iam": "Soy", "yournext": "Tu próximo ", "rol": "desarrollador",
+      "roles-list": ["desarrollador", "programador", "administrador", "informático"],
+      "a1": "Sobre mí", "a2": "Proyectos"
     },
-    "smr": {
-      "title": "Sistemas Microinformáticos y Redes",
-      "subtitle": "Grado Medio de FP",
-      "location": "Elche, España",
-      "phrase1": "Configuración y administración de servidores Linux y Windows, implementando y gestionando servicios de red como DHCP, DNS, HTTP y FTP.",
-      "phrase2": "Diseño y administración de infraestructuras de red y entornos virtualizados mediante VirtualBox.",
-      "phrase3": "Realización de diagnósticos de hardware, pruebas de estrés y análisis de rendimiento utilizando herramientas como MemTest86, Cinebench y 3DMark.",
-      "phrase4": "Monitorización y análisis del tráfico de red con Wireshark, junto con la implementación de medidas de ciberseguridad mediante firewalls, soluciones antivirus y herramientas de análisis de vulnerabilidades como OpenVAS.",
-      "phrase5": "Administración de sistemas operativos, entornos de servidor, herramientas de desarrollo e infraestructuras informáticas."
+
+    "about-me": {
+      "phrase1": "Soy un técnico informático ilicitano apasionado por comprender y dominar la tecnología.",
+      "phrase2": "Me enfoco en los problemas complejos para diseñar soluciones escalables y eficientes.",
+      "phrase3": "Ordenado, perfeccionista y con alta capacidad de rápido aprendizaje.",
+      "phrase4": "Propongo mejoras y soluciones con otra perspectiva que ayudan al entorno.",
+      "phrase5": "Busco crecer profesionalmente y contribuir al éxito del equipo y de la empresa.",
+      "phrase6": "Poseo español nativo, con nivel intermedio de inglés y comprensión pasiva de valenciano."
+    },
+
+    "projects": {
+      "phrase": "Explora mis trabajos más recientes y proyectos desarrollados.",
+      "button": "Ver proyectos"
+    },
+
+    "education": {
+      "dam": {
+        "title": "Desarrollo de Aplicaciones Multiplataforma",
+        "subtitle": "Grado Superior de FP",
+        "phrase1": "Desarrollo de aplicaciones multiplataforma utilizando Java, aplicando programación orientada a objetos, estructuras de datos y patrones de diseño.",
+        "phrase2": "Implementación de interfaces gráficas con JavaFX y desarrollo de aplicaciones web con HTML, CSS y JavaScript, incluyendo el consumo e integración de APIs REST.",
+        "phrase3": "Diseño, modelado y gestión de bases de datos relacionales y NoSQL mediante MariaDB, PostgreSQL, MongoDB y Redis.",
+        "phrase4": "Control de versiones con Git y aplicación de flujos de trabajo colaborativos.",
+        "phrase5": "Análisis y diseño de soluciones software mediante UML, junto con la aplicación de principios de Clean Code, buenas prácticas de documentación y metodologías de desarrollo para la creación de aplicaciones mantenibles y escalables."
+      },
+      "smr": {
+        "title": "Sistemas Microinformáticos y Redes",
+        "subtitle": "Grado Medio de FP",
+        "phrase1": "Configuración y administración de servidores Linux y Windows, implementando y gestionando servicios de red como DHCP, DNS, HTTP y FTP.",
+        "phrase2": "Diseño y administración de infraestructuras de red y entornos virtualizados mediante VirtualBox.",
+        "phrase3": "Realización de diagnósticos de hardware, pruebas de estrés y análisis de rendimiento utilizando herramientas como MemTest86, Cinebench y 3DMark.",
+        "phrase4": "Monitorización y análisis del tráfico de red con Wireshark, junto con la implementación de medidas de ciberseguridad mediante firewalls, soluciones antivirus y herramientas de análisis de vulnerabilidades como OpenVAS.",
+        "phrase5": "Administración de sistemas operativos, entornos de servidor, herramientas de desarrollo e infraestructuras informáticas."
+      }
+    },
+
+    "experience": {
+      "nttdata": {
+        "job": "Desarrollador Full-Stack en Prácticas",
+        "company": "NTT Data España",
+        "location": "Playa de San Juan, España",
+        "business": "NTT Data San Juan",
+        "phrase1": "Desarrollo de aplicaciones backend utilizando Java 18 y Spring Boot, implementando APIs REST, autenticación y autorización con Spring Security, así como pruebas unitarias mediante JUnit y Mockito.",
+        "phrase2": "Desarrollo de aplicaciones frontend con Angular, TypeScript, HTML y CSS, aplicando prácticas modernas de desarrollo web y herramientas del ecosistema de Node.js.",
+        "phrase3": "Gestión de dependencias, compilación y automatización de proyectos mediante Maven, siguiendo flujos de desarrollo estructurados.",
+        "phrase4": "Diseño, implementación y gestión de la capa de persistencia utilizando PostgreSQL.",
+        "phrase5": "Control de versiones con Git y colaboración dentro de un entorno profesional de desarrollo de software.",
+        "phrase6": "Integración de herramientas y agentes de inteligencia artificial para optimizar los flujos de desarrollo e incrementar la productividad.",
+        "years": "Abril 2026 - Junio 2026"
+      },
+      "neuric": {
+        "job": "Desarrollador Web",
+        "company": "Neuric",
+        "business": "Neuric Consultoría",
+        "phrase1": "Desarrollo, personalización y optimización de sitios web utilizando WordPress en un entorno profesional.",
+        "phrase2": "Creación de interfaces y funcionalidades avanzadas mediante Elementor y WooCommerce, adaptando las soluciones a las necesidades de cada proyecto.",
+        "phrase3": "Desarrollo de componentes y personalizaciones con HTML, CSS y JavaScript, adquiriendo una sólida base en diseño, maquetación y estilos avanzados con CSS.",
+        "phrase4": "Aplicación de técnicas de optimización del rendimiento, seguridad web y buenas prácticas para mejorar la experiencia de usuario y el posicionamiento de los sitios web.",
+        "phrase5": "Administración básica de sistemas informáticos y soporte técnico dentro del entorno empresarial.",
+        "years": "Febrero 2025 - Mayo 2025"
+      }
     }
   },
 
-  "title": "Carlos Tormo | Portafolio",
-
-  "stats": {
-    "h2": "Estadísticas"
-  },
-
-  "social": {
-    "h2": "Social"
-  },
-
-  "info": {
-    "h2": "Información"
-  },
-
-  "experience": {
-    "h2": "Experiencia",
-    "nttdata": {
-      "job": "Desarrollador Full-Stack en Prácticas",
-      "company": "NTT Data España",
-      "location": "Playa de San Juan, España",
-      "business": "NTT Data San Juan",
-      "phrase1": "Desarrollo de aplicaciones backend utilizando Java 18 y Spring Boot, implementando APIs REST, autenticación y autorización con Spring Security, así como pruebas unitarias mediante JUnit y Mockito.",
-      "phrase2": "Desarrollo de aplicaciones frontend con Angular, TypeScript, HTML y CSS, aplicando prácticas modernas de desarrollo web y herramientas del ecosistema de Node.js.",
-      "phrase3": "Gestión de dependencias, compilación y automatización de proyectos mediante Maven, siguiendo flujos de desarrollo estructurados.",
-      "phrase4": "Diseño, implementación y gestión de la capa de persistencia utilizando PostgreSQL.",
-      "phrase5": "Control de versiones con Git y colaboración dentro de un entorno profesional de desarrollo de software.",
-      "phrase6": "Integración de herramientas y agentes de inteligencia artificial para optimizar los flujos de desarrollo e incrementar la productividad.",
-      "years": "Abril 2026 - Junio 2026"
+  "projects": {
+    "hero": {
+      "phrase": "Descubre todos mis proyectos, desde aplicaciones y sistemas hasta experimentos y desarrollos personales.",
+      "button": "Ver proyectos"
     },
-    "neuric": {
-      "job": "Desarrollador Web",
-      "company": "Neuric",
-      "location": "Elche, España",
-      "business": "Neuric Consultoría",
-      "phrase1": "Desarrollo, personalización y optimización de sitios web utilizando WordPress en un entorno profesional.",
-      "phrase2": "Creación de interfaces y funcionalidades avanzadas mediante Elementor y WooCommerce, adaptando las soluciones a las necesidades de cada proyecto.",
-      "phrase3": "Desarrollo de componentes y personalizaciones con HTML, CSS y JavaScript, adquiriendo una sólida base en diseño, maquetación y estilos avanzados con CSS.",
-      "phrase4": "Aplicación de técnicas de optimización del rendimiento, seguridad web y buenas prácticas para mejorar la experiencia de usuario y el posicionamiento de los sitios web.",
-      "phrase5": "Administración básica de sistemas informáticos y soporte técnico dentro del entorno empresarial.",
-      "years": "Febrero 2025 - Mayo 2025"
+    "projects": {
+      "sort": "Ordenar",
+      "desc": "Descendente",
+      "asc": "Ascendente",
+      "stars": "Estrellas",
+      "language": "Lenguaje",
+      "reset": "Reiniciar",
+      "no-projects": "No hay proyectos que coincidan con los filtros.",
+      "buttons": "Ver proyecto"
     }
-  },
-
-  "menu": {
-    "language": "Idioma",
-    "theme": "Tema",
-    "home": "Inicio",
-    "projects": "Proyectos",
-    "contact": "Contacto"
-  },
-
-  "header-projects": {
-    "portfolio": "Portafolios",
-    "technologies": "Tecnologías"
-  },
-
-  "navigator-projects": {
-    "language": "Idioma",
-    "theme": "Tema",
-    "portfolio": "Portafolios",
-    "contact": "Contacto"
   }
 }

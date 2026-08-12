@@ -1,153 +1,114 @@
 {
-  "header": {
+  "global": {
+    "language": "Valencià",
+    "languages": {
+      "es": "Espanyol", "en": "Anglés", "zh": "Xinés", "ja": "Japonés", "va": "Valencià",
+      "fr": "Francés", "it": "Italià", "de": "Alemany", "ko": "Coreà", "pt": "Portugués"
+    },
+    "portfolio": { "title": "Carlos Tormo | Portafoli", "h1": "Portafoli de Carlos Tormo Castaño" },
+    "projects": { "title": "Carlos Tormo | Projectes", "h1": "Projectes de CarlostcDev" },
+    "copyright": "Tots els drets no reservats."
+  },
+  "shared": {
     "home": "Inici",
     "about-me": "Sobre mi",
     "skills": "Aptituds",
     "education": "Formació",
     "experience": "Experiència",
     "contact": "Contacte",
-    "language": "Valencià",
-    "es": "Espanyol",
-    "en": "Anglés",
-    "zh": "Xinés",
-    "ja": "Japonés",
-    "va": "Valencià",
-    "fr": "Francés",
-    "it": "Italià",
-    "de": "Alemany",
-    "ko": "Coreà",
-    "pt": "Portugués"
-  },
-
-  "main": {
-    "h1": "Portafoli de Carlos Tormo Castaño"
-  },
-
-  "home": {
-    "p1": "Benvingut/da,",
-    "p2": "Soc",
-    "p3": "El teu pròxim ",
-    "a1": "Sobre mi",
-    "a2": "Projectes",
-    "word-animation": "desenvolupador",
-    "roles-list": [
-      "desenvolupador",
-      "programador",
-      "administrador",
-      "informàtic"
-    ]
-  },
-
-  "about-me": {
-    "h2": "Sobre mi",
-    "phrase1": "Soc un tècnic informàtic elxà apassionat per comprendre i dominar la tecnologia.",
-    "phrase2": "Em centre en els problemes complexos per a dissenyar solucions escalables i eficients.",
-    "phrase3": "Ordenat, perfeccionista i amb una alta capacitat de ràpid aprenentatge.",
-    "phrase4": "Propose millores i solucions amb una altra perspectiva que ajuden a l'entorn.",
-    "phrase5": "Busque créixer professionalment i contribuir a l'èxit de l'equip i de l'empresa.",
-    "phrase6": "Tinc espanyol natiu, amb nivell intermedi d'anglés i comprensió passiva de valencià."
-  },
-
-  "projects": {
-    "h2": "Projectes",
-    "p": "Explora els meus treballs més recents i projectes desenvolupats.",
-    "a": "Veure projectes"
-  },
-
-  "footer": {
-    "h2": "Contacte",
     "projects": "Projectes",
+    "theme": "Tema",
+    "language": "Idioma",
+    "portfolio": "Portafoli",
+    "technologies": "Tecnologies",
+    "info": "Informació",
+    "social": "Social",
+    "stats": "Estadístiques",
     "phone": "Telèfon",
-    "copyright": "Tots els drets no reservats.",
     "location": "Elx, Espanya",
     "cv": "Currículum",
     "localtime": "Hora local:"
   },
-
-  "education": {
-    "h2": "Formació",
-    "dam": {
-      "title": "Desenvolupament d'Aplicacions Multiplataforma",
-      "subtitle": "Grau Superior de FP",
-      "location": "Elx, Espanya",
-      "phrase1": "Desenvolupament d'aplicacions multiplataforma utilitzant Java, aplicant programació orientada a objectes, estructures de dades i patrons de disseny.",
-      "phrase2": "Implementació d'interfícies gràfiques amb JavaFX i desenvolupament d'aplicacions web amb HTML, CSS i JavaScript, incloent-hi el consum i integració d'APIs REST.",
-      "phrase3": "Disseny, modelatge i gestió de bases de dades relacionals i NoSQL mitjançant MariaDB, PostgreSQL, MongoDB i Redis.",
-      "phrase4": "Control de versions amb Git i aplicació de fluxos de treball col·laboratius.",
-      "phrase5": "Anàlisi i disseny de solucions programari mitjançant UML, juntament amb l'aplicació de principis de Clean Code, bones pràctiques de documentació i metodologies de desenvolupament per a la creació d'aplicacions mantenibles i escalables."
+  "portfolio": {
+    "home": {
+      "welcome": "Benvingut,",
+      "iam": "Soc", "yournext": "El teu pròxim ", "rol": "desenvolupador",
+      "roles-list": ["desenvolupador", "programador", "administrador", "informàtic"],
+      "a1": "Sobre mi", "a2": "Projectes"
     },
-    "smr": {
-      "title": "Sistemes Microinformàtics i Xarxes",
-      "subtitle": "Grau Mitjà de FP",
-      "location": "Elx, Espanya",
-      "phrase1": "Configuració i administració de servidors Linux i Windows, implementant i gestionant serveis de xarxa com DHCP, DNS, HTTP i FTP.",
-      "phrase2": "Disseny i administració d'infraestructures de xarxa i entorns virtualitzats mitjançant VirtualBox.",
-      "phrase3": "Realització de diagnòstics de maquinari, proves d'esforç i anàlisi de rendiment utilitzant eines com MemTest86, Cinebench i 3DMark.",
-      "phrase4": "Monitoratge i anàlisi del tràfec de xarxa amb Wireshark, juntament amb la implementació de mesures de ciberseguretat mitjançant tallafocs, solucions antivirus i eines d'anàlisi de vulnerabilitats com OpenVAS.",
-      "phrase5": "Administració de sistemes operatius, entorns de servidor, eines de desenvolupament i infraestructures informàtiques."
+    "about-me": {
+      "phrase1": "Soc un tècnic informàtic il·licità apassionat per comprendre i dominar la tecnologia.",
+      "phrase2": "M'enfoque en els problemes complexos per a dissenyar solucions escalables i eficients.",
+      "phrase3": "Ordeat, perfeccionista i amb alta capacitat de ràpid aprenentatge.",
+      "phrase4": "Propose millores i solucions amb una altra perspectiva que ajuden a l'entorn de treball.",
+      "phrase5": "Busque créixer professionalment i contribuir a l'èxit de l'equip i de l'empresa.",
+      "phrase6": "Tinc espanyol natiu, amb nivell intermedi d'anglés i comprensió passiva de valencià."
+    },
+    "projects": {
+      "phrase": "Explora els meus treballs més recents i projectes desenvolupats.",
+      "button": "Veure projectes"
+    },
+    "education": {
+      "dam": {
+        "title": "Desenvolupament d'Aplicacions Multiplataforma",
+        "subtitle": "Grau Superior de FP",
+        "phrase1": "Desenvolupament d'aplicacions multiplataforma utilitzant Java, aplicant programació orientada a objectes, estructures de dades i patrons de disseny.",
+        "phrase2": "Implementació d'interfícies gràfiques amb JavaFX i desenvolupament d'aplicacions web amb HTML, CSS i JavaScript, incloent el consum i integració d'APIs REST.",
+        "phrase3": "Disseny, modelat i gestió de bases de dades relacionals i NoSQL mitjançant MariaDB, PostgreSQL, MongoDB i Redis.",
+        "phrase4": "Control de versions amb Git i aplicació de fluxos de treball col·laboratius.",
+        "phrase5": "Anàlisi i disseny de solucions software mitjançant UML, juntament amb l'aplicació de principis de Clean Code, bones pràctiques de documentació i metodologies de desenvolupament per a la creació d'aplicacions mantenibles i escalables."
+      },
+      "smr": {
+        "title": "Sistemes Microinformàtics i Xarxes",
+        "subtitle": "Grau Mitjà de FP",
+        "phrase1": "Configuració i administració de servidors Linux i Windows, implementant i gestionant serveis de xarxa com DHCP, DNS, HTTP i FTP.",
+        "phrase2": "Disseny i administració d'infraestructures de xarxa i entorns virtualitzats mitjançant VirtualBox.",
+        "phrase3": "Realització de diagnòstics de maquinari, proves d'estrés i anàlisi de rendiment utilitzant eines com MemTest86, Cinebench i 3DMark.",
+        "phrase4": "Monitoratge i anàlisi del tràfic de xarxa amb Wireshark, juntament amb la implementació de mesures de ciberseguretat mitjançant tallafocs, solucions antivirus i eines d'anàlisi de vulnerabilitats com OpenVAS.",
+        "phrase5": "Administració de sistemes operatius, entorns de servidor, eines de desenvolupament i infraestructures informàtiques."
+      }
+    },
+    "experience": {
+      "nttdata": {
+        "job": "Desenvolupador Full-Stack en Pràctiques",
+        "company": "NTT Data Espanya",
+        "location": "Plaja de Sant Joan, Espanya",
+        "business": "NTT Data Sant Joan",
+        "phrase1": "Desenvolupament d'aplicacions backend utilitzant Java 18 i Spring Boot, implementant APIs REST, autenticació i autorització amb Spring Security, així com proves unitàries mitjançant JUnit i Mockito.",
+        "phrase2": "Desenvolupament d'aplicacions frontend amb Angular, TypeScript, HTML i CSS, aplicant pràctiques modernes de desenvolupament web i eines de l'ecosistema de Node.js.",
+        "phrase3": "Gestió de dependències, mecanicisme de compilació i automatització de projectes mitjançant Maven.",
+        "phrase4": "Disseny, implementació i gestió de la capa de persistència utilitzant PostgreSQL.",
+        "phrase5": "Control de versions amb Git i col·laboració dins d'un entorn professional de desenvolupament de software.",
+        "phrase6": "Integració d'eines i agents d'intel·ligència artificial per a optimitzar els fluxos de desenvolupament i incrementar la productivitat.",
+        "years": "Abril 2026 - Juny 2026"
+      },
+      "neuric": {
+        "job": "Desenvolupador Web",
+        "company": "Neuric",
+        "business": "Neuric Consultoria",
+        "phrase1": "Desenvolupament, personalització i optimització de llocs web utilitzant WordPress en un entorn professional.",
+        "phrase2": "Creació d'interfícies i funcionalitats avançades mitjançant Elementor i WooCommerce, adaptant les solucions a les necessitats de cada projecte.",
+        "phrase3": "Desenvolupament de components i personalitzacions amb HTML, CSS i JavaScript, adquirint una sòlida base en disseny, maquetació i estils avançats amb CSS.",
+        "phrase4": "Aplicació de tècniques d'optimització del rendiment, seguretat web i bones pràctiques per a millorar l'experiència d'usuari i el posicionament dels llocs web.",
+        "phrase5": "Administració bàsica de sistemes informàtics i suport tècnic dins de l'entorn empresarial.",
+        "years": "Febrer 2025 - Maig 2025"
+      }
     }
   },
-
-  "title": "Carlos Tormo | Portfoli",
-
-  "stats": {
-    "h2": "Estadístiques"
-  },
-
-  "social": {
-    "h2": "Social"
-  },
-
-  "info": {
-    "h2": "Informació"
-  },
-
-  "experience": {
-    "h2": "Experiència",
-    "nttdata": {
-      "job": "Desenvolupador Full-Stack en Pràctiques",
-      "company": "NTT Data Espanya",
-      "location": "Platja de Sant Joan, Espanya",
-      "business": "NTT Data Sant Joan",
-      "phrase1": "Desenvolupament d'aplicacions backend amb Java 18 i Spring Boot, implementant APIs REST, autenticació i autorització amb Spring Security, a més de proves unitàries amb JUnit i Mockito.",
-      "phrase2": "Desenvolupament d'aplicacions frontend amb Angular, TypeScript, HTML i CSS, aplicant pràctiques modernes de desenvolupament web i eines de l'ecosistema de Node.js.",
-      "phrase3": "Gestió de dependències, compilació i automatització de projectes amb Maven, seguint fluxos de desenvolupament estructurats.",
-      "phrase4": "Disseny, implementació i gestió de la capa de persistència utilitzant PostgreSQL.",
-      "phrase5": "Control de versions amb Git i col·laboració dins d'un entorn professional de desenvolupament de programari.",
-      "phrase6": "Integració d'eines i agents de intel·ligència artificial per a optimitzar els fluxos de desenvolupament i augmentar la productivitat.",
-      "years": "Abril 2026 - Juny 2026"
+  "projects": {
+    "hero": {
+      "phrase": "Descobreix tots els meus projectes, des d'aplicacions i sistemes fins a experiments i desenvolupaments personals.",
+      "button": "Veure projectes"
     },
-    "neuric": {
-      "job": "Desenvolupador Web",
-      "company": "Neuric",
-      "location": "Elx, Espanya",
-      "business": "Neuric Consultoria",
-      "phrase1": "Desenvolupament, personalització i optimització de llocs web utilitzant WordPress en un entorn professional.",
-      "phrase2": "Creació d'interfícies i funcionalitats avançades amb Elementor i WooCommerce, adaptant les solucions a les necessitats de cada project.",
-      "phrase3": "Desenvolupament de components i personalitzacions amb HTML, CSS i JavaScript, adquirint una sòlida base en disseny, maquetació i estils avançats amb CSS.",
-      "phrase4": "Aplicació de tècniques d'optimització del rendiment, seguretat web i bones pràctiques per a millorar l'experiència d'usuari i el posicionament dels llocs web.",
-      "phrase5": "Administració bàsica de sistemes informàtics i suport tècnic en l'entorn empresarial.",
-      "years": "Febrer de 2025 - Maig de 2025"
+    "projects": {
+      "sort": "Ordenar",
+      "desc": "Descendent",
+      "asc": "Ascendent",
+      "stars": "Estrelles",
+      "language": "Llenguatge",
+      "reset": "Reiniciar",
+      "no-projects": "No hi ha projectes que coincidisquen amb els filtres.",
+      "buttons": "Veure projecte"
     }
-  },
-
-  "menu": {
-    "language": "Idioma",
-    "theme": "Tema",
-    "home": "Inici",
-    "projects": "Projectes",
-    "contact": "Contacte"
-  },
-
-  "header-projects": {
-    "portfolio": "Portafoli",
-    "technologies": "Tecnologies"
-  },
-
-  "navigator-projects": {
-    "language": "Idioma",
-    "theme": "Tema",
-    "portfolio": "Portafoli",
-    "contact": "Contacte"
   }
 }
