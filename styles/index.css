@@ -3,8 +3,9 @@
 @import url("../components/sections/experience/experience.css");
 @import url("../components/shared/footer/footer.css");
 @import url("../components/shared/header/header.css");
-@import url("../components/sections/home/home.css");
 @import url("../components/shared/navigator/navigator.css");
+@import url("../components/shared/ai-assistant/ai-assistant.css");
+@import url("../components/sections/home/home.css");
 @import url("../components/sections/projects/projects.css");
 @import url("./themes/dark-theme.css");
 @import url("./themes/light-theme.css");

@@ -76,8 +76,8 @@ class Footer {
         stats.innerHTML = `
             <h2 data-i18n="shared.stats">Estadísticas</h2>
             <div class="image-stats">
-                <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=CarlostcDev&layout=compact&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9&hide_border=true&width=100%"
-                     width="100%" class="image-stats" loading="lazy" alt="Carlos Tormo - Developer Stats">
+                <img src="https://streak-stats.demolab.com/?user=CarlostcDev&theme=dark"
+                     width="75%" class="img" loading="lazy" alt="Carlos Tormo - Developer Stats">
             </div>`;
     }
 
