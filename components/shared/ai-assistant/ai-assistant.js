@@ -1,4 +1,6 @@
 class AiAssistant {
+    #conversationHistory = [];
+
     constructor() {
         this.aiAssistant = document.getElementById("ai-assistant");
     }
@@ -56,28 +58,41 @@ class AiAssistant {
         const form = this.aiAssistant.querySelector(".ai-form");
         const textarea = this.aiAssistant.querySelector(".ai-textarea");
         const button = this.aiAssistant.querySelector(".ai-btn");
+
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
             const message = textarea.value.trim();
             if (!message) return;
+
             this.#addMessage(message, "user");
+
+            this.#conversationHistory.push({
+                role: "user",
+                parts: [{ text: message }]
+            });
+
             textarea.value = "";
             textarea.style.height = "40px";
             button.classList.remove("active");
+
             try {
                 const response = await fetch(
                     "https://api.carlostcdev-chatbot.workers.dev",
                     {
                         method: "POST",
                         headers: {"Content-Type": "application/json"},
-                        body: JSON.stringify({message: message})
+                        body: JSON.stringify({messages: this.#conversationHistory})
                     }
                 );
+
                 if (!response.ok) {
+                    this.#conversationHistory.pop();
                     const errorText = await response.text();
                     throw new Error(`Error ${response.status}: ${errorText}`);
                 }
+
                 if (!response.body) throw new Error("El servidor no ha enviado un stream.");
+
                 const assistantMessage = this.#addMessage("", "assistant");
                 const reader = response.body.getReader();
                 const decoder = new TextDecoder();
@@ -85,6 +100,7 @@ class AiAssistant {
                 let textQueue = "";
                 let assistantText = "";
                 let isWriting = false;
+
                 const writeQueue = async () => {
                     if (isWriting) return;
                     isWriting = true;
@@ -101,6 +117,7 @@ class AiAssistant {
                     }
                     isWriting = false;
                 };
+
                 while (true) {
                     const { value, done } = await reader.read();
                     if (done) break;
@@ -123,11 +140,19 @@ class AiAssistant {
                         }
                     }
                 }
+
                 while (textQueue.length > 0) {
                     await writeQueue();
                     if (textQueue.length > 0) await new Promise(resolve => setTimeout(resolve, 30));
                 }
+
                 assistantMessage.innerHTML = this.#parseMarkdown(assistantText);
+
+                this.#conversationHistory.push({
+                    role: "model",
+                    parts: [{ text: assistantText }]
+                });
+
             } catch (error) {
                 console.error("Error del chatbot:", error);
                 this.#addMessage(`Error: ${error.message}`, "assistant");
