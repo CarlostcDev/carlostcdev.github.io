@@ -65,6 +65,29 @@
         width: 150px;
         margin-bottom: -20px;
     }
+
+    #projects-list .projects-filter {
+        display: grid !important;
+        grid-template-columns: repeat(4, max-content) !important;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #projects-list .projects-filter .search-bar {
+        grid-column: 1 / -1 !important;
+        grid-row: 2 !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
+
+    #projects-list .projects-filter .reset-filters {
+        grid-column: 4;
+        grid-row: 1;
+    }
 }
 
 @media screen and (max-width: 980px) {
@@ -78,6 +101,16 @@
     #header .nav-menu .menu-container .menu-options {
         gap: 5px;
         font-size: 0.8rem;
+    }
+
+    #robot-animation {
+        display: none;
+    }
+
+    .hero-container, .hero-content {
+        width: 100% !important;
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -144,6 +177,16 @@
         right: auto;
         z-index: 10000;
     }
+
+    #ai-assistant {
+        bottom: 58px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+
+    #ai-assistant .ai-assistant-bar {
+        background: var(--black);
+    }
 }
 
 @media screen and (max-width: 625px) {
@@ -182,6 +225,37 @@
 
     #navigator .nav-item {
         gap: 0;
+    }
+
+    #projects-list .projects-filter {
+        grid-template-columns: repeat(2, max-content) !important;
+    }
+
+    #projects-list .projects-filter .search-bar {
+        grid-column: 1 / -1 !important;
+        grid-row: 3 !important;
+        width: 100% !important;
+    }
+
+    #projects-list .projects-filter .reset-filters {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #projects-list .projects-list {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #projects-list {
+        padding: 30px 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #projects-list .project-box {
+        width: 100% !important;
     }
 }
 

@@ -25,10 +25,7 @@ class AiAssistant {
         const form = this.aiAssistant.querySelector(".ai-form");
         const button = this.aiAssistant.querySelector(".ai-btn");
         textarea.addEventListener("input", () => {
-            button.classList.toggle(
-                "active",
-                textarea.value.trim().length > 0
-            );
+            button.classList.toggle("active", textarea.value.trim().length > 0);
             textarea.style.height = "40px";
             const height = Math.min(Math.max(Math.ceil(textarea.scrollHeight / 20) * 20, 40), 100);
             textarea.style.height = `${height}px`;

@@ -1,7 +1,6 @@
 class Project {
     constructor() {
-        this.projectsElement = document.getElementById("projects");
-        this.loader = document.getElementById("loading");
+        this.projectsElement = document.getElementById("projects-list");
         this.searchInput = document.querySelector(".filter-input");
         this.rangeInput = document.querySelector(".filter-range");
         this.rangeTooltip = document.getElementById("range-tooltip");
@@ -19,6 +18,7 @@ class Project {
     }
 
     async #getProjects() {
+        this.loader = document.getElementById("loader");
         this.loader?.classList.remove("hidden");
         try {
             const response = await fetch("https://api.github.com/users/CarlostcDev/repos?type=owner&sort=updated&per_page=100", {

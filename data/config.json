@@ -28,7 +28,7 @@
       "projects": [
         {"name": "Idioma", "i18n": "shared.language", "icon": "language", "class": "lang-toggle", "ariaLabel": "Change Language", "hasLangOptions": true},
         {"name": "Tema", "i18n": "shared.theme", "icon": "light-mode", "class": "theme-toggle", "ariaLabel": "Theme Toggle"},
-        {"name": "Portafolios", "i18n": "shared.portfolio", "href": "../index.html", "icon": "portfolio"},
+        {"name": "Portafolios", "i18n": "shared.portfolio", "href": "../index.html", "icon": "dashboard"},
         {"name": "GitHub", "i18n": "", "href": "https://github.com/CarlostcDev", "icon": "github", "target": "_blank", "rel": "noopener"},
         {"name": "Contacto", "i18n": "shared.contact", "href": "#footer", "icon": "contact"}
       ]
@@ -60,7 +60,7 @@
   ],
 
 
-  "themes": ["blue-theme", "green-theme", "orange-theme", "purple-theme", "maroon-theme", "light-blue-theme"],
+  "themes": ["blue-theme", "green-theme", "purple-theme", "light-blue-theme"],
 
   "social": {
     "title": {"h2": "Social", "i18n": "shared.social"},

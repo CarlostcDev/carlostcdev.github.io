@@ -1,6 +1,6 @@
 @import url("../../styles/subindex.css");
 @import url("../components/hero/hero.css");
-@import url("../components/projects/projects.css");
+@import url("../components/projects-list/projects-list.css");
 @import url("../components/robot-animation/robot-animation.css");
 
 :root.dark-theme.blue-theme {
@@ -11,18 +11,10 @@
     --background-image: url("../../sources/backgrounds/section/background-section-light-blue.webp");
 }
 
-:root.dark-theme.maroon-theme {
-    --background-image: url("../../sources/backgrounds/section/background-section-maroon.webp");
-}
-
 :root.dark-theme.green-theme {
     --background-image: url("../../sources/backgrounds/section/background-section-green.webp");
 }
 
 :root.dark-theme.purple-theme {
     --background-image: url("../../sources/backgrounds/section/background-section-purple.webp");
-}
-
-:root.dark-theme.orange-theme {
-    --background-image: url("../../sources/backgrounds/section/background-section-orange.webp");
 }

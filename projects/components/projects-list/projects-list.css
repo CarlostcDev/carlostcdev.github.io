@@ -1,4 +1,4 @@
-#projects {
+#projects-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,16 +11,17 @@
     z-index: 10;
 }
 
-#projects .projects-list {
+#projects-list .projects-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 30px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    justify-items: center;
 }
 
-#projects .projects-list .project-box {
+#projects-list .projects-list .project-box {
     position: relative;
     z-index: 0;
     display: flex;
@@ -32,46 +33,16 @@
     padding: 2rem;
     border-radius: 55px 0;
     overflow: hidden;
-}
-
-#projects .projects-list .project-box::before {
-    content: '';
-    position: absolute;
-    z-index: -2;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 50% 50%, 50% 50%;
-    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    background-image:
-            linear-gradient(var(--primary), var(--primary)),
-            linear-gradient(var(--secondary), var(--secondary)),
-            linear-gradient(var(--primary), var(--primary)),
-            linear-gradient(var(--secondary), var(--secondary));
-    animation: rotate 30s linear infinite;
-}
-
-#projects .projects-list .project-box::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 6px;
-    left: 6px;
-    width: calc(100% - 12px);
-    height: calc(100% - 12px);
     background: var(--black);
-    border-radius: 50px 0;
+    border: 5px solid var(--primary);
 }
 
-#projects .projects-list .project-box .box-title {
+#projects-list .projects-list .project-box .box-title {
     font-size: 2rem;
     font-weight: bold;
 }
 
-#projects .projects-list .project-box .box-url {
+#projects-list .projects-list .project-box .box-url {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,23 +55,23 @@
     transition: var(--transition);
 }
 
-#projects .projects-list .project-box .box-url:hover {
+#projects-list .projects-list .project-box .box-url:hover {
     background: var(--dark);
 }
 
-#projects .projects-list .project-box .box-url:hover .box-button {
+#projects-list .projects-list .project-box .box-url:hover .box-button {
     color: var(--primary);
 }
 
-#projects .projects-list .project-box .box-url:hover .box-svg {
+#projects-list .projects-list .project-box .box-url:hover .box-svg {
     fill: var(--primary);
 }
 
-#projects .projects-list .project-box .box-url .box-button, #projects .projects-list .project-box .box-url .box-svg {
+#projects-list .projects-list .project-box .box-url .box-button, #projects-list .projects-list .project-box .box-url .box-svg {
     transition: var(--transition);
 }
 
-#projects .projects-list .project-box .box-button {
+#projects-list .projects-list .project-box .box-button {
     background: transparent;
     border: none;
     color: var(--black);
@@ -109,13 +80,13 @@
     cursor: pointer;
 }
 
-#projects .projects-list .project-box .box-svg {
+#projects-list .projects-list .project-box .box-svg {
     width: 30px;
     height: 30px;
     fill: var(--black);
 }
 
-#projects .projects-list .box-desc {
+#projects-list .projects-list .box-desc {
     color: var(--light);
     font-family: var(--font-code), system-ui;
     font-size: 1rem;
@@ -123,21 +94,21 @@
     white-space: pre-wrap;
 }
 
-#projects .box-ul {
+#projects-list .box-ul {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     list-style: none;
 }
 
-#projects .box-ul .box-li {
+#projects-list .box-ul .box-li {
     padding: 0 10px;
     color: white;
     border-radius: 5px;
     text-transform: capitalize;
 }
 
-#projects .projects-filter {
+#projects-list .projects-filter {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -148,12 +119,12 @@
     box-sizing: border-box;
 }
 
-#projects .projects-filter .filter-select {
+#projects-list .projects-filter .filter-select {
     position: relative;
     flex-shrink: 0;
 }
 
-#projects .projects-filter .filter-select summary, #projects .reset-filters {
+#projects-list .projects-filter .filter-select summary, #projects-list .reset-filters {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,31 +143,31 @@
     box-sizing: border-box;
 }
 
-#projects .projects-filter .filter-select summary::-webkit-details-marker {
+#projects-list .projects-filter .filter-select summary::-webkit-details-marker {
     display: none;
 }
 
-#projects .projects-filter .filter-select summary:hover {
+#projects-list .projects-filter .filter-select summary:hover {
     background: var(--gray);
 }
 
-#projects .projects-filter .filter-select summary:hover .filter-svg,
-#projects .projects-filter .filter-select[open] .filter-svg {
+#projects-list .projects-filter .filter-select summary:hover .filter-svg,
+#projects-list .projects-filter .filter-select[open] .filter-svg {
     color: var(--primary);
 }
 
-#projects .projects-filter .filter-select summary span {
+#projects-list .projects-filter .filter-select summary span {
     transition: var(--transition);
 }
 
-#projects .projects-filter .filter-select .filter-svg {
+#projects-list .projects-filter .filter-select .filter-svg {
     width: 25px;
     height: 25px;
     fill: var(--light);
     transition: var(--transition);
 }
 
-#projects .projects-filter .filter-select .filter-options {
+#projects-list .projects-filter .filter-select .filter-options {
     position: absolute;
     top: 52px;
     left: 0;
@@ -212,7 +183,7 @@
     z-index: 100;
 }
 
-#projects .projects-filter .filter-select .filter-options .filter-btn {
+#projects-list .projects-filter .filter-select .filter-options .filter-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -230,30 +201,30 @@
     cursor: pointer;
 }
 
-#projects .projects-filter .filter-select .filter-options .filter-btn:hover {
+#projects-list .projects-filter .filter-select .filter-options .filter-btn:hover {
     background: var(--gray);
 }
 
-#projects .projects-filter .filter-select .filter-options .filter-btn.active {
+#projects-list .projects-filter .filter-select .filter-options .filter-btn.active {
     background: var(--primary);
     color: var(--black);
 }
 
-#projects .projects-filter .filter-select .filter-options .filter-btn.active .filter-switch {
+#projects-list .projects-filter .filter-select .filter-options .filter-btn.active .filter-switch {
     background: var(--primary);
 }
 
-#projects .projects-filter .filter-select .filter-options .filter-btn.active .filter-switch::after {
+#projects-list .projects-filter .filter-select .filter-options .filter-btn.active .filter-switch::after {
     left: 21px;
     background: var(--secondary);
 }
 
-#projects .projects-filter .filter-buttons .filter-options .filter-btn.active {
+#projects-list .projects-filter .filter-buttons .filter-options .filter-btn.active {
     background: transparent;
     color: var(--light);
 }
 
-#projects .projects-filter .filter-select .filter-options .filter-btn .filter-switch {
+#projects-list .projects-filter .filter-select .filter-options .filter-btn .filter-switch {
     position: relative;
     flex-shrink: 0;
     width: 40px;
@@ -263,7 +234,7 @@
     transition: var(--transition);
 }
 
-#projects .projects-filter .filter-select .filter-options .filter-btn .filter-switch::after {
+#projects-list .projects-filter .filter-select .filter-options .filter-btn .filter-switch::after {
     content: '';
     position: absolute;
     top: 3px;
@@ -275,7 +246,7 @@
     transition: var(--transition);
 }
 
-#projects .projects-filter .search-bar {
+#projects-list .projects-filter .search-bar {
     position: relative;
     display: flex;
     align-items: center;
@@ -291,22 +262,22 @@
     transition: var(--transition);
 }
 
-#projects .projects-filter .search-bar:hover,
-#projects .projects-filter .search-bar:focus-within {
+#projects-list .projects-filter .search-bar:hover,
+#projects-list .projects-filter .search-bar:focus-within {
     background: var(--gray);
 }
 
-#projects .projects-filter .search-bar:has(.filter-input:not(:placeholder-shown)) .clear {
+#projects-list .projects-filter .search-bar:has(.filter-input:not(:placeholder-shown)) .clear {
     display: block;
 }
 
-#projects .projects-filter .search-bar .search {
+#projects-list .projects-filter .search-bar .search {
     width: 25px;
     margin: 5px;
     fill: var(--light);
 }
 
-#projects .projects-filter .search-bar .filter-input {
+#projects-list .projects-filter .search-bar .filter-input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -316,11 +287,11 @@
     margin-right: 25px;
 }
 
-#projects .projects-filter .search-bar .filter-input::-webkit-search-cancel-button {
+#projects-list .projects-filter .search-bar .filter-input::-webkit-search-cancel-button {
     appearance: none;
 }
 
-#projects .clear {
+#projects-list .clear {
     position: absolute;
     right: 10px;
     display: none;
@@ -330,12 +301,12 @@
     cursor: pointer;
 }
 
-#projects .range-container {
+#projects-list .range-container {
     height: 50px;
     padding: 0 20px !important;
 }
 
-#projects .range-wrapper {
+#projects-list .range-wrapper {
     position: relative;
     display: flex;
     align-items: center;
@@ -344,7 +315,7 @@
     height: 100%;
 }
 
-#projects .range-tooltip {
+#projects-list .range-tooltip {
     position: absolute;
     top: -20px;
     left: 0;
@@ -361,11 +332,11 @@
     pointer-events: none;
 }
 
-#projects .range-tooltip.hidden {
+#projects-list .range-tooltip.hidden {
     display: none;
 }
 
-#projects .filter-range {
+#projects-list .filter-range {
     width: 250px;
     height: 12px;
     padding: 30px 0;
@@ -375,7 +346,7 @@
     cursor: pointer;
 }
 
-#projects .filter-range::-webkit-slider-thumb {
+#projects-list .filter-range::-webkit-slider-thumb {
     width: 14px;
     height: 40px;
     margin-top: -14px;
@@ -385,7 +356,7 @@
     appearance: none;
 }
 
-#projects .filter-range::-moz-range-thumb {
+#projects-list .filter-range::-moz-range-thumb {
     width: 16px;
     height: 16px;
     background: var(--primary);
@@ -393,13 +364,13 @@
     border-radius: 50%;
 }
 
-#projects .filter-range::-webkit-slider-runnable-track {
+#projects-list .filter-range::-webkit-slider-runnable-track {
     height: 12px;
     background: linear-gradient(to right, var(--primary) var(--value-percent, 0%), var(--gray) var(--value-percent, 0%));
     border-radius: 20px;
 }
 
-#projects .filter-range::-moz-range-track {
+#projects-list .filter-range::-moz-range-track {
     height: 80px;
     border-radius: 8px;
 }
@@ -410,35 +381,56 @@
     }
 }
 
-#projects .no-projects {
+#projects-list .no-projects {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
     background: var(--dark);
     border-radius: 30px;
+    width: 100%;
 }
 
-#projects .no-projects .no-svg {
+#projects-list .no-projects .no-svg {
     fill: var(--light);
     width: 25px;
 }
 
-#projects .no-projects .no-p {
+#projects-list .no-projects .no-p {
     font-size: 1rem;
 }
 
-#projects .reset-filters .reset-svg {
+#projects-list .reset-filters .reset-svg {
     width: 25px;
     height: 25px;
     fill: var(--light);
     transition: var(--transition);
 }
 
-#projects .reset-filters:hover {
+#projects-list .reset-filters:hover {
     background: var(--gray);
 }
 
-#projects .reset-filters:hover .reset-svg {
+#projects-list .reset-filters:hover .reset-svg {
     color: var(--primary);
+}
+
+#projects-list #loader {
+    width: 100px;
+    height: 100px;
+    border: 10px solid var(--dark);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+    margin: 250px auto;
+}
+
+#projects-list #loader.hidden {
+    display: none;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
 }
