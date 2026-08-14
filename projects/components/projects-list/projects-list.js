@@ -148,7 +148,7 @@ class Project {
     #updateButtonStates() {
         document.querySelectorAll(".filter-btn").forEach((btn) => {
             const { sort, order, prop, value } = btn.dataset;
-            let isActive = false;
+            let isActive;
             if (sort) {
                 const sortOrder = order || "desc";
                 isActive = Boolean(this.currentSort && this.currentSort.prop === sort && this.currentSort.order === sortOrder);

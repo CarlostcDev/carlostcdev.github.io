@@ -1,9 +1,9 @@
-@import url("../components/shared/footer/footer.css");
-@import url("../components/shared/header/header.css");
-@import url("../components/shared/navigator/navigator.css");
-@import url("../components/shared/ai-assistant/ai-assistant.css");
 @import url("./themes/dark-theme.css");
 @import url("./themes/light-theme.css");
 @import url("./utils/fonts.css");
-@import url("./utils/responsive.css");
 @import url("./app.css");
+@import url("../components/shared/header/header.css");
+@import url("../components/shared/navigator/navigator.css");
+@import url("../components/shared/ai-assistant/ai-assistant.css");
+@import url("../components/shared/footer/footer.css");
+@import url("./utils/responsive.css");

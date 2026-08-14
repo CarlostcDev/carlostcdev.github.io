@@ -4,22 +4,29 @@ export async function loadComponents() {
 
     await Promise.all(
         Array.from(elements).map(async element => {
-            const [type, name] = element.dataset.component.split("/");
+            try {
+                const [type, name] = element.dataset.component.split("/");
 
-            if (type === "sections" && !isHome) return;
+                if (type === "sections" && !isHome) return;
 
-            const basePath = type === "shared" || type === "sections"
-                ? `../../components/${type}/${name}/${name}`
-                : `../../${type}/components/${name}/${name}`;
+                const basePath = type === "shared" || type === "sections"
+                    ? `../../components/${type}/${name}/${name}`
+                    : `../../${type}/components/${name}/${name}`;
 
-            const htmlPath = new URL(`${basePath}.html`, import.meta.url);
-            const jsPath = new URL(`${basePath}.js`, import.meta.url);
+                const htmlPath = new URL(`${basePath}.html`, import.meta.url);
+                const jsPath = new URL(`${basePath}.js`, import.meta.url);
 
-            const res = await fetch(htmlPath);
+                const res = await fetch(htmlPath);
 
-            if (res.ok) {
+                if (!res.ok) {
+                    console.error(`Failed to load component "${element.dataset.component}": ${res.status} ${res.statusText}`);
+                    return;
+                }
+
                 element.innerHTML = await res.text();
                 await import(jsPath);
+            } catch (error) {
+                console.error(`Failed to load component "${element.dataset.component}":`, error);
             }
         })
     );

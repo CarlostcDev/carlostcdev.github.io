@@ -6,61 +6,80 @@ export function textCarousel(options = {}) {
         eventName = "portfolio:languagechange"
     } = options;
 
-    const e = document.getElementById(elementId);
-    if (!e) return null;
+    const element = document.getElementById(elementId);
+    if (!element) return null;
 
-    const getNestedValue = (obj, path) => {
-        if (!obj || !path) return undefined;
-        return path.split('.').reduce((acc, part) => acc && acc[part], obj);
-    };
+    const getNestedValue = (object, path) =>
+        object && path
+            ? path.split(".").reduce((value, key) => value?.[key], object)
+            : undefined;
 
-    const normalizeArray = (arr) => {
-        return Array.isArray(arr) ? arr.filter(item => typeof item === "string" && item.trim()) : [];
-    };
+    const normalizeArray = array =>
+        Array.isArray(array)
+            ? array.filter(item => typeof item === "string" && item.trim())
+            : [];
 
-    let items = normalizeArray(getNestedValue(window.languageState, configKey));
-    let i = 0;
-    let timerId = null;
-    e.style.display = "inline-block";
-    e.style.transition = "all 0.5s ease";
+    let items = normalizeArray(
+        getNestedValue(window.languageState, configKey)
+    );
+
+    let index = 0;
+    let intervalId;
+    let animationTimeoutId;
+    let resetTimeoutId;
+
+    element.style.display = "inline-block";
+    element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
 
     const updateText = () => {
-        if (items.length === 0) return;
-        i %= items.length;
-        e.textContent = items[i];
+        if (!items.length) return;
+
+        index %= items.length;
+        element.textContent = items[index];
     };
 
-    const handleLanguageChange = (event) => {
-        const eventData = event.detail ? getNestedValue(event.detail, configKey) : undefined;
-        items = normalizeArray(eventData);
-        i = 0;
+    const handleLanguageChange = event => {
+        items = normalizeArray(
+            event.detail
+                ? getNestedValue(event.detail, configKey)
+                : undefined
+        );
+
+        index = 0;
         updateText();
+    };
+
+    const changeText = () => {
+        if (!items.length) return;
+
+        element.style.opacity = "0";
+        element.style.transform = "translateY(-20px)";
+
+        animationTimeoutId = setTimeout(() => {
+            element.style.transition = "none";
+            element.style.transform = "translateY(20px)";
+
+            index = (index + 1) % items.length;
+            updateText();
+
+            resetTimeoutId = setTimeout(() => {
+                element.style.transition =
+                    "opacity 0.5s ease, transform 0.5s ease";
+                element.style.opacity = "1";
+                element.style.transform = "translateY(0)";
+            }, 50);
+        }, 500);
     };
 
     window.addEventListener(eventName, handleLanguageChange);
     updateText();
 
-    timerId = setInterval(() => {
-        if (items.length === 0) return;
-        e.style.opacity = "0";
-        e.style.transform = "translateY(-20px)";
-
-        setTimeout(() => {
-            e.style.transition = "none";
-            e.style.transform = "translateY(20px)";
-            i = (i + 1) % items.length;
-            updateText();
-
-            setTimeout(() => {
-                e.style.transition = "all 0.5s ease";
-                e.style.opacity = "1";
-                e.style.transform = "translateY(0)";
-            }, 50);
-        }, 500);
-    }, interval);
+    intervalId = setInterval(changeText, interval);
 
     return () => {
-        if (timerId) clearInterval(timerId);
+        clearInterval(intervalId);
+        clearTimeout(animationTimeoutId);
+        clearTimeout(resetTimeoutId);
         window.removeEventListener(eventName, handleLanguageChange);
     };
 }

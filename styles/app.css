@@ -4,9 +4,6 @@
     --transparent: color-mix(in srgb, var(--black) 70%, transparent);
     --transition: all 0.5s;
     --dark-gray: #0d0c0f;
-    --error: #b3261e;
-    --warning: #ff7f7d;
-    --danger: #7c0515;
 }
 
 html[lang="zh"] {--font-general: "Noto Sans SC", "Google Sans", "Open Sans", "Google Sans Flex", system-ui;}
@@ -15,11 +12,11 @@ html[lang="ko"] {--font-general: "Noto Sans KR", "Google Sans", "Open Sans", "Go
 
 html {
     scroll-behavior: smooth;
-    width: 100%
 }
 
-h1 {
-    display: none;
+#main > #h1 {
+    font-size: 0;
+    color: transparent;
 }
 
 * {
@@ -90,7 +87,7 @@ body {
     content: '';
     position: absolute;
     right: 0;
-    left: -0%;
+    left: 0%;
     top: 100%;
     z-index: 10;
     display: block;
@@ -158,3 +155,8 @@ body {
     border-radius: 0 0 18px 0;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

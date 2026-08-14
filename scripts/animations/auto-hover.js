@@ -1,15 +1,24 @@
-export function autoHover(element, time) {
-    const node = document.querySelectorAll(element);
-    if (node.length > 0) {
-        let index = 0;
+export function autoHover(selector, interval) {
+    const nodes = document.querySelectorAll(selector);
 
-        const nextNode = () => {
-            node.forEach(phrase => phrase.classList.remove("hovered"));
-            node[index].classList.add("hovered");
-            index = (index + 1) % node.length;
-        };
+    if (!nodes.length) return null;
 
-        nextNode();
-        setInterval(nextNode, time);
-    }
+    let index = 0;
+    let current = nodes[0];
+
+    current.classList.add("hovered");
+
+    const intervalId = setInterval(() => {
+        current.classList.remove("hovered");
+
+        index = (index + 1) % nodes.length;
+        current = nodes[index];
+
+        current.classList.add("hovered");
+    }, interval);
+
+    return () => {
+        clearInterval(intervalId);
+        current.classList.remove("hovered");
+    };
 }

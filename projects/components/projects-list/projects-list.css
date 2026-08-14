@@ -116,7 +116,6 @@
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
-    box-sizing: border-box;
 }
 
 #projects-list .projects-filter .filter-select {
@@ -140,7 +139,6 @@
     cursor: pointer;
     user-select: none;
     transition: var(--transition);
-    box-sizing: border-box;
 }
 
 #projects-list .projects-filter .filter-select summary::-webkit-details-marker {
