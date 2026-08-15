@@ -5,5 +5,4 @@ if (!response.ok) {
 }
 
 const config = await response.json();
-
 export default config;

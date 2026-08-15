@@ -204,3 +204,16 @@ export async function loadLanguages() {
     bindLanguageSelector();
     await applyLanguage(initialLanguage);
 }
+
+export function translateElement(e) {
+    const translations = languageState.translations;
+    const fallback = languageState.code === DEFAULT_LANGUAGE ? translations : translationsCache.get(DEFAULT_LANGUAGE);
+    const keyPath = e.dataset.i18n;
+    if (!keyPath) return;
+    const value = getValue(translations, keyPath) ?? getValue(fallback, keyPath);
+    if (value === undefined || value === null) return;
+    if (typeof value !== "string" && typeof value !== "number") return;
+    const attribute = e.dataset.i18nAttr;
+    if (attribute) e.setAttribute(attribute, String(value));
+    else e.textContent = String(value);
+}

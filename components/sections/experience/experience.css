@@ -146,3 +146,70 @@
 #experience .info .data .list .content a:hover {
     color: var(--primary);
 }
+
+@media (max-width: 1120px) {
+    #experience .info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #experience .info > div {
+        width: 100%;
+    }
+
+    #experience .experience .info .title {
+        width: 100%;
+    }
+
+    #experience .info .data .list {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #experience .experience .description {
+        flex-direction: column-reverse;
+    }
+
+    #experience .experience .description .skills {
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        padding-right: 20px;
+    }
+
+    #experience .experience .description .phrases {
+        width: 100%;
+    }
+
+    #experience .experience .info .logo .icon {
+        width: 150px;
+        margin-bottom: -20px;
+    }
+}
+
+@media (max-width: 625px) {
+    #experience .info .data .list {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #experience {
+        padding: 10px;
+    }
+
+    #experience #jobs, #experience .h2 {
+        width: 100%;
+    }
+
+    #experience .h2 {
+        font-size: 1.5rem;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 525px) {
+    #experience .h2 {
+        font-size: 1.2rem;
+        align-items: center;
+    }
+}

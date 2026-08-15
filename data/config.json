@@ -1,101 +1,99 @@
 {
+  "themes": ["blue-theme", "green-theme", "purple-theme", "light-blue-theme"],
+  "roles": ["developer", "programmer", "administrator", "IT specialist"],
+
   "menus": {
     "headers": {
       "portfolio": [
-        {"name": "Inicio", "href": "#home", "i18n": "shared.home"},
-        {"name": "Sobre mi", "href": "#about-me", "i18n": "shared.about-me"},
-        {"name": "Aptitudes", "href": "#skills", "i18n": "shared.skills"},
-        {"name": "Formación", "href": "#education", "i18n": "shared.education"},
-        {"name": "Experiencia", "href": "#experience", "i18n": "shared.experience"},
-        {"name": "Contacto", "href": "#footer", "i18n": "shared.contact"}
+        {"name": "Home", "href": "#home", "i18n": "shared.home"},
+        {"name": "About me", "href": "#about-me", "i18n": "shared.about-me"},
+        {"name": "Skills", "href": "#skills", "i18n": "shared.skills"},
+        {"name": "Education", "href": "#education", "i18n": "shared.education"},
+        {"name": "Experience", "href": "#experience", "i18n": "shared.experience"},
+        {"name": "Contact", "href": "#footer", "i18n": "shared.contact"}
       ],
       "projects": [
-        {"name": "Inicio", "href": "#hero", "i18n": "shared.home"},
-        {"name": "Portafolio", "href": "../index.html", "i18n": "shared.portfolio"},
-        {"name": "Tecnologías", "href": "#technologies", "i18n": "shared.technologies"},
+        {"name": "Home", "href": "#hero", "i18n": "shared.home"},
+        {"name": "Portfolio", "href": "../index.html", "i18n": "shared.portfolio"},
+        {"name": "Technologies", "href": "#technologies", "i18n": "shared.technologies"},
         {"name": "GitHub", "href": "https://github.com/CarlostcDev"},
-        {"name": "Contacto", "href": "#footer", "i18n": "shared.contact"}
+        {"name": "Contact", "href": "#footer", "i18n": "shared.contact"}
       ]
     },
     "navigators": {
       "portfolio": [
-        {"name": "Idioma", "i18n": "shared.language", "icon": "language", "class": "lang-toggle", "ariaLabel": "Change Language", "hasLangOptions": true},
-        {"name": "Tema", "i18n": "shared.theme", "icon": "light-mode", "class": "theme-toggle", "ariaLabel": "Theme Toggle"},
-        {"name": "Inicio", "i18n": "shared.home", "href": "#home", "icon": "home"},
-        {"name": "Proyectos", "i18n": "shared.projects", "href": "./projects", "icon": "code", "target": "_blank", "rel": "noopener"},
-        {"name": "Contacto", "i18n": "shared.contact", "href": "#footer", "icon": "contact"}
+        {"name": "Language", "i18n": "shared.language", "icon": "language", "class": "lang-toggle", "ariaLabel": "Change Language", "hasLangOptions": true},
+        {"name": "Theme", "i18n": "shared.theme", "icon": "light-mode", "class": "theme-toggle", "ariaLabel": "Theme Toggle"},
+        {"name": "Home", "i18n": "shared.home", "href": "#home", "icon": "home"},
+        {"name": "Projects", "i18n": "shared.projects", "href": "./projects", "icon": "code", "target": "_blank", "rel": "noopener"},
+        {"name": "Contact", "i18n": "shared.contact", "href": "#footer", "icon": "contact"}
       ],
       "projects": [
-        {"name": "Idioma", "i18n": "shared.language", "icon": "language", "class": "lang-toggle", "ariaLabel": "Change Language", "hasLangOptions": true},
-        {"name": "Tema", "i18n": "shared.theme", "icon": "light-mode", "class": "theme-toggle", "ariaLabel": "Theme Toggle"},
-        {"name": "Portafolios", "i18n": "shared.portfolio", "href": "../index.html", "icon": "dashboard"},
+        {"name": "Language", "i18n": "shared.language", "icon": "language", "class": "lang-toggle", "ariaLabel": "Change Language", "hasLangOptions": true},
+        {"name": "Theme", "i18n": "shared.theme", "icon": "light-mode", "class": "theme-toggle", "ariaLabel": "Theme Toggle"},
+        {"name": "Portfolio", "i18n": "shared.portfolio", "href": "../index.html", "icon": "dashboard"},
         {"name": "GitHub", "i18n": "", "href": "https://github.com/CarlostcDev", "icon": "github", "target": "_blank", "rel": "noopener"},
-        {"name": "Contacto", "i18n": "shared.contact", "href": "#footer", "icon": "contact"}
+        {"name": "Contact", "i18n": "shared.contact", "href": "#footer", "icon": "contact"}
       ]
     }
   },
 
   "languages": [
-    { "code": "es", "name": "Español", "aliases": ["es-ES", "es-MX", "es-AR", "es-CO", "es-CL"] },
-    { "code": "en", "name": "Inglés", "aliases": ["en-US", "en-GB", "en-AU", "en-CA"] },
-    { "code": "zh", "name": "Chino", "aliases": ["zh-CN", "zh-Hans", "zh-TW", "zh-Hant"] },
-    { "code": "ja", "name": "Japonés", "aliases": ["ja-JP"] },
-    { "code": "va", "name": "Valenciano", "aliases": ["ca", "ca-ES", "ca-ES-valencia"] },
-    { "code": "fr", "name": "Francés", "aliases": ["fr-FR", "fr-CA", "fr-BE"] },
-    { "code": "it", "name": "Italiano", "aliases": ["it-IT"] },
-    { "code": "de", "name": "Alemán", "aliases": ["de-DE", "de-AT", "de-CH"] },
-    { "code": "ko", "name": "Coreano", "aliases": ["ko-KR"] },
-    { "code": "pt", "name": "Portugués", "aliases": ["pt-PT", "pt-BR"] }
+    { "code": "es", "name": "Spanish", "aliases": ["es-ES", "es-MX", "es-AR", "es-CO", "es-CL"] },
+    { "code": "en", "name": "English", "aliases": ["en-US", "en-GB", "en-AU", "en-CA"] },
+    { "code": "zh", "name": "Chinese", "aliases": ["zh-CN", "zh-Hans", "zh-TW", "zh-Hant"] },
+    { "code": "ja", "name": "Japanese", "aliases": ["ja-JP"] },
+    { "code": "va", "name": "Valencian", "aliases": ["ca", "ca-ES", "ca-ES-valencia"] },
+    { "code": "fr", "name": "French", "aliases": ["fr-FR", "fr-CA", "fr-BE"] },
+    { "code": "it", "name": "Italian", "aliases": ["it-IT"] },
+    { "code": "de", "name": "German", "aliases": ["de-DE", "de-AT", "de-CH"] },
+    { "code": "ko", "name": "Korean", "aliases": ["ko-KR"] },
+    { "code": "pt", "name": "Portuguese", "aliases": ["pt-PT", "pt-BR"] }
   ],
-
-  "roles": ["desarrollador", "programador", "administrador", "informático"],
 
   "phrases": [
-    {"key": "portfolio.about-me.phrase1", "text": "Soy un técnico informático ilicitano apasionado por comprender y dominar la tecnología."},
-    {"key": "portfolio.about-me.phrase2", "text": "Me enfoco en los problemas complejos para diseñar soluciones escalables y eficientes."},
-    {"key": "portfolio.about-me.phrase3", "text": "Ordenado, perfeccionista y con alta capacidad de rápido aprendizaje."},
-    {"key": "portfolio.about-me.phrase4", "text": "Propongo mejoras y soluciones con otra perspectiva que ayudan al entorno."},
-    {"key": "portfolio.about-me.phrase5", "text": "Busco crecer profesionalmente y contribuir al éxito del equipo y de la empresa."},
-    {"key": "portfolio.about-me.phrase6", "text": "Poseo español nativo, con nivel intermedio de inglés y comprensión pasiva de valenciano."}
+    {"key": "portfolio.about-me.phrase1", "text": "I am an IT technician from Elche passionate about understanding and mastering technology."},
+    {"key": "portfolio.about-me.phrase2", "text": "I focus on complex problems to design scalable and efficient solutions."},
+    {"key": "portfolio.about-me.phrase3", "text": "Organized, perfectionist, and a fast learner."},
+    {"key": "portfolio.about-me.phrase4", "text": "I propose improvements and solutions from fresh perspectives that benefit the team environment."},
+    {"key": "portfolio.about-me.phrase5", "text": "I aim to grow professionally and contribute to the success of the team and company."},
+    {"key": "portfolio.about-me.phrase6", "text": "Native Spanish speaker, with intermediate English and passive understanding of Valencian."}
   ],
-
-
-  "themes": ["blue-theme", "green-theme", "purple-theme", "light-blue-theme"],
 
   "social": {
     "title": {"h2": "Social", "i18n": "shared.social"},
     "items": [
-      {"id": "projects", "href": "./projects", "icon": "code", "text": "Proyectos", "i18n": "shared.projects", "target": null, "rel": null, "class": "projects"},
+      {"id": "projects", "href": "./projects", "icon": "code", "text": "Projects", "i18n": "shared.projects", "target": null, "rel": null, "class": "projects"},
       {"id": "linkedin", "href": "https://www.linkedin.com/in/cartorcas", "icon": "linkedin", "text": "LinkedIn", "i18n": null, "target": "_blank", "rel": "noopener noreferrer", "class": "linkedin"},
       {"id": "github", "href": "https://github.com/CarlostcDev", "icon": "github", "text": "GitHub", "i18n": null, "target": "_blank", "rel": "noopener noreferrer", "class": "github"},
       {"id": "email", "href": "mailto:carlostccarlos2003@gmail.com", "icon": "email", "text": "Email", "i18n": null, "target": "_blank", "rel": "noopener noreferrer", "class": "email"},
-      {"id": "phone", "href": "tel:+34664637295", "icon": "phone", "text": "Teléfono", "i18n": "shared.phone", "target": "_blank", "rel": "noopener noreferrer", "class": "phone"},
+      {"id": "phone", "href": "tel:+34664637295", "icon": "phone", "text": "Phone", "i18n": "shared.phone", "target": "_blank", "rel": "noopener noreferrer", "class": "phone"},
       {"id": "whatsapp", "href": "https://wa.me/34664637295", "icon": "whatsapp", "text": "WhatsApp", "i18n": null, "target": "_blank", "rel": "noopener noreferrer", "class": "whatsapp"}
     ]
   },
 
   "info": {
-    "title": {"h2": "Información", "i18n": "shared.info"},
+    "title": {"h2": "Information", "i18n": "shared.info"},
     "items": [
-      {"icon": "location", "text": "Elche, España", "href": "https://maps.app.goo.gl/VyLmG2a6jPgxPa8r8", "i18n": "shared.location"},
+      {"icon": "location", "text": "Elche, Spain", "href": "https://maps.app.goo.gl/VyLmG2a6jPgxPa8r8", "i18n": "shared.location"},
       {"icon": "copy", "text": "carlostccarlos2003@gmail.com", "href": null, "i18n": null},
-      {"icon": "download", "text": "Curriculum", "href": "./sources/profile/cv/CV_Carlos_Tormo_Castano", "i18n": "shared.cv"},
-      {"icon": "clock", "text": "Hora local:", "href": "https://time.is/Elche", "i18n": "shared.localtime"}
+      {"icon": "download", "text": "Resume", "href": "./sources/profile/cv/CV_Carlos_Tormo_Castano", "i18n": "shared.cv"},
+      {"icon": "clock", "text": "Local time:", "href": "https://time.is/Elche", "i18n": "shared.localtime"}
     ]
   },
 
   "education": [
     {
-      "title": {"i18n": "portfolio.education.dam.title", "text": "Desarrollo de Aplicaciones Multiplataforma"},
-      "subtitle": {"i18n": "portfolio.education.dam.subtitle", "text": "Grado Superior de FP"},
+      "title": {"i18n": "portfolio.education.dam.title", "text": "Cross-Platform Applications Development"},
+      "subtitle": {"i18n": "portfolio.education.dam.subtitle", "text": "Higher Vocational Education"},
       "school": {"name": "IES Severo Ochoa", "href": "https://maps.app.goo.gl/JdSuRGf8xe2peQc78"},
-      "location": {"i18n": "shared.location", "text": "Elche, España"},
+      "location": {"i18n": "shared.location", "text": "Elche, Spain"},
       "description": [
-        {"i18n": "portfolio.education.dam.phrase1", "text": "Desarrollo de aplicaciones multiplataforma utilizando Java, aplicando programación orientada a objetos, estructuras de datos y patrones de diseño."},
-        {"i18n": "portfolio.education.dam.phrase2", "text": "Implementación de interfaces gráficas con JavaFX y desarrollo de aplicaciones web con HTML, CSS y JavaScript, incluyendo el consumo e integración de APIs REST."},
-        {"i18n": "portfolio.education.dam.phrase3", "text": "Diseño, modelado y gestión de bases de datos relacionales y NoSQL mediante MariaDB, PostgreSQL, MongoDB y Redis."},
-        {"i18n": "portfolio.education.dam.phrase4", "text": "Control de versiones con Git y aplicación de flujos de trabajo colaborativos."},
-        {"i18n": "portfolio.education.dam.phrase5", "text": "Análisis y diseño de soluciones software mediante UML, junto con la aplicación de principios de Clean Code, buenas prácticas de documentación y metodologías de desarrollo para la creación de aplicaciones mantenibles y escalables."}
+        {"i18n": "portfolio.education.dam.phrase1", "text": "Cross-platform application development using Java, applying object-oriented programming, data structures, and design patterns."},
+        {"i18n": "portfolio.education.dam.phrase2", "text": "Implementation of graphical user interfaces with JavaFX and web application development using HTML, CSS, and JavaScript, including REST API consumption and integration."},
+        {"i18n": "portfolio.education.dam.phrase3", "text": "Design, modeling, and management of relational and NoSQL databases using MariaDB, PostgreSQL, MongoDB, and Redis."},
+        {"i18n": "portfolio.education.dam.phrase4", "text": "Version control with Git and implementation of collaborative workflows."},
+        {"i18n": "portfolio.education.dam.phrase5", "text": "Software solution analysis and design using UML, applying Clean Code principles, documentation best practices, and development methodologies for maintainable and scalable applications."}
       ],
       "range-years": "2025 - 2027",
       "technologies": [
@@ -115,16 +113,16 @@
       ]
     },
     {
-      "title": {"i18n": "portfolio.education.smr.title", "text": "Sistemas Microinformáticos y Redes"},
-      "subtitle": {"i18n": "portfolio.education.smr.subtitle", "text": "Grado Medio de FP"},
+      "title": {"i18n": "portfolio.education.smr.title", "text": "Microcomputer Systems and Networks"},
+      "subtitle": {"i18n": "portfolio.education.smr.subtitle", "text": "Intermediate Vocational Education"},
       "school": {"name": "IES Severo Ochoa", "href": "https://maps.app.goo.gl/JdSuRGf8xe2peQc78"},
-      "location": {"i18n": "shared.location", "text": "Elche, España"},
+      "location": {"i18n": "shared.location", "text": "Elche, Spain"},
       "description": [
-        {"i18n": "portfolio.education.smr.phrase1", "text": "Configuración y administración de servidores Linux y Windows, implementando y gestionando servicios de red como DHCP, DNS, HTTP y FTP."},
-        {"i18n": "portfolio.education.smr.phrase2", "text": "Diseño y administración de infraestructuras de red y entornos virtualizados mediante VirtualBox."},
-        {"i18n": "portfolio.education.smr.phrase3", "text": "Realización de diagnósticos de hardware, pruebas de estrés y análisis de rendimiento utilizando herramientas como MemTest86, Cinebench y 3DMark."},
-        {"i18n": "portfolio.education.smr.phrase4", "text": "Monitorización y análisis del tráfico de red con Wireshark, junto con la implementación de medidas de ciberseguridad mediante firewalls, soluciones antivirus y herramientas de análisis de vulnerabilidades como OpenVAS."},
-        {"i18n": "portfolio.education.smr.phrase5", "text": "Administración de sistemas operativos, entornos de servidor, herramientas de desarrollo e infraestructuras informáticas."}
+        {"i18n": "portfolio.education.smr.phrase1", "text": "Configuration and administration of Linux and Windows servers, deploying and managing network services such as DHCP, DNS, HTTP, and FTP."},
+        {"i18n": "portfolio.education.smr.phrase2", "text": "Design and management of network infrastructures and virtualized environments using VirtualBox."},
+        {"i18n": "portfolio.education.smr.phrase3", "text": "Hardware diagnostics, stress testing, and performance analysis using tools such as MemTest86, Cinebench, and 3DMark."},
+        {"i18n": "portfolio.education.smr.phrase4", "text": "Network traffic monitoring and analysis with Wireshark, implementing cybersecurity measures using firewalls, antivirus solutions, and vulnerability analysis tools like OpenVAS."},
+        {"i18n": "portfolio.education.smr.phrase5", "text": "Administration of operating systems, server environments, development tools, and IT infrastructures."}
       ],
       "range-years": "2023-2025",
       "technologies": [
@@ -146,20 +144,20 @@
 
   "experience": [
     {
-      "job": {"name": "Desarrollador Full-Stack en Prácticas", "i18n": "portfolio.experience.nttdata.job"},
-      "company": {"name": "NTT Data España", "i18n": "portfolio.experience.nttdata.company"},
-      "location": {"text": "Playa de San Juan, España", "i18n": "portfolio.experience.nttdata.location"},
+      "job": {"name": "Full-Stack Developer Intern", "i18n": "portfolio.experience.nttdata.job"},
+      "company": {"name": "NTT Data Spain", "i18n": "portfolio.experience.nttdata.company"},
+      "location": {"text": "Playa de San Juan, Spain", "i18n": "portfolio.experience.nttdata.location"},
       "icon": {"src": "sources/logos/nttdata-logo.webp", "class": "nttdata icon"},
       "business": {"name": "NTT Data San Juan", "i18n": "portfolio.experience.nttdata.business", "href": "https://maps.app.goo.gl/BZ4nv1p4RfjYg3W46"},
       "description": [
-        {"i18n": "portfolio.experience.nttdata.phrase1", "text": "Desarrollo de aplicaciones backend utilizando Java 18 y Spring Boot, implementando APIs REST, autenticación y autorización con Spring Security, así como pruebas unitarias mediante JUnit y Mockito."},
-        {"i18n": "portfolio.experience.nttdata.phrase2", "text": "Desarrollo de aplicaciones frontend con Angular, TypeScript, HTML y CSS, aplicando prácticas modernas de desarrollo web y herramientas del ecosistema Node.js."},
-        {"i18n": "portfolio.experience.nttdata.phrase3", "text": "Gestión de dependencias, compilación y automatización de proyectos mediante Maven, siguiendo flujos de desarrollo estructurados."},
-        {"i18n": "portfolio.experience.nttdata.phrase4", "text": "Diseño, implementación y gestión de la capa de persistencia utilizando PostgreSQL."},
-        {"i18n": "portfolio.experience.nttdata.phrase5", "text": "Control de versiones con Git y colaboración dentro de un entorno profesional de desarrollo de software."},
-        {"i18n": "portfolio.experience.nttdata.phrase6", "text": "Integración de herramientas y agentes basados en inteligencia artificial para optimizar los flujos de desarrollo y aumentar la productividad."}
+        {"i18n": "portfolio.experience.nttdata.phrase1", "text": "Backend application development using Java 18 and Spring Boot, implementing REST APIs, authentication and authorization with Spring Security, and unit testing with JUnit and Mockito."},
+        {"i18n": "portfolio.experience.nttdata.phrase2", "text": "Frontend application development with Angular, TypeScript, HTML, and CSS, applying modern web development practices and tools from the Node.js ecosystem."},
+        {"i18n": "portfolio.experience.nttdata.phrase3", "text": "Dependency management, build automation, and project management using Maven following structured development workflows."},
+        {"i18n": "portfolio.experience.nttdata.phrase4", "text": "Design, implementation, and management of the persistence layer using PostgreSQL."},
+        {"i18n": "portfolio.experience.nttdata.phrase5", "text": "Version control with Git and collaboration in a professional software development environment."},
+        {"i18n": "portfolio.experience.nttdata.phrase6", "text": "Integration of artificial intelligence tools and agents to optimize development workflows and boost productivity."}
       ],
-      "range-years": {"years": "Abril 2026 - Junio 2026", "i18n": "portfolio.experience.nttdata.years"},
+      "range-years": {"years": "April 2026 - June 2026", "i18n": "portfolio.experience.nttdata.years"},
       "technologies": [
         { "name": "Java", "class": "java" },
         { "name": "Spring Boot", "class": "spring-boot" },
@@ -174,23 +172,23 @@
         { "name": "Maven", "class": "maven" },
         { "name": "Node.js", "class": "node-js" },
         { "name": "Git", "class": "git" },
-        { "name": "IA", "class": "ia" }
+        { "name": "AI", "class": "ia" }
       ]
     },
     {
-      "job": {"name": "Desarrollador Web", "i18n": "portfolio.experience.neuric.job"},
+      "job": {"name": "Web Developer", "i18n": "portfolio.experience.neuric.job"},
       "company": {"name": "Neuric", "i18n": "portfolio.experience.neuric.company"},
-      "location": {"text": "Elche, España", "i18n": "shared.location"},
+      "location": {"text": "Elche, Spain", "i18n": "shared.location"},
       "icon": {"src": "sources/logos/neuric-logo.webp", "class": "neuric icon"},
       "business": {"name": "Neuric Consultoría", "i18n": "portfolio.experience.neuric.business", "href": "https://maps.app.goo.gl/2qFMVwtJuUVijKTCA"},
       "description": [
-        {"i18n": "portfolio.experience.neuric.phrase1", "text": "Desarrollo, personalización y optimización de sitios web utilizando WordPress en un entorno profesional."},
-        {"i18n": "portfolio.experience.neuric.phrase2", "text": "Creación de interfaces y funcionalidades avanzadas mediante Elementor y WooCommerce, adaptando soluciones a las necesidades de cada proyecto."},
-        {"i18n": "portfolio.experience.neuric.phrase3", "text": "Desarrollo de componentes y personalizaciones con HTML, CSS y JavaScript, adquiriendo una sólida base en diseño, maquetación y estilos avanzados con CSS."},
-        {"i18n": "portfolio.experience.neuric.phrase4", "text": "Aplicación de técnicas de optimización del rendimiento, seguridad web y buenas prácticas para mejorar la experiencia de usuario y el posicionamiento de los sitios web."},
-        {"i18n": "portfolio.experience.neuric.phrase5", "text": "Administración básica de sistemas informáticos y soporte técnico dentro del entorno empresarial."}
+        {"i18n": "portfolio.experience.neuric.phrase1", "text": "Development, customization, and optimization of WordPress websites in a professional environment."},
+        {"i18n": "portfolio.experience.neuric.phrase2", "text": "Creation of advanced user interfaces and features using Elementor and WooCommerce, tailoring solutions to specific project needs."},
+        {"i18n": "portfolio.experience.neuric.phrase3", "text": "Component development and customizations using HTML, CSS, and JavaScript, building a strong foundation in web design, layout, and advanced CSS styling."},
+        {"i18n": "portfolio.experience.neuric.phrase4", "text": "Application of performance optimization techniques, web security, and best practices to improve user experience and SEO positioning."},
+        {"i18n": "portfolio.experience.neuric.phrase5", "text": "Basic IT systems administration and technical support within a corporate environment."}
       ],
-      "range-years": {"years": "Febrero 2025 - Mayo 2025", "i18n": "portfolio.experience.neuric.years"},
+      "range-years": {"years": "February 2025 - May 2025", "i18n": "portfolio.experience.neuric.years"},
       "technologies": [
         { "name": "WordPress", "class": "wordpress" },
         { "name": "Elementor", "class": "elementor" },

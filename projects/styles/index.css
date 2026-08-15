@@ -1,7 +1,7 @@
-@import url("../../styles/subindex.css");
 @import url("../components/hero/hero.css");
 @import url("../components/projects-list/projects-list.css");
 @import url("../components/robot-animation/robot-animation.css");
+@import url("../../styles/subindex.css");
 
 :root.dark-theme.blue-theme {
     --background-image: url("../../sources/backgrounds/section/background-section-blue.webp");

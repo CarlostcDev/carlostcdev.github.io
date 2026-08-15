@@ -13,15 +13,11 @@ let theme;
 try {
     const storedTheme = localStorage.getItem("theme");
     theme = storedTheme === "dark-theme" || storedTheme === "light-theme" ? storedTheme : systemTheme;
-} catch {
-    theme = systemTheme;
-}
+} catch {theme = systemTheme;}
 
 function changeTheme(newTheme) {
     theme = newTheme;
-    try {
-        localStorage.setItem("theme", theme);
-    } catch {}
+    try {localStorage.setItem("theme", theme);} catch {}
     root.classList.remove("dark-theme", "light-theme");
     root.classList.add(theme);
     const icon = theme === "dark-theme" ? "light-mode" : "dark-mode";

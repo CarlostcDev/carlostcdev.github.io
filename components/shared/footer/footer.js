@@ -22,12 +22,9 @@ class Footer {
 
         const language = (localStorage.getItem("portfolio.language") || "EN").toUpperCase();
         const basePath = this.footer.dataset.subpage === "true" ? "../../" : "";
-
-        // 1. Info section
         const infoItems = config.info?.items;
         const infoLen = infoItems?.length ?? 0;
         let infoHtml = `<h2 data-i18n="${config.info?.title?.i18n ?? ""}">${config.info?.title?.h2 ?? ""}</h2><div class="info-container">`;
-
         for (let i = 0; i < infoLen; i++) {
             const item = infoItems[i];
             const rawHref = item.i18n === "shared.cv" ? `${item.href}_${language}.pdf` : item.href;
@@ -35,7 +32,6 @@ class Footer {
             const hrefAttr = hrefVal != null ? `href="${hrefVal}"` : "";
             const idAttr = item.icon === "copy" ? 'id="copy-mail"' : "";
             const i18nAttr = item.i18n ? `data-i18n="${item.i18n}"` : "";
-
             infoHtml += `
                 <div class="list">
                     <svg class="icon"><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
@@ -46,11 +42,9 @@ class Footer {
         infoHtml += "</div>";
         info.innerHTML = infoHtml;
 
-        // 2. Social section
         const socialItems = config.social?.items;
         const socialLen = socialItems?.length ?? 0;
         let socialHtml = `<h2 data-i18n="${config.social?.title?.i18n ?? ""}">${config.social?.title?.h2 ?? ""}</h2><div class="buttons-container">`;
-
         for (let i = 0; i < socialLen; i++) {
             const item = socialItems[i];
             const rawHref = item.href;
@@ -58,7 +52,6 @@ class Footer {
             const hrefAttr = hrefVal != null ? `href="${hrefVal}"` : "";
             const targetAttr = item.target ? `target="${item.target}"` : "";
             const relAttr = item.rel ? `rel="${item.rel}"` : "";
-
             socialHtml += `
                 <div class="button-item">
                     <a ${hrefAttr} ${targetAttr} ${relAttr}>
@@ -71,39 +64,30 @@ class Footer {
         }
         socialHtml += "</div>";
         social.innerHTML = socialHtml;
-
-        // 3. Stats section
         stats.innerHTML = `
             <h2 data-i18n="shared.stats">Estadísticas</h2>
             <div class="image-stats">
                 <img src="https://streak-stats.demolab.com/?user=CarlostcDev&theme=dark"
-                     width="75%" class="img" loading="lazy" alt="Carlos Tormo - Developer Stats">
+                data-i18n="shared.github-stats" data-i18n-attr="alt" width="75%" class="img" 
+                loading="lazy" alt="GitHub contribution streak statistics for Carlos Tormo">
             </div>`;
     }
 
     #setYear() {
         const year = this.footer.querySelector("#year");
         if (!year) return;
-
-        try {
-            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            year.textContent = new Date().toLocaleDateString("es-ES", { timeZone: timezone, year: "numeric" });
-        } catch {
-            year.textContent = new Date().getFullYear();
-        }
+        year.textContent = String(new Date().getFullYear());
     }
 
     #setLocalTime() {
         const clock = this.footer.querySelector("#localtime");
         if (!clock) return;
-
         const timeFormatter = new Intl.DateTimeFormat("es-ES", {
             timeZone: "Europe/Madrid",
             hour: "2-digit",
             minute: "2-digit",
             second: "2-digit"
         });
-
         const updateTime = () => { clock.textContent = timeFormatter.format(new Date()); };
         updateTime();
         setInterval(updateTime, 1000);

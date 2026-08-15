@@ -1,23 +1,22 @@
+import { translateElement } from "../utils/i18n.js";
+
 export function clickCopy(element) {
-    document.getElementById(element).addEventListener("click", async (e) => {
+    const target = document.getElementById(element);
+    if (!target) return;
+
+    target.addEventListener("click", async e => {
         e.preventDefault();
-
-        await navigator.clipboard.writeText(e.target.textContent.trim());
-
+        const text = target.textContent.trim();
+        await navigator.clipboard.writeText(text);
         const div = document.createElement("div");
-        div.textContent = "¡Copiado!";
-        Object.assign(div.style, {
-            position: "fixed",
-            bottom: "10%",
-            right: "50%",
-            padding: "20px 30px",
-            background: "var(--dark)",
-            color: "var(--primary)",
-            borderRadius: "4px",
-            zIndex: "9999"
-        });
-
+        div.classList.add("copy-content");
+        div.innerHTML = `
+            <svg aria-hidden="true" class="copy-svg"><use href="../sources/svgs/sprite.svg#check"></use></svg>
+            <span data-i18n="shared.msg-copied" class="copy-span"></span>
+        `;
         document.body.appendChild(div);
+        const msg = div.querySelector("[data-i18n]");
+        translateElement(msg);
         setTimeout(() => div.remove(), 2000);
     });
 }

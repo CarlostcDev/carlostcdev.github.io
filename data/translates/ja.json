@@ -5,8 +5,16 @@
       "es": "スペイン語", "en": "英語", "zh": "中国語", "ja": "日本語", "va": "バレンシア語",
       "fr": "フランス語", "it": "イタリア語", "de": "ドイツ語", "ko": "韓国語", "pt": "ポルトガル語"
     },
-    "portfolio": { "title": "Carlos Tormo | ポートフォリオ", "h1": "Carlos Tormo Castaño ポートフォリオ" },
-    "projects": { "title": "Carlos Tormo | プロジェクト", "h1": "CarlostcDev プロジェクト一覧" },
+    "portfolio": {
+      "title": "Carlos Tormo | ポートフォリオ",
+      "h1": "カルロス・トルモ・カスタニョのポートフォリオ",
+      "description": "ソフトウェア開発を学ぶ学生、カルロス・トルモ・カスタニョのポートフォリオ。"
+    },
+    "projects": {
+      "title": "Carlos Tormo | プロジェクト",
+      "h1": "CarlostcDevのプロジェクト",
+      "description": "Web、バックエンド、データベース、アプリケーション開発を含む、カルロス・トルモ・カスタニョのソフトウェア開発プロジェクトをご覧ください。"
+    },
     "copyright": "All rights non-reserved."
   },
   "shared": {
@@ -27,7 +35,11 @@
     "phone": "電話番号",
     "location": "エルチェ、スペイン",
     "cv": "履歴書",
-    "localtime": "現地時間:"
+    "localtime": "現地時間:",
+    "msg-copied": "メッセージが正常にコピーされました！",
+    "ai-assistant": "AIアシスタント",
+    "ai-placeholder": "カルロスについて質問してください...",
+    "github-stats": "カルロス・トルモのGitHubコントリビューション連続記録統計"
   },
   "portfolio": {
     "home": {

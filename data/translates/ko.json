@@ -5,8 +5,16 @@
       "es": "스페인어", "en": "영어", "zh": "중국어", "ja": "일본어", "va": "발렌시아어",
       "fr": "프랑스어", "it": "이탈리아어", "de": "독일어", "ko": "한국어", "pt": "포르투갈어"
     },
-    "portfolio": { "title": "Carlos Tormo | 포트폴리오", "h1": "Carlos Tormo Castaño 포트폴리오" },
-    "projects": { "title": "Carlos Tormo | 프로젝트", "h1": "CarlostcDev 프로젝트" },
+    "portfolio": {
+      "title": "Carlos Tormo | 포트폴리오",
+      "h1": "Carlos Tormo Castaño의 포트폴리오",
+      "description": "소프트웨어 개발을 공부하는 학생 Carlos Tormo Castaño의 포트폴리오입니다."
+    },
+    "projects": {
+      "title": "Carlos Tormo | 프로젝트",
+      "h1": "CarlostcDev의 프로젝트",
+      "description": "웹, 백엔드, 데이터베이스 및 애플리케이션 개발을 포함한 Carlos Tormo Castaño의 소프트웨어 개발 프로젝트를 살펴보세요."
+    },
     "copyright": "All rights non-reserved."
   },
   "shared": {
@@ -27,7 +35,11 @@
     "phone": "전화번호",
     "location": "엘체, 스페인",
     "cv": "이력서",
-    "localtime": "현지 시간:"
+    "localtime": "현지 시간:",
+    "msg-copied": "메시지가 성공적으로 복사되었습니다!",
+    "ai-assistant": "AI 어시스턴트",
+    "ai-placeholder": "Carlos에 대해 물어보세요...",
+    "github-stats": "Carlos Tormo의 GitHub 기여 연속 기록 통계"
   },
   "portfolio": {
     "home": {

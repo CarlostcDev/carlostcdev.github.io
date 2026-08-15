@@ -5,8 +5,16 @@
       "es": "西班牙语", "en": "英语", "zh": "中文", "ja": "日语", "va": "瓦伦西亚语",
       "fr": "法语", "it": "意大利语", "de": "德语", "ko": "韩语", "pt": "葡萄牙语"
     },
-    "portfolio": { "title": "Carlos Tormo | 个人作品集", "h1": "Carlos Tormo Castaño 的个人作品集" },
-    "projects": { "title": "Carlos Tormo | 项目展示", "h1": "CarlostcDev 的项目列表" },
+    "portfolio": {
+      "title": "Carlos Tormo | 作品集",
+      "h1": "Carlos Tormo Castaño 的个人作品集",
+      "description": "软件开发专业学生 Carlos Tormo Castaño 的个人作品集。"
+    },
+    "projects": {
+      "title": "Carlos Tormo | 项目",
+      "h1": "CarlostcDev 的项目作品",
+      "description": "探索 Carlos Tormo Castaño 的软件开发项目，涵盖 Web 开发、后端、数据库及应用程序开发。"
+    },
     "copyright": "保留所有非独家权利。"
   },
   "shared": {
@@ -27,7 +35,11 @@
     "phone": "电话",
     "location": "埃尔切，西班牙",
     "cv": "个人简历",
-    "localtime": "当地时间："
+    "localtime": "当地时间：",
+    "msg-copied": "消息已成功复制！",
+    "ai-assistant": "AI 助手",
+    "ai-placeholder": "向我提问关于 Carlos 的事情...",
+    "github-stats": "Carlos Tormo 的 GitHub 连续贡献统计"
   },
   "portfolio": {
     "home": {

@@ -1,3 +1,9 @@
 #robot-animation > svg > g {
     cursor: pointer;
 }
+
+@media (max-width: 920px) {
+    #robot-animation {
+        display: none;
+    }
+}

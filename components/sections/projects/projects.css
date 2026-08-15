@@ -30,3 +30,20 @@
     background: var(--black);
     color: var(--primary);
 }
+
+@media (max-width: 820px) {
+    #projects {
+        flex-direction: column;
+        height: 300px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    #projects .container {
+        width: 50%;
+    }
+
+    #projects .container .p {
+        width: 100%;
+    }
+}

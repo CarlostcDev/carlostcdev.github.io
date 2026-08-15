@@ -5,8 +5,16 @@
       "es": "Spanisch", "en": "Englisch", "zh": "Chinesisch", "ja": "Japanisch", "va": "Valencianisch",
       "fr": "Französisch", "it": "Italienisch", "de": "Deutsch", "ko": "Koreanisch", "pt": "Portugiesisch"
     },
-    "portfolio": { "title": "Carlos Tormo | Portfolio", "h1": "Portfolio von Carlos Tormo Castaño" },
-    "projects": { "title": "Carlos Tormo | Projekte", "h1": "Projekte von CarlostcDev" },
+    "portfolio": {
+      "title": "Carlos Tormo | Portfolio",
+      "h1": "Portfolio von Carlos Tormo Castaño",
+      "description": "Portfolio von Carlos Tormo Castaño, Informatikstudent und Softwareentwickler."
+    },
+    "projects": {
+      "title": "Carlos Tormo | Projekte",
+      "h1": "Projekte von CarlostcDev",
+      "description": "Entdecken Sie die Softwareentwicklungsprojekte von Carlos Tormo Castaño, einschließlich Web-, Backend-, Datenbank- und Anwendungsentwicklung."
+    },
     "copyright": "Alle Rechte nicht vorbehalten."
   },
   "shared": {
@@ -27,7 +35,11 @@
     "phone": "Telefon",
     "location": "Elche, Spanien",
     "cv": "Lebenslauf",
-    "localtime": "Ortszeit:"
+    "localtime": "Ortszeit:",
+    "msg-copied": "Nachricht erfolgreich kopiert!",
+    "ai-assistant": "KI-Assistent",
+    "ai-placeholder": "Frage mich etwas über Carlos...",
+    "github-stats": "GitHub-Beitrags-Streak-Statistiken für Carlos Tormo"
   },
   "portfolio": {
     "home": {

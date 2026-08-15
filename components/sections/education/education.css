@@ -133,3 +133,55 @@
 #education .info .data .list .content a:hover {
     color: var(--primary);
 }
+
+@media (max-width: 1120px) {
+    #education .info {
+        flex-direction: column;
+    }
+
+    #education .info .data .list {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #education .education .description {
+        flex-direction: column-reverse;
+    }
+
+    #education .education .description .skills {
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    #education .education .description .phrases {
+        width: 100%;
+    }
+}
+
+@media (max-width: 625px) {
+    #education .info .data .list {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #education {
+        padding: 10px;
+    }
+
+    #education #courses, #education .h2 {
+        width: 100%;
+    }
+
+    #education .h2 {
+        font-size: 1.5rem;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 525px) {
+    #education .h2 {
+        font-size: 1.2rem;
+        align-items: center;
+    }
+}

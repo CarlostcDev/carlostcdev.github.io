@@ -43,7 +43,7 @@ body {
 
 .skill {border: 2px solid black; color: white; }
 .java { background: #db380e; }
-.javascript { background: #e8d44d; color: #30312e; }
+.javascript { background: #e8d44d; color: var(--dark-gray); }
 .html { background: #f16529; }
 .css { background: #0096dc; }
 .mariadb { background: #015777; }
@@ -60,7 +60,7 @@ body {
 .wireshark { background: #00619e; }
 .windows-server { background: #00adef; }
 .dhcp-server { background: #ec6117; }
-.http-server { background: #b5e08c; color: #1a1a12; }
+.http-server { background: #b5e08c; color: var(--dark-gray); }
 .dns-server { background: #f7b217; }
 .nginx { background: #009438; }
 .docker { background: #2597ee; }
@@ -73,10 +73,14 @@ body {
 .mockito { background: #79a63e; }
 .maven { background: #cc2236; }
 .node-js { background: #409338; }
-.ia { background: #adffff; color: #30312e; }
+.ia { background: #adffff; color: var(--dark-gray); }
 .wordpress { background: #2b92b4; }
 .elementor { background: #ab366d; }
 .woocommerce { background: #9b5c8f; }
+.cloudflare { background: #f29527; }
+.backend { background: #8cff00; color: var(--dark-gray); }
+.api { background: #ff00ae; }
+.gemini { background: #0a91f4; }
 
 #separator {
     position: relative;
@@ -153,6 +157,29 @@ body {
 
 .lang-options li:last-child {
     border-radius: 0 0 18px 0;
+}
+
+.copy-content {
+    position: fixed;
+    background: var(--dark);
+    color: var(--primary);
+    border-radius: 25px;
+    z-index: 9999;
+    font-size: 1rem;
+    font-weight: bold;
+    right: 5px;
+    bottom: 50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+}
+
+.copy-content .copy-svg {
+    fill: var(--primary);
+    width: 30px;
+    height: 30px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -30,7 +30,7 @@ class Navigator {
             const target = item.target ? `target="${item.target}" ` : "";
             const rel = item.rel ? `rel="${item.rel}" ` : "";
             const langList = item.hasLangOptions ? '<ul class="lang-options" role="listbox" hidden></ul>' : "";
-            html += `<li>${langList}<a ${href}class="nav-item${cls}" ${aria}${target}${rel}><div class="hover"><svg class="icon"><use href="/sources/svgs/sprite.svg#${item.icon}"></use></svg></div><span data-i18n="${item.i18n}">${item.name}</span></a></li>`;
+            html += `<li>${langList}<a ${href} class="nav-item${cls}" ${aria}${target}${rel}><div class="hover"><svg class="icon"><use href="/sources/svgs/sprite.svg#${item.icon}"></use></svg></div><span data-i18n="${item.i18n}">${item.name}</span></a></li>`;
         }
         menuList.innerHTML = html;
     }
