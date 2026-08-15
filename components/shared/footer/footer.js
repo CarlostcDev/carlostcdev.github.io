@@ -24,51 +24,59 @@ class Footer {
         const basePath = this.footer.dataset.subpage === "true" ? "../../" : "";
         const infoItems = config.info?.items;
         const infoLen = infoItems?.length ?? 0;
+
         let infoHtml = `<h2 data-i18n="${config.info?.title?.i18n ?? ""}">${config.info?.title?.h2 ?? ""}</h2><div class="info-container">`;
+
         for (let i = 0; i < infoLen; i++) {
             const item = infoItems[i];
             const rawHref = item.i18n === "shared.cv" ? `${item.href}_${language}.pdf` : item.href;
-            const hrefVal = rawHref && !rawHref.startsWith("http") && !rawHref.startsWith("mailto:") ? `${basePath}${rawHref}` : rawHref;
+            const hrefVal = rawHref && !rawHref.startsWith("http") && !rawHref.startsWith("mailto:") && !rawHref.startsWith("tel:") ? `${basePath}${rawHref}` : rawHref;
             const hrefAttr = hrefVal != null ? `href="${hrefVal}"` : "";
             const idAttr = item.icon === "copy" ? 'id="copy-mail"' : "";
             const i18nAttr = item.i18n ? `data-i18n="${item.i18n}"` : "";
+            const targetAttr = item.href?.startsWith("http") ? 'target="_blank"' : "";
+            const relAttr = targetAttr ? 'rel="noopener noreferrer"' : "";
+
             infoHtml += `
                 <div class="list">
-                    <svg class="icon"><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
-                    <a ${idAttr} ${hrefAttr} target="_blank" rel="noopener noreferrer" class="source" ${i18nAttr}>${item.text}</a>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
+                    <a ${idAttr} ${hrefAttr} ${targetAttr} ${relAttr} class="source" ${i18nAttr}>${item.text}</a>
                     ${item.i18n === "shared.localtime" ? '<span id="localtime"></span>' : ""}
                 </div>`;
         }
+
         infoHtml += "</div>";
         info.innerHTML = infoHtml;
 
         const socialItems = config.social?.items;
         const socialLen = socialItems?.length ?? 0;
         let socialHtml = `<h2 data-i18n="${config.social?.title?.i18n ?? ""}">${config.social?.title?.h2 ?? ""}</h2><div class="buttons-container">`;
+
         for (let i = 0; i < socialLen; i++) {
             const item = socialItems[i];
             const rawHref = item.href;
-            const hrefVal = rawHref && !rawHref.startsWith("http") ? `${basePath}${rawHref}` : rawHref;
+            const hrefVal = rawHref && !rawHref.startsWith("http") && !rawHref.startsWith("mailto:") && !rawHref.startsWith("tel:") ? `${basePath}${rawHref}` : rawHref;
             const hrefAttr = hrefVal != null ? `href="${hrefVal}"` : "";
-            const targetAttr = item.target ? `target="${item.target}"` : "";
-            const relAttr = item.rel ? `rel="${item.rel}"` : "";
+            const targetAttr = item.target && !rawHref?.startsWith("mailto:") && !rawHref?.startsWith("tel:") ? `target="${item.target}"` : "";
+            const relAttr = targetAttr && item.rel ? `rel="${item.rel}"` : "";
+
             socialHtml += `
                 <div class="button-item">
-                    <a ${hrefAttr} ${targetAttr} ${relAttr}>
-                        <button class="${item.class}">
-                            <svg><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
-                            ${item.i18n ? `<span data-i18n="${item.i18n}">${item.text}</span>` : item.text}
-                        </button>
+                    <a ${hrefAttr} ${targetAttr} ${relAttr} class="${item.class}">
+                        <svg aria-hidden="true" focusable="false"><use href="${basePath}sources/svgs/sprite.svg#${item.icon}"></use></svg>
+                        ${item.i18n ? `<span data-i18n="${item.i18n}">${item.text}</span>` : item.text}
                     </a>
                 </div>`;
         }
+
         socialHtml += "</div>";
         social.innerHTML = socialHtml;
+
         stats.innerHTML = `
             <h2 data-i18n="shared.stats">Estadísticas</h2>
             <div class="image-stats">
                 <img src="https://streak-stats.demolab.com/?user=CarlostcDev&theme=dark"
-                data-i18n="shared.github-stats" data-i18n-attr="alt" width="75%" class="img" 
+                data-i18n="shared.github-stats" data-i18n-attr="alt" width="75%" class="img"
                 loading="lazy" alt="GitHub contribution streak statistics for Carlos Tormo">
             </div>`;
     }
@@ -82,13 +90,16 @@ class Footer {
     #setLocalTime() {
         const clock = this.footer.querySelector("#localtime");
         if (!clock) return;
+
         const timeFormatter = new Intl.DateTimeFormat("es-ES", {
             timeZone: "Europe/Madrid",
             hour: "2-digit",
             minute: "2-digit",
             second: "2-digit"
         });
-        const updateTime = () => { clock.textContent = timeFormatter.format(new Date()); };
+
+        const updateTime = () => {clock.textContent = timeFormatter.format(new Date());};
+
         updateTime();
         setInterval(updateTime, 1000);
     }

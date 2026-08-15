@@ -3,17 +3,18 @@ import { autoHover } from "../../../scripts/animations/auto-hover.js";
 
 class AboutMe {
     constructor() {
-        this.phrases = document.getElementById("phrases");
+        this.aboutMe = document.getElementById("about-me");
     }
 
     init() {
-        if (!this.phrases) return;
+        if (!this.aboutMe) return;
         this.#render();
     }
 
     #render() {
         const list = config.phrases;
-        if (!this.phrases || !list?.length) return;
+        const phrases = this.aboutMe.querySelector("#phrases");
+        if (!phrases || !list?.length) return;
         const fragment = document.createDocumentFragment();
         const len = list.length;
         for (let i = 0; i < len; i++) {
@@ -24,8 +25,8 @@ class AboutMe {
             p.textContent = item.text;
             fragment.appendChild(p);
         }
-        this.phrases.replaceChildren(fragment);
-        autoHover(".phrase", 4600);
+        phrases.replaceChildren(fragment);
+        autoHover("#about-me .phrase", 4600);
     }
 }
 

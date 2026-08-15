@@ -32,7 +32,7 @@
     margin: 0;
 }
 
-#footer #social div, #footer #social div a, #footer #social div a button {
+#footer #social div, #footer #social div a {
     width: 100%;
 }
 
@@ -57,7 +57,6 @@
 #footer #info .list .source {
     color: var(--black);
     font-weight: bold;
-
 }
 
 #footer h2 {
@@ -69,7 +68,7 @@
     border-radius: 30px 0;
 }
 
-#footer #social button {
+#footer #social .buttons-container a {
     outline: none;
     padding: 10px 20px;
     border-radius: 15px 0;
@@ -82,6 +81,8 @@
     align-items: center;
     gap: 10px;
     color: white;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
 #footer #social svg * {
@@ -98,7 +99,7 @@
     font-weight: bold;
 }
 
-#footer #social button:hover {
+#footer #social .buttons-container a:hover {
     transform: scale(1.10);
     filter: brightness(1.05) saturate(1.8);
     box-shadow: 0 20px 20px #000000DD;
@@ -132,7 +133,7 @@
     background: linear-gradient(90deg, #8f03f9, #fe0173, #ffb200);
 }
 
-#footer #social button svg {
+#footer #social .buttons-container a svg {
     width: 20px;
     height: 20px;
     fill: var(--light);

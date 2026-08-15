@@ -1,13 +1,15 @@
-<button class="ai-assistant-bar" type="button" aria-expanded="false">
-    <svg class="ai-svg"><use href="../../../sources/svgs/sprite.svg#android"></use></svg>
+<button class="ai-assistant-bar" type="button" aria-expanded="false" aria-controls="ai-assistant-chat">
+    <svg class="ai-svg" aria-hidden="true" focusable="false"><use href="../../../sources/svgs/sprite.svg#android"></use></svg>
     <span class="ai-tittle" data-i18n="shared.ai-assistant">AI Assistant</span>
 </button>
 
-<div class="ai-assistant-chat">
+<div id="ai-assistant-chat" class="ai-assistant-chat">
     <div class="messages" role="log" aria-live="polite"></div>
 
     <form class="ai-form">
         <textarea class="ai-textarea" data-i18n="shared.ai-placeholder" data-i18n-attr="placeholder" placeholder="Ask me about Carlos..."></textarea>
-        <button class="ai-btn" type="submit"><svg class="ai-btn-svg"><use href="../../../sources/svgs/sprite.svg#enter"></use></svg></button>
+        <button class="ai-btn" type="submit" aria-label="Send message">
+            <svg class="ai-btn-svg" aria-hidden="true" focusable="false"><use href="../../../sources/svgs/sprite.svg#enter"></use></svg>
+        </button>
     </form>
 </div>

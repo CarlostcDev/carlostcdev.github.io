@@ -1,7 +1,7 @@
 <form class="projects-filter" action="#">
     <details class="filter-select">
         <summary>
-            <svg class="filter-svg" aria-hidden="true"><use href="../sources/svgs/sprite.svg#sort"></use></svg>
+            <svg class="filter-svg" aria-hidden="true" focusable="false"><use href="../sources/svgs/sprite.svg#sort"></use></svg>
             <span data-i18n="projects.projects.sort">Sort</span>
         </summary>
         <div class="filter-options">
@@ -12,52 +12,52 @@
 
     <details class="filter-select">
         <summary>
-            <svg class="filter-svg" aria-hidden="true"><use href="../sources/svgs/sprite.svg#star"></use></svg>
+            <svg class="filter-svg" aria-hidden="true" focusable="false"><use href="../sources/svgs/sprite.svg#star"></use></svg>
             <span data-i18n="projects.projects.stars">Stars</span>
         </summary>
         <div class="filter-options range-container">
             <div class="range-wrapper">
                 <span class="range-tooltip hidden" id="range-tooltip">0</span>
-                <input class="filter-range" type="range" min="0" max="50" step="5" value="0" data-prop="stars">
+                <input class="filter-range" type="range" min="0" max="50" step="5" value="0" data-prop="stars" aria-label="Minimum stars">
             </div>
         </div>
     </details>
 
     <details class="filter-select filter-buttons">
         <summary>
-            <svg class="filter-svg" aria-hidden="true"><use href="../sources/svgs/sprite.svg#code"></use></svg>
+            <svg class="filter-svg" aria-hidden="true" focusable="false"><use href="../sources/svgs/sprite.svg#code"></use></svg>
             <span data-i18n="projects.projects.language">Language</span>
         </summary>
         <div class="filter-options">
             <button class="filter-btn" type="button" data-prop="topics" data-value="java">
                 <span>Java</span>
-                <span class="filter-switch"></span>
+                <span class="filter-switch" aria-hidden="true"></span>
             </button>
             <button class="filter-btn" type="button" data-prop="topics" data-value="javascript">
                 <span>JavaScript</span>
-                <span class="filter-switch"></span>
+                <span class="filter-switch" aria-hidden="true"></span>
             </button>
             <button class="filter-btn" type="button" data-prop="topics" data-value="typescript">
                 <span>TypeScript</span>
-                <span class="filter-switch"></span>
+                <span class="filter-switch" aria-hidden="true"></span>
             </button>
             <button class="filter-btn" type="button" data-prop="topics" data-value="sql">
                 <span>SQL</span>
-                <span class="filter-switch"></span>
+                <span class="filter-switch" aria-hidden="true"></span>
             </button>
         </div>
     </details>
 
     <div class="search-bar">
-        <svg class="search"><use href="../sources/svgs/sprite.svg#search"></use></svg>
-        <input class="filter-input" type="search" placeholder="Buscar...">
-        <svg class="clear"><use href="../sources/svgs/sprite.svg#close"></use></svg>
+        <svg class="search" aria-hidden="true" focusable="false"><use href="../sources/svgs/sprite.svg#search"></use></svg>
+        <input class="filter-input" type="search" data-i18n="projects.projects.search" data-i18n-attr="placeholder" placeholder="Search...">
+        <svg class="clear" aria-hidden="true" focusable="false"><use href="../sources/svgs/sprite.svg#close"></use></svg>
     </div>
 
-    <div class="reset-filters" role="button" tabindex="0">
-        <svg class="reset-svg" aria-hidden="true"><use href="../sources/svgs/sprite.svg#reset"></use></svg>
+    <button class="reset-filters" type="button">
+        <svg class="reset-svg" aria-hidden="true" focusable="false"><use href="../sources/svgs/sprite.svg#reset"></use></svg>
         <span class="reset-text" data-i18n="projects.projects.reset">Reset</span>
-    </div>
+    </button>
 </form>
 
 <div class="projects-list"></div>
