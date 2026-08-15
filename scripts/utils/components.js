@@ -6,23 +6,17 @@ export async function loadComponents() {
         Array.from(elements).map(async element => {
             try {
                 const [type, name] = element.dataset.component.split("/");
-
                 if (type === "sections" && !isHome) return;
-
                 const basePath = type === "shared" || type === "sections"
                     ? `../../components/${type}/${name}/${name}`
                     : `../../${type}/components/${name}/${name}`;
-
                 const htmlPath = new URL(`${basePath}.html`, import.meta.url);
                 const jsPath = new URL(`${basePath}.js`, import.meta.url);
-
                 const res = await fetch(htmlPath);
-
                 if (!res.ok) {
                     console.error(`Failed to load component "${element.dataset.component}": ${res.status} ${res.statusText}`);
                     return;
                 }
-
                 element.innerHTML = await res.text();
                 await import(jsPath);
             } catch (error) {
