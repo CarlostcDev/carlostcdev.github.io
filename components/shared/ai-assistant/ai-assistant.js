@@ -75,7 +75,7 @@ class AiAssistant {
 
             try {
                 const response = await fetch(
-                    "https://api.carlostcdev-chatbot.workers.dev",
+                    "https://ai-assistant.carlostcdev.workers.dev",
                     {
                         method: "POST",
                         headers: {"Content-Type": "application/json"},
