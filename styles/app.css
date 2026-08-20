@@ -77,10 +77,11 @@ body {
 .wordpress { background: #2b92b4; }
 .elementor { background: #ab366d; }
 .woocommerce { background: #9b5c8f; }
-.cloudflare { background: #f29527; }
 .backend { background: #8cff00; color: var(--dark-gray); }
 .api { background: #ff00ae; }
 .gemini { background: #0a91f4; }
+.scss { background: #cd669a; }
+.cloudflare-workers { background: #f08c1e; }
 
 #separator {
     position: relative;

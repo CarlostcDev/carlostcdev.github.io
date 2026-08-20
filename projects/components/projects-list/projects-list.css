@@ -138,6 +138,7 @@
     cursor: pointer;
     user-select: none;
     transition: var(--transition);
+    border: none;
 }
 
 #projects-list summary::-webkit-details-marker {
