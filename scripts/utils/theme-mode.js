@@ -23,6 +23,9 @@ function changeTheme(newTheme) {
     if (favicon && colorTheme) favicon.setAttribute("href", `/sources/svgs/favicon/${newTheme}/favicon.${newTheme}.${colorTheme}.svg`);
 }
 
+const currentTheme = root.classList.contains("dark-theme") ? "dark-theme" : "light-theme";
+changeTheme(currentTheme);
+
 toggles.forEach(toggle => {
     toggle.addEventListener("click", () => {
         const currentTheme = root.classList.contains("dark-theme") ? "dark-theme" : "light-theme";
